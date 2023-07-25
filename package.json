@@ -1,0 +1,35 @@
+{
+	"name": "information",
+	"version": "0.1.2",
+	"private": true,
+	"uni-app": {
+		"scripts": {
+			"dev": {
+				"title": "开发版",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"VUE_APP_BASE_URL": "https://xiaoetong-test.integrity.com.cn/html/#"
+				}
+			},
+			"pre": {
+				"title": "测试版",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"VUE_APP_BASE_URL": "https://xiaoetong-test.integrity.com.cn/html/#"
+				}
+			},
+			"prod": {
+				"title": "正式版",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"VUE_APP_BASE_URL": "https://xiaoetong.integrity.com.cn/html/#"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"echarts": "^5.4.2",
+		"element-ui": "^2.15.13",
+		"vue-smooth-dnd": "^0.8.1"
+	}
+}

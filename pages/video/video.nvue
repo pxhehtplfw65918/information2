@@ -1,0 +1,806 @@
+<template>
+	<div class="page" :style="{ height: height }">
+		<view class="tab-tab-bar">
+			<view class="tab-list" @click.stop="clickTab(0)"><text class="tab-name" :class="tabIndex==0 ? 'active' : ''">{{__('推荐')}}</text></view>
+			<view class="tab-border"></view>
+			<view class="tab-list" @click.stop="clickTab(1)"><text class="tab-name" :class="tabIndex==1 ? 'active' : ''">{{__('同城')}}</text></view>
+			
+			<view @click.stop="gopost"><image class="video-img" src="https://qnsp.zcskjy.com/zc_images/images/video.png" /></view>
+		</view>
+	
+		<swiper class="swiper" :current="tabIndex" @change="changeTab"  :duration="300" :indicator-dots="false"  :vertical="false" >
+			<swiper-item>
+		<swiper class="swiper" :vertical="true" @change="changeCurrent" :current="index">
+			<swiper-item v-for="(item, idx) in videoList" :key="idx" class="swiper-item">
+
+				<div v-if="Math.abs(index-idx)<=1" class="video-box">
+					<chunlei-video class="video" :src="item.story_video" :height="height" :width="width" :play="item.flag" v-if="Math.abs(index-idx)<=1"
+					 :gDuration="item.duration" :initialTime="item.initialTime" @pause="pauseVideo" @click="clickVideo" :objectFit="item.objectFit">
+					</chunlei-video>
+
+					<cover-view class="cover-view-product" v-if="item.item_id && item.product_item_name" @click.stop="onProduct(item.item_id)">
+						<cover-view class="left-view" style="width: 100upx;height: 100upx;">
+							<cover-image :src="item.product_image" class="product_img" style="width: 100upx;height: 100upx;"></cover-image>
+						</cover-view>
+						<cover-view class="left-view" style="width: 400upx;height: 100upx;">
+							<cover-view class="left-text uni-ellipsis" style="padding-left: 10upx;">{{item.product_item_name}}</cover-view>
+							<cover-view class="left-text uni-ellipsis" style="padding-left: 10upx;font-size: 24upx;padding-top:4upx;">{{sprintf(__('价格:%s'), item.item_unit_price)}}</cover-view>
+						</cover-view>
+					</cover-view>
+					<cover-view class="cover-view-left">
+						<cover-view class="left-view">
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text class="left-text">@{{item.user_nickname}}</text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view class="left-text">@{{item.user_nickname}}</cover-view>
+							<!-- #endif -->
+						</cover-view>
+						<cover-view class="left-view">
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text class="left-text">{{item.story_title}}</text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view class="left-text">{{item.story_title}}</cover-view>
+							<!-- #endif -->
+						</cover-view>
+					</cover-view>
+					<cover-view class="cover-view-right">
+						<cover-image :src="item.story_file[0]" class="avater" @click.stop="tapAvater(item.user_id)"></cover-image>
+						<!-- #ifdef APP-PLUS-NVUE -->
+						<text class="right-text-avater">+</text>
+						<text class="right-text"></text>
+						<!-- #endif -->
+						<!-- #ifndef APP-PLUS-NVUE -->
+						<cover-view class="right-text-avater">+</cover-view>
+						<cover-view class="right-text"></cover-view>
+						<!-- #endif -->
+
+						<cover-image v-if="item.IsFabulous" src="https://static.shopsuite.cn/xcxfile/appicon/video/aixinRed.png" class="img" @click.stop="onUnLike" :data-story_id="item.story_id"></cover-image>
+
+						<cover-image v-if="!(item.IsFabulous)"  src="https://static.shopsuite.cn/xcxfile/appicon/video/aixin.png" class="img" @click.stop="onLike" :data-story_id="item.story_id"></cover-image>
+
+						<!-- #ifdef APP-PLUS-NVUE -->
+						<text class="right-text">{{item.story_like_count}}</text>
+						<!-- #endif -->
+						<!-- #ifndef APP-PLUS-NVUE -->
+						<cover-view class="right-text">{{item.story_like_count}}</cover-view>
+						<!-- #endif -->
+
+						<block  v-if="true">
+						<cover-image src="https://static.shopsuite.cn/xcxfile/appicon/video/xiaoxi.png" class="img" :data-story_id="item.story_id" :data-user_id="item.user_id" @click.stop="tapMsg"></cover-image>
+
+						<!-- #ifdef APP-PLUS-NVUE -->
+						<text class="right-text">{{item.story_comment_count}}</text>
+						<!-- #endif -->
+						<!-- #ifndef APP-PLUS-NVUE -->
+						<cover-view class="right-text">{{item.story_comment_count}}</cover-view>
+						<!-- #endif -->
+						<block  v-if="false">
+						<cover-image src="https://static.shopsuite.cn/xcxfile/appicon/video/share-fill.png" class="img" @click.stop="tapShare"></cover-image>
+
+						<!-- #ifdef APP-PLUS-NVUE -->
+						<text class="right-text">{{__('分享')}}</text>
+						<!-- #endif -->
+						<!-- #ifndef APP-PLUS-NVUE -->
+						<cover-view class="right-text">{{__('分享')}}</cover-view>
+						<!-- #endif -->
+						</block>
+						</block>
+
+						<cover-image src="https://static.shopsuite.cn/xcxfile/appicon/video/changpian.png" class="musicIcon img" v-if="false"></cover-image>
+					</cover-view>
+				</div>
+
+			</swiper-item>
+		</swiper>
+		</swiper-item>
+		<swiper-item>
+			<scroll-view  scroll-y  @scrolltolower="scrolltolower"  style="z-index:9999;height:100%;">
+				<video-lists ref="VideoLists" @confirm="confirm($event)"></video-lists>
+			</scroll-view>
+	
+		</swiper-item>
+		</swiper>
+		
+		<view :class="'m-panel-sp ' + (selectsp == 0 ?'hide':'') "   @click.stop="closesp" v-if="(selectsp)">
+			<view class="m-panel-sp-content"
+			 @click.stop>
+				<view class="page-body">
+					<five-mul-commentlist
+						:commentLists="commentList"
+						@clickPraise="clickPraiseComment"
+						@clickDelete="clickDeleteComment"
+						@clickDeleteChild="clickDeleteCommentChild"
+						@clickRecomment="clickRecomment"
+						@clickRecommentChild="clickRecommentChild"
+						@confirm="setNum($event)"
+						:story_id="story_id"
+						:user_id="user_id"
+					></five-mul-commentlist>
+				</view>
+			</view>
+		</view>
+		
+	</div>
+</template>
+<script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
+
+	import dateUtil from "../../helpers/util_date";
+	import chunleiVideo from '../../components/chunlei-video/chunlei-video.vue'
+	import VideoLists from '../../components/video-lists/video-lists.vue'
+	import FiveComment from '../../components/five-comment/five-comment.vue'
+	import FiveMulCommentlist from '../../components/five-mul-commentlist/five-mul-commentlist.vue'
+	
+	export default {
+		components: {
+			chunleiVideo,
+			VideoLists,
+			FiveMulCommentlist,
+			FiveComment
+		},
+		data() {
+			return {
+				sysheight: 0,
+				videoList: [],
+				height: '667px',
+				index: 0,
+				width: '',
+				oldIndex: 0,
+				story_id:0,
+				tabIndex:0,
+				
+				user_id:0,
+				ischange: !1,
+				
+				selectsp: 0,
+				shareContetnFlag: 0,
+				
+				detailInfo: {},
+				commentList: [],
+				
+				//评论组件相关
+				placeholder: '请输入评论内容…',
+				commentParam: {},
+				
+				flag: !1,
+				pageIndex: 1,
+				
+				flag_index: !1,
+			}
+		},
+		computed: mapState(['Config', 'StateCode', 'notice', 'plantformInfo', 'shopInfo', 'userInfo', 'hasLogin', '__', '$',
+			'sprintf'
+		]),
+
+		onLoad: function(options) {
+
+			//#ifdef APP-PLUS
+			plus.screen.lockOrientation("portrait-primary")
+			//#endif
+			this.sysheight = uni.getSystemInfoSync().windowHeight
+			this.height = `${this.sysheight}px`
+			let width = uni.getSystemInfoSync().windowWidth
+			this.width = `${width}px`
+
+
+			this.story_id = options.id ? options.id : 0;
+		},
+
+		async mounted() {
+			await this.pushVideoList()
+			setTimeout(() => {
+				this.videoPlay(this.index)
+			}, 200);
+		},
+		onHide() {
+			for (let item of this.videoList) {
+				item.flag = false
+			}
+		},
+		methods: {
+			...mapMutations(['logout', 'getPlantformInfo', 'forceUserInfo', 'getStoreInfo']),
+			changeCurrent(e) {
+				this.index = e.detail.current;
+				for (let item of this.videoList) {
+					item.flag = false
+				}
+					
+				this.videoList[this.index].flag = !this.videoList[this.index].flag
+			},
+			pushVideoList() {
+				let promise = new Promise((resolve, reject) => {
+
+					let that = this;
+					var params = {
+						page: this.page
+					};
+
+					params['story_id'] = that.story_id;
+
+					this.$.request({
+						url: this.Config.URL.sns.story_lists,
+						data: params,
+						success: (data, status, msg, code) => {
+
+							let videoGroup = []
+							if (data.items.length > 0) {
+								for (var r = 0; r < data.items.length; r++) {
+									data.items[r]['story_time_str'] = dateUtil.dateUtils.format(this.$.datetimeFormatter(data.items[r][
+										'story_time'
+									]));
+
+									data.items[r]['flag'] = false;
+									data.items[r]['objectFit'] = 'fill';
+									/*
+									videoGroup.push({
+										story_video:item.data.playUrl,
+										story_title:item.data.title,
+										flag: false,
+										IsFabulous:false,
+										story_like_count:'7w',
+										story_comment_count:'1045',
+										user_nickname:item.data.author.name,
+										user_avatar:item.data.author.icon,
+										initialTime: 0,
+										duration: item.data.duration
+									})
+									*/
+								}
+
+
+								if (data.page >= data.total) {
+									that.videoList = that.videoList.concat(data.items);
+									that.flag = !1;
+									that.ispage = !1;
+								} else {
+									that.videoList = that.videoList.concat(data.items);
+									that.flag = !0;
+									that.ispage = !0
+								}
+
+								resolve()
+
+							} else {
+
+								that.flag = !1;
+								that.ispage = !1;
+							}
+
+							that.ispage = !0;
+
+							that.$.stopPullDownRefresh()
+							that.$.hideLoading();
+						}
+					});
+
+				})
+				return promise
+			},
+			
+			async confirm(res) {
+				var that = this;
+				
+				this.story_id = res;
+				this.videoList = [];
+				this.ischange = !0;
+				this.page = 1;
+				this.index = 0;
+				this.oldIndex = 0;
+				this.tabIndex = 0;
+				await this.pushVideoList()
+				setTimeout(() => {
+					this.videoPlay(this.index)
+				}, 200);
+			},
+			
+			changeTab(e) {
+				if(this.ischange)
+				{
+					this.ischange = !1;
+				}
+				else
+				{
+					this.tabIndex = e.detail.current
+					this.videoList[this.index].flag = !this.videoList[this.index].flag
+				}
+				
+			},
+			
+			clickTab(e) {
+				this.tabIndex = e
+			},
+			
+			gopost() {
+				this.$.gopage('/community/community/post')
+			},
+			tapLove() {
+				this.videoList[this.index].IsFabulous = !this.videoList[this.index].IsFabulous
+				this.videoList = [...this.videoList]
+
+			},
+			onProduct(item_id) {
+				this.$.gopage('/pages/product/detail?pid=' + item_id)
+			},
+			
+			scrolltolower() {
+				this.$refs.VideoLists.scrollbottom();
+			},
+			setNum(res) {
+				this.videoList[this.index].story_comment_count = parseInt(this.videoList[this.index].story_comment_count) + 1
+			},
+
+			tapAvater(uid) {
+				/*
+				uni.showToast({
+					icon: 'none',
+					title: `点击索引为${this.index}的头像`
+				})
+				*/
+
+				this.$.gopage('/community/community/userspace?uid=' + uid);
+			},
+			tapMsg(a) {
+				this.story_id = parseInt(a.currentTarget.dataset.story_id)
+				
+				this.user_id = parseInt(a.currentTarget.dataset.user_id)
+			
+				this.GetPostsCommentByPostsId()
+				this.selectsp = 1;
+			},
+			
+			closesp: function(e) {
+				var that = this;
+			
+				this.selectsp = 0
+		
+				setTimeout(function() {
+						this.selectsp = 0
+					},
+					1e2)
+				
+			},
+			
+			
+			tapShare() {
+				uni.showToast({
+					icon: 'none',
+					title: `分享索引为${this.index}的视频`
+				})
+			},
+			videoPlay(index) {
+				let promise = new Promise((resolve, reject) => {
+					resolve()
+				})
+				promise.then(res => {
+					this.videoList[index].flag = !this.videoList[index].flag
+				})
+			},
+			pauseVideo(val) {
+				if (typeof this.videoList[this.oldIndex].initialTime != 'undefined') this.videoList[this.oldIndex].initialTime =
+					val
+			},
+			clickVideo() {
+				this.videoList[this.index].flag = !this.videoList[this.index].flag
+			},
+			
+			GetMemberPostsServerData: function () {
+			    var that = this, params = {
+			        story_id: that.story_id,
+			        user_id: that.userInfo.user_id,
+			        to_user_id: that.datauser.user_id,
+			        /* operateId: that.shopInfo.store_id*/
+			    };
+			
+			    that.$.request({
+			        url: this.Config.URL.sns.story_rel_data,
+			        data: params,
+			        loading: false,
+			        success: function (data, status, msg, code) {
+			            that.setData({
+			                dataContent: data,
+			                story_hot_rows: data.story_hot_rows
+			            });
+			
+			            0 < that.dataContent.like_user_total ? that.setData({isshowdzphoto: !0}) : that.setData({isshowdzphoto: !1});
+			        }
+			    });
+			},
+			GetPostsCommentByPostsId: function () {
+			    var that = this,
+			        params = {
+						story_id: that.story_id,
+						sidx: 'comment_time',
+						sord: 'DESC',
+					};
+			    that.$.request({
+			        url: this.Config.URL.sns.story_comment_lists,
+			        data: params,
+			        loading: false,
+			        success: function (data, status, msg, code) {
+			            if (data.items.length > 0) {
+			
+			                for (var r = 0; r < data.items.length; r++) {
+			                    //that.dataComment[r]['comment_time_str'] = dateUtil.dateUtils.format(that.$.datetimeFormatter(that.dataComment[r]['comment_time']));
+			
+								data.items[r]['comment_time_str'] = data.items[r]['comment_time'];
+			
+								data.items[r]['reply_name_str'] = '';
+			
+			                    for (var j = 0; j < data.items[r]['commentList'].length; j++) {
+			                        data.items[r]['commentList'][j]['comment_reply_time_str'] = dateUtil.dateUtils.format(that.$.datetimeFormatter(data.items[r]['commentList'][j]['comment_reply_time']));
+			
+			                        //data.items[r]['commentList'][j]['comment_reply_time_str'] = data.items[r]['commentList'][j]['comment_reply_time'];
+			
+									data.items[r]['reply_name_str'] = data.items[r]['commentList'][j]['user_nickname'];
+			                    }
+			                }
+			
+			                if (data.page >= data.total) {
+								that.commentList = data.items
+								that.flag_index =  !1
+								that.ispage_index =  !1
+			                } else {
+								that.commentList = data.items
+								that.flag_index =  !0
+								that.ispage_index =  !0
+			                }
+							console.log(that.commentList)
+							
+			            } else {
+							that.flag_index =  !1
+							that.ispage_index =  !1
+			            }
+			        }
+			    });
+			},
+
+			onLike: function(a) {
+				let that = this;
+				that.forceUserInfo(function(user) {
+					that.doLike(a.currentTarget.dataset.story_id)
+				});
+			},
+			doLike: function(story_id) {
+				var that = this,
+					params = {
+						story_id: story_id
+					};
+
+				that.$.request({
+					url: this.Config.URL.sns.story_like_add,
+					data: params,
+					success: function(data, status, msg, code) {
+						if (200 == status) {
+							that.videoList[that.index].IsFabulous = true;
+							that.videoList[that.index].story_like_count++
+						} else {}
+					}
+				});
+			},
+			onUnLike: function(a) {
+				let that = this;
+				that.forceUserInfo(function(user) {
+					that.canceldianzan(a.currentTarget.dataset.story_id)
+				});
+			},
+			canceldianzan: function(story_id) {
+				var that = this,
+					params = {
+						story_id: story_id
+					};
+
+				that.$.request({
+					url: this.Config.URL.sns.story_like_remove,
+					data: params,
+					success: function(data, status, msg, code) {
+						if (200 == status) {
+							//修正当前记录数据
+							that.videoList[that.index].IsFabulous = false;
+							that.videoList[that.index].story_like_count--
+						} else {}
+					}
+				});
+			}
+		},
+		watch: {
+			index(newVal, oldVal) {
+				this.oldIndex = oldVal
+			}
+		}
+	}
+</script>
+<style scoped>
+	.swiper {
+		flex: 1;
+		background-color: #000;
+	}
+
+	.swiper-item {
+		flex: 1;
+	}
+
+	.video {
+		flex: 1;
+	}
+
+	.video-box {
+		flex: 1;
+	}
+
+	.cover-view-center {
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		opacity: 0.1;
+		z-index: 999;
+	}
+
+	.cover-view-product {
+		position: absolute;
+		margin-left: 10upx;
+		width: 500upx;
+		bottom: 250upx;
+		z-index: 9999;
+		font-size: 16px;
+		color: #FFFFFF;
+		//#ifndef APP-PLUS-NVUE
+		white-space: pre-wrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		//#endif
+
+		display: flex;
+		background-color: rgba(0, 0, 0, 0.2);
+		justify-content:space-between;
+		flex-direction:row
+	}
+
+	.cover-view-left {
+		position: absolute;
+		margin-left: 10upx;
+		width: 600upx;
+		bottom: 60upx;
+		z-index: 9999;
+		font-size: 16px;
+		color: #FFFFFF;
+		//#ifndef APP-PLUS-NVUE
+		white-space: pre-wrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		//#endif
+	}
+
+	.left-view {
+		margin-bottom: 0upx;
+	}
+	
+	.uni-ellipsis {
+		text-overflow: ellipsis;
+		lines: 1;
+		/* line-height: 1; */
+		word-wrap: anywhere;
+		width: 400upx;
+	}
+
+	.left-text {
+		font-size: 16px;
+		color: #FFFFFF;
+	}
+
+	.avater {
+		border-radius: 50upx;
+		border-color: #fff;
+		border-style: solid;
+		border-width: 2px;
+
+		height: 90upx !important;
+		width: 90upx !important;
+		opacity: 0.9;
+		margin: auto;
+	}
+
+	.cover-view-right {
+		position: absolute;
+		bottom: 60upx;
+		right: 20upx;
+		//#ifndef APP-PLUS-NVUE
+		display: flex;
+		flex-direction: column;
+		//#endif
+		z-index: 9999;
+	}
+
+	.right-text-avater {
+		position: absolute;
+		font-size: 14px;
+		top: 80upx;
+		left: 30upx;
+		height: 40upx;
+		width: 40upx;
+		background-color: #DD524D;
+		color: #FFFFFF;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 40upx;
+		z-index: 999;
+	}
+
+	.avater-icon {
+		height: 40upx;
+		width: 40upx;
+
+		color: #fff;
+		background-color: #DD524D;
+		border-radius: 50%;
+		position: absolute;
+		left: 30upx;
+		top: -20upx;
+	}
+
+	.right-text {
+		text-align: center;
+		font-size: 26upx;
+		color: #FFFFFF;
+		margin-bottom: 10upx;
+		height: 20px;
+	}
+
+	.musicIcon {
+		margin-top: 40upx !important;
+		/* #ifndef APP-PLUS-NVUE */
+		animation: rotating 3s linear infinite;
+		/* #endif */
+	}
+
+	@keyframes rotating {
+		from {
+			transform: rotate(0);
+		}
+
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.img {
+		height: 70upx;
+		width: 70upx;
+		opacity: 0.9;
+		margin: auto;
+		//#ifdef APP-PLUS-NVUE
+		margin-left: 10upx;
+		//#endif
+	}
+
+	.page {
+		//#ifndef APP-PLUS-NVUE
+		display: flex;
+		flex-direction: column;
+		//#endif
+		flex: 1;
+	}
+	
+	.tab-tab-bar {
+		position: fixed;
+		width:100%;
+		display:flex;
+		flex-direction: row !important;
+		justify-content : center !important;
+		/* flex-wrap:wrap !important; */
+		z-index: 2;
+		padding-top:40upx;
+		/* #ifdef APP-PLUS-NVUE */
+		padding-left:600upx;
+		/* #endif */
+	}
+	
+	.tab-list {
+		/* #ifdef APP-PLUS-NVUE */
+		padding-top:10upx;
+		/* #endif */
+	}
+	
+	.tab-border {
+		height:50upx;
+		width:6upx;
+		background-color: #FFFFFF;
+		margin:10upx 20upx;
+	}
+	
+	.tab-name {
+		font-size: 40upx;
+		color: #FFFFFF;
+		/* #ifdef APP-PLUS-NVUE */
+		padding-bottom: 12upx;
+		/* #endif */
+	}
+	
+	.video-img {
+		width:80upx;
+		height:50upx;
+		left:150upx;
+		top:10upx;
+	}
+	
+	.active {
+		border-bottom-style: solid ;
+		border-bottom-width: 2px;
+		border-bottom-color: #FFFFFF;
+		color: #FFFFFF;
+	}
+	
+	.m-panel-sp {
+		position: fixed;
+		width: 750upx;
+		height: 1624upx;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		background-color: rgba(0, 0, 0, 0.2)
+	}
+	
+	.m-panel-sp-content {
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		box-shadow: 0px -10upx 15upx rgba(0, 0, 0, 0.35);
+		z-index:999;
+	}
+	
+	.view-conmment-send-bottom {
+		width: 750upx;
+		position: fixed;
+		bottom: 0;
+		display: flex;
+		flex-direction: row;
+		background-color: white;
+		border-top: 1px solid #fbfbfb;
+		z-index:999;
+	}
+	
+	.view-comment-textarea {
+		background-color: #f8f8f8;
+		border-radius: 40rpx;
+		padding: 15rpx 20rpx;
+		margin: 25rpx 20rpx;
+		width: 700upx;
+		/* flex: 1;
+		align-items: center; */
+	}
+	.textarea-comment {
+		padding: 0;
+		width: 100%;
+		/* height: 100%; */
+		font-size: $uni-font-size-base;
+		/* color: $uni-text-color; */
+		color: $uni-text-sub-color;
+	}
+	
+	.icon-comment {
+		font-size: 46rpx;
+		color: $uni-text-color;
+		margin: 0 30rpx 0 5rpx;
+	}
+	.view-btn-comment {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: $uni-font-size-base;
+		color: white;
+		height: 70rpx;
+		width: 120rpx;
+		border-radius: 10rpx;
+		background-color: $theme-color;
+		font-weight: 500;
+	}
+	.textarea-bottom {
+		background-color: white;
+		padding: 20rpx;
+	}
+</style>

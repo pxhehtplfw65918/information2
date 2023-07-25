@@ -1,0 +1,51 @@
+$navbar1: 'https://f.integrity.com.cn/tj/uploads/20230703/127528d4db064fe9ff145ac2f469d701.png';
+$navbar2: '';
+.content {
+	width: 750rpx;
+	background-color: #FFFFFF;
+	overflow: hidden;
+  ::v-deep .toolTemplate {
+
+	.toolTemplate-content{
+	  width: 750rpx;
+	  height: 100%;
+	  background: #ffffff;
+	  border-radius: 20rpx;
+	  margin: 0 auto;
+	  position: relative;
+	  top: calc(312rpx + var(--status-bar-height));
+	  height: max-content;
+	}
+    .toolTemplatenav {
+      width: 750rpx;
+      height: 350rpx;
+      background: url($navbar1);
+      background-size:100% 100%;
+      background-position: center 100%;
+      background-repeat: repeat;
+	  left:50%;
+	  top:-4rpx;
+	  transform: translateX(-50%);
+      .toolTemplatenav-navbar {
+        width: 750rpx;
+        height: 100%;
+        background: url($navbar2) no-repeat center;
+        // background-size: 530rpx 79rpx;
+      }
+    }
+  }
+  .toolTemplate{
+	  ::v-deep .u-navbar {
+	  	.u-navbar__content__left {
+	  	  width: 100rpx;
+	  	  height: 100%;
+		  padding-left: 24rpx;
+	  	  top: var(--status-bar-height);
+	  	  left: 0rpx;
+	  	  box-sizing: border-box;
+	  	  cursor: pointer;
+	  	}
+	  }
+  }
+}
+

@@ -1,0 +1,230 @@
+.playback-area {
+  padding: 0 30upx;
+
+  .components-title {
+    width: 100%;
+    font-size: 36upx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10upx;
+    padding-top: 5upx;
+
+    &-key {
+      font-size: 24upx;
+      font-family: PingFangSC-Regular, PingFang SC;
+      color: #999999;
+      // -webkit-text-stroke:2upx #333333;
+      // text-shadow: 0 0 5px #FF0000, 0 0 5px #6bf403;
+    }
+  }
+
+  .curriculum {
+    width: 100%;
+    height: 175upx;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 88upx;
+  }
+
+  .playback-area-child {
+    position: relative;
+  }
+
+  .curriculum {
+    .curriculum-image-content {
+      width: 180upx;
+      height: 220upx;
+      border-radius: 10upx;
+      overflow: hidden;
+
+      .curriculum-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 10upx;
+        overflow: hidden;
+      }
+    }
+
+    .playback-area-describe {
+      padding-left: 30upx;
+      line-height: 24upx;
+      padding-top: 10upx;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .playback-area-describe-bottom {
+      width: 66.8%;
+      height: 55rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 50upx;
+      visibility: visible;
+
+      .speaker-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+      }
+
+      .speaker {
+        height: 33rpx;
+        line-height: 33rpx;
+        display: inline-block;
+		font-size: 24rpx;
+		font-family: PingFangSC-Regular, PingFang SC;
+		font-weight: 400;
+		color: #666666;
+      }
+
+      .portrait {
+        display: inline-block;
+        width: 50rpx;
+        height: 50rpx;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 21rpx;
+        visibility: visible;
+      }
+    }
+  }
+
+  &-price {
+    font-size: 36upx;
+    line-height: 36upx;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #f43d3e;
+
+    .price_unit {
+      font-size: 20upx;
+      padding-right: 10upx;
+    }
+  }
+
+  .classSection {
+    text-align: center;
+    line-height: 40rpx;
+    padding: 6upx 12upx;
+    background: linear-gradient(90deg, #fdecd8 0%, #ffdeae 100%);
+    border-radius: 20upx;
+    font-size: 20upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #5b2111;
+    position: absolute;
+    bottom: -28upx;
+    left: 50%;
+    transform: translateX(-50%);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    white-space: nowrap;
+
+    .icon-curriculum {
+      vertical-align: middle;
+    }
+
+    .classSection-text {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 44rpx;
+    }
+  }
+
+  .playback-area-className {
+    font-size: 36upx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    max-width: 100%;
+    max-height: 46upx;
+    line-height: 46upx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .class-describe {
+    font-size: 24upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+    max-width: 100%;
+    max-height: 46upx;
+    line-height: 40upx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &-describe-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffa312;
+    margin-top: 12upx;
+
+    .describe-list-child {
+      background: #fff5ed;
+      border-radius: 6rpx;
+      padding: 7rpx 10rpx;
+      margin-right: 10rpx;
+      white-space: nowrap;
+
+      &-text {
+        // transform: scale(0.9);
+        display: inline-block;
+        white-space: nowrap;
+		vertical-align: text-top;
+      }
+    }
+  }
+}
+
+.icon-curriculum {
+  width: 23upx;
+  height: 23upx;
+  vertical-align: middle;
+  margin-right: 10upx;
+}
+
+.look-more {
+  width: 750upx;
+  font-size: 26upx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  padding-bottom: 50upx;
+  text-align: center;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  &-icon {
+    margin-left: 10upx;
+    width: 12upx;
+    height: 22upx;
+  }
+}

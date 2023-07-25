@@ -1,0 +1,765 @@
+@import "../../styles/_variables";
+
+.m-banner {
+  height: 200upx;
+  position: relative;
+  image {
+    height: 200upx;
+    width: 100%;
+  }
+}
+
+.m-content-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.m-logo {
+  width: 140.4upx;
+  height: 140.4upx;
+  background-color: #fff;
+  border-radius: 8upx;
+  box-shadow: 0px 0upx 10upx rgba(0, 0, 0, 0.35);
+  color: #888;
+  position: absolute;
+  left: 20upx;
+  bottom: 25upx;
+  z-index: 2;
+  text-align: center;
+  padding: 5upx;
+  box-sizing: border-box;
+  display: inline-block;
+  image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.m-shopinfo {
+  label {
+    color: #fff;
+    font-size: 28upx;
+    line-height: 20upx;
+    display: inline-block;
+  }
+  .iconfont {
+    color: $default-skin-bg;
+    font-size: 50upx;
+    margin-left: 10upx;
+    position: relative;
+    top: 8upx;
+  }
+  position: absolute;
+  top: 50upx;
+  left: 170upx;
+  width: 70%;
+  z-index: 2;
+  text {
+    display: block;
+    font-size: 24upx;
+    color: #fff;
+    margin-top: 20upx;
+  }
+}
+
+.m-ba-tab {
+  font-size: 24upx;
+  text-align: center;
+  background-color: #fff;
+  height: 105.3upx;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 14upx;
+  box-shadow: 0px 0upx 10upx rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.m-ba-icon {
+  width: 100%;
+  height: 45upx;
+  line-height: 45upx;
+}
+
+.m-ba-item-select {
+  color: $default-skin-bg;
+  position: relative;
+  &::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0upx;
+    right: 0;
+    height: 6upx;
+    border-bottom: 6upx solid $default-skin-bg;
+    color: #CCCCCC;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 3;
+  }
+}
+
+.m-ShopProfile .m-cell-bd {
+  font-size: 28upx;
+}
+
+.m-sort {
+  position: relative;
+  image {
+    width: 24upx;
+    height: 24upx;
+    position: absolute;
+    /*top: 50%;*/
+    margin-top: 10upx;
+    margin-left: 2upx;
+  }
+}
+
+.u-pabtn {
+  top: 305upx !important;
+}
+
+.u-patop {
+  top: 0 !important;
+}
+
+.u-pabtn .m-tab {
+  position: absolute;
+}
+
+.no-tap {
+  padding-top: 4upx !important;
+}
+
+/*全部商品 start*/
+
+.m-navbar::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #CCCCCC;
+  color: #CCCCCC;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 3;
+}
+
+
+.m-navbar:after {
+  bottom: 2upx;
+}
+
+
+.m-navbar-item {
+  padding: 20upx 0;
+  font-size: 24upx;
+  &:after {
+    border: none;
+  }
+  &.m-navbar-item-on {
+    background-color: #fff;
+    color: $default-skin-bg;
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 6upx;
+      border-bottom: 6upx solid $default-skin-bg;
+      color: #CCCCCC;
+      -webkit-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      z-index: 3;
+    }
+  }
+}
+
+/*全部商品 end*/
+
+/*商超模块 start*/
+
+.m-supermarket-ad {
+  margin: 20upx 0;
+}
+
+.m-supermarket-tip-item {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  height: 88upx;
+  padding: 10upx;
+  box-sizing: border-box;
+  label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8upx;
+    line-height: 68upx;
+    font-size: 28upx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+/*商超模块 end*/
+
+/*母婴之家广告模块 start*/
+
+.m-muyin-ad-content {
+  margin: 20upx 0;
+}
+
+.m-muyin-ba-item {
+  width: 718upx;
+  height: 412upx;
+  background-color: #fff;
+  margin: 20upx auto;
+  border-radius: 8upx;
+  overflow: hidden;
+  image {
+    width: 718upx;
+    height: 336upx;
+    vertical-align: top;
+  }
+}
+
+.m-muyin-ba-info {
+  height: 75upx;
+  line-height: 75upx;
+  padding: 0 20upx;
+  font-size: 28upx;
+  text {
+    color: $default-skin-bg;
+    float: right;
+    font-size: 32upx;
+  }
+}
+
+.m-muyin-ba-name {
+  width: 500upx;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*母婴之家广告模版 end*/
+
+/*生鲜食品广告模块 start*/
+
+.m-food-adlist {
+  margin: 20upx 0;
+}
+
+.m-food-aditem {
+  width: 680upx;
+  height: 788upx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 20upx;
+  box-sizing: border-box;
+  padding: 20upx;
+  position: relative;
+}
+
+.m-food-ad-img {
+  width: 640upx;
+  height: 640upx;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.m-food-info {
+  height: 108upx;
+  width: 80%;
+}
+
+.m-food-info-price {
+  font-size: 28upx;
+  color: $default-skin-bg;
+  padding-top: 10upx;
+  label {
+    font-size: 36upx;
+  }
+  text {
+    font-size: 28upx;
+    color: #888;
+    text-decoration: line-through;
+    padding-left: 20upx;
+    line-height: 20px;
+  }
+}
+
+.m-food-info-name {
+  font-size: 32upx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.m-food-ad-icon image {
+  width: 60upx;
+  height: 60upx;
+  position: absolute;
+  bottom: 40upx;
+  right: 20upx;
+}
+
+/*生鲜食品广告模块 end*/
+
+/*第六套模块 end*/
+
+.content {
+  display: flex;
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.category {
+  flex: 1;
+  font-size: 26upx;
+}
+
+.category-item {
+  height: 100upx;
+  line-height: 100upx;
+  text-align: center;
+  border-bottom: 1upx solid #eee;
+  border-left: 8upx solid transparent;
+  background: #F8F8F8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.category-item-select {
+  border-left: 8upx solid $default-skin-bg;
+  box-sizing: border-box;
+  background: white;
+}
+
+.body {
+  flex: 4;
+}
+
+.body-title {
+  font-size: 24upx;
+  background: #F8F8F8;
+  height: 50upx;
+  line-height: 50upx;
+  padding-left: 20upx;
+}
+
+.body-item {
+  padding: 10upx 20upx;
+  display: flex;
+  position: relative;
+  border-bottom: 1upx solid #eee;
+  background: white;
+  image {
+    border-radius: 10upx;
+    height: 120upx;
+    width: 120upx;
+    display: inline-block;
+    padding: 15upx 0;
+  }
+}
+
+.body-item-info {
+  margin-left: 20upx;
+  flex: 1;
+  font-size: 28upx;
+}
+
+.item-info-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 40upx;
+  max-height: 80upx;
+}
+
+.item-info-salenum {
+  font-size: 22upx;
+  color: gray;
+  margin-top: 15upx;
+}
+
+.item-info-price {
+  color: $default-skin-bg;
+  font-weight: bold;
+  font-size: 32upx;
+  margin-top: 20upx;
+  position: relative;
+  label {
+    font-size: 22upx;
+    font-weight: normal;
+  }
+}
+
+.item-num-box {
+  position: absolute;
+  bottom: 0upx;
+  right: 20upx;
+  display: flex;
+  align-items: center;
+  font-size: 30upx;
+  height: 120upx;
+  color: $default-skin-bg;
+}
+
+.item-num-add {
+  width: 50upx;
+  text-align: center;
+  overflow: hidden;
+}
+
+.item-num-choose {
+  background: $default-skin-bg;
+  padding: 8upx 20upx;
+  border-radius: 20upx;
+  color: white;
+  font-size: 26upx;
+  display: inline-block;
+}
+
+.item-num-over {
+  padding: 5upx 15upx;
+  border-radius: 20upx;
+  color: $default-skin-bg;
+  font-size: 26upx;
+  display: inline-block;
+  border: 1px solid $default-skin-bg;
+  box-sizing: border-box;
+}
+
+.bottom-bar {
+  height: 100upx;
+  width: 100%;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  z-index: 15;
+}
+
+.bar-left {
+  flex: 3;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 28upx;
+}
+
+.car {
+  width: 110upx;
+  height: 110upx;
+  position: fixed;
+  left: 30upx;
+  bottom: 30upx;
+  z-index: 20;
+}
+
+.car-img {
+  font-size: 110upx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.red {
+  color: $default-skin-bg;
+}
+
+.gray {
+  color: #ccc;
+}
+
+.delAll {
+  display: block;
+  padding-left: 10upx;
+}
+
+.car-num {
+  position: absolute;
+  width: 30upx;
+  height: 30upx;
+  background: $default-skin-bg;
+  color: white;
+  right: 0;
+  top: 40upx;
+  border-radius: 50%;
+  font-size: 18upx;
+  border: 4upx solid white;
+  line-height: 30upx;
+  text-align: center;
+  overflow: hidden;
+}
+
+.price-box {
+  margin-left: 150upx;
+  line-height: 45upx;
+  padding: 5upx;
+}
+
+.price-money {
+  font-size: 36upx;
+  color: $default-skin-bg;
+  font-weight: bold;
+  label {
+    font-size: 28upx;
+    color: $default-skin-bg;
+  }
+}
+
+.price-delivery {
+  font-size: 24upx;
+  color: gray;
+}
+
+.text-null {
+  line-height: 100upx;
+  margin-left: 150upx;
+  color: gray;
+}
+
+.bar-right {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 32upx;
+  line-height: 100upx;
+}
+
+.bar-right-red {
+  background: $default-skin-bg;
+}
+
+.bar-right-gray {
+  background: #ccc;
+}
+
+/*底部弹框*/
+
+.window {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.window-top {
+  flex: 1;
+}
+
+.top-content {
+  background: #F8F8F8;
+  bottom: 100upx;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.window-clear {
+  height: 60upx;
+  line-height: 60upx;
+  font-size: 24upx;
+  margin-right: 20upx;
+  color: gray;
+  label {
+    float: right;
+  }
+}
+
+.top-scrollbox {
+  max-height: 480upx;
+  overflow: scroll;
+}
+
+.window-scroll-item {
+  height: 120upx;
+  line-height: 120upx;
+  background: white;
+  border-bottom: 1upx solid #eee;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 32upx;
+}
+
+.window-item-title {
+  width: 400upx;
+  display: inline-block;
+  margin-left: 20upx;
+  height: 120upx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.window-item-title-sp {
+  width: 400upx;
+  margin-left: 20upx;
+  height: 120upx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-height: 60upx;
+  padding: 10upx 0;
+  box-sizing: border-box;
+}
+
+.sp-name {
+  width: 400upx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.sp-content {
+  font-size: 26upx;
+  width: 400upx;
+  overflow: hidden;
+  color: gray;
+}
+
+.window-item-price {
+  height: 102upx;
+  display: inline-block;
+  line-height: 120upx;
+  position: absolute;
+  top: 0;
+  left: 420upx;
+  color: $default-skin-bg;
+}
+
+.window-bottom {
+  height: 100upx;
+}
+
+/*第六套模块 end*/
+
+.m-sp-box {
+  width: 80%;
+  background: white;
+  border-radius: 10upx;
+  box-sizing: border-box;
+}
+
+.m-sp-top {
+  padding: 0 30upx;
+  position: relative;
+}
+
+.u-close-sp {
+  font-size: 46upx;
+  color: $default-skin-bg;
+  position: absolute;
+  right: 30upx;
+  top: 10upx;
+}
+
+.m-sp-title {
+  height: 100upx;
+  text-align: center;
+  line-height: 100upx;
+  overflow: hidden;
+  font-size: 30upx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin: 0 auto;
+  width: 300upx;
+  margin: 0;
+}
+
+.m-sp-body {
+  font-size: 24upx;
+  color: gray;
+  margin-bottom: 30upx;
+}
+
+.m-bodyname {
+  height: 100upx;
+}
+
+.m-sp-choose {
+  display: inline-block;
+  padding: 8upx 25upx;
+  border: 1px solid gray;
+  border-radius: 50upx;
+  margin: 10upx;
+  border-color: lightgray;
+}
+
+.m-sp-unit {
+  margin-top: 30upx;
+}
+
+.sp-choose-item {}
+
+.sp-choose-item-checked {
+  background-color: rgba(219, 56, 76, 0.2);
+  border-color: $default-skin-bg;
+  color: black;
+}
+
+.m-sp-bottom {
+  background: #F8F8F8;
+  height: 100upx;
+  border-top: 1px solid lightgray;
+  margin-top: 50upx;
+  border-bottom-left-radius: 10upx;
+  border-bottom-right-radius: 10upx;
+  line-height: 100upx;
+  position: relative;
+  padding: 0 30upx;
+}
+
+.sp-bottom-price {
+  font-size: 40upx;
+  font-style: bold;
+  color: $default-skin-bg;
+}
+
+.sp-bottom-des {
+  font-size: 24upx;
+  color: gray;
+  margin-left: 10upx;
+}

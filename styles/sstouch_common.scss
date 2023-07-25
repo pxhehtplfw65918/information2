@@ -1,0 +1,711 @@
+@charset "UTF-8";
+
+/* ================================ */
+
+/* 触屏版常用层与动作等样式			*/
+
+/* ================================ */
+
+/* Author:			qianyistore	    	*/
+
+/* Support Site:	www.qianyistore.com	*/
+
+/* Retrofit Date:	Aug-08-2016		*/
+
+/* ================================ */
+
+.sstouch-search-layout {
+  margin-top: 93.75upx;
+  .dl {
+    padding: 37.5upx 23.4375upx 23.4375upx;
+    text-align: left;
+  }
+  .dt {
+    font-size: 32.8125upx;
+    line-height: 46.875upx;
+    color: #111;
+    margin-bottom: 18.75upx;
+  }
+  view {
+    font-size: 0;
+    display: block;
+    display: inline-block;
+    background-color: #FFF;
+    border: solid 2.34375upx #EEE;
+    margin: 0 18.75upx 18.75upx 0;
+    .a {
+      display: block;
+      padding: 9.375upx 23.4375upx;
+      font-size: 28.125upx;
+      line-height: 46.875upx;
+      color: #555;
+    }
+  }
+  .hot-keyword view {
+    border-radius: 35.15625upx;
+  }
+  .a.clear-history {
+    display: inline-block;
+    width: 79%;
+    height: 90.9375upx;
+    text-align: center;
+    margin: 70.3125upx 10% 0 10%;
+    background-color: #EEE;
+    border-radius: 9.375upx;
+    font-size: 32.8125upx;
+    line-height: 90.9375upx;
+    color: #555;
+  }
+}
+
+/*页内全屏遮罩层*/
+
+.sstouch-full-mask {
+  position: fixed;
+  z-index: 19;
+  top: 0;
+  bottom: 0;
+}
+
+.sstouch-full-mask-bg {
+  display: block;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.sstouch-full-mask-block {
+  display: block;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $body-bg;
+  box-shadow: -11.71875upx 0 9.375upx rgba(0, 0, 0, 0.2);
+}
+
+.sstouch-full-mask {
+  &.left {
+    display: block;
+    left: 0;
+    right: 0;
+    animation: optionBlockLeft 0.3s ease-in-out;
+    -webkit-animation: optionBlockLeft 0.3s ease-in-out;
+  }
+  &.right {
+    left: 110%;
+    right: -110%;
+    animation: optionBlockRight 0.5s ease-in-out;
+    -webkit-animation: optionBlockRight 0.5s ease-in-out;
+  }
+}
+
+@keyframes optionBlockLeft {
+  from {
+    display: none;
+    left: 100%;
+    right: -100%;
+  }
+
+  to {
+    display: block;
+    left: 0;
+    right: 0;
+  }
+}
+
+
+@-webkit-keyframes optionBlockLeft {
+  from {
+    display: none;
+    left: 100%;
+    right: -100%;
+  }
+
+  to {
+    display: block;
+    left: 0;
+    right: 0;
+  }
+}
+
+
+@keyframes optionBlockRight {
+  from {
+    display: block;
+    left: 0;
+    right: 0;
+  }
+
+  to {
+    display: none;
+    left: 110%;
+    right: -110%;
+  }
+}
+
+
+@-webkit-keyframes optionBlockRight {
+  from {
+    display: block;
+    left: 0;
+    right: 0;
+  }
+
+  to {
+    display: none;
+    left: 110%;
+    right: -110%;
+  }
+}
+
+
+/*页内下部滑入遮罩*/
+
+.sstouch-bottom-mask {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+.sstouch-bottom-mask-bg {
+  display: block;
+  position: absolute;
+  z-index: 21;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.sstouch-bottom-mask-block {
+  display: block;
+  position: absolute;
+  z-index: 22;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 562.5upx;
+  background: #FFF;
+}
+
+.sstouch-bottom-mask {
+  &.up {
+    display: block;
+    bottom: 0;
+    animation: optionBlockUp 0.5s ease-in-out;
+    -webkit-animation: optionBlockUp 0.5s ease-in-out;
+  }
+  &.down {
+    animation: optionBlockDown 0.5s ease-in-out;
+    -webkit-animation: optionBlockDown 0.5s ease-in-out;
+  }
+}
+
+@keyframes optionBlockUp {
+  from {
+    display: none;
+    bottom: -100%;
+  }
+
+  to {
+    display: block;
+    bottom: 0;
+  }
+}
+
+
+@-webkit-keyframes optionBlockUp {
+  from {
+    display: none;
+    bottom: -100%;
+  }
+
+  to {
+    display: block;
+    bottom: 0;
+  }
+}
+
+
+@keyframes optionBlockDown {
+  from {
+    display: block;
+    bottom: 0;
+  }
+
+  to {
+    display: none;
+    bottom: -100%;
+  }
+}
+
+
+@-webkit-keyframes optionBlockDown {
+  from {
+    display: block;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  to {
+    display: none;
+    bottom: -100%;
+    opacity: 0;
+  }
+}
+
+
+.sstouch-bottom-mask-tip {
+  position: absolute;
+  z-index: 1;
+  top: -56.25upx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 28.125upx;
+  font-weight: 600;
+  line-height: 42.1875upx;
+  color: #FFF;
+  text-shadow: 0 0 23.4375upx rgba(0, 0, 0, 0.5);
+  .i {
+    background-image: url(https://test.shopsuite.cn/wap/images/back_down.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 75%;
+    width: 37.5upx;
+    height: 42.1875upx;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4.6875upx;
+  }
+}
+
+.sstouch-bottom-mask-top {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 23.4375upx;
+  border-bottom: solid 2.34375upx #EEE;
+}
+
+.sstouch-bottom-mask-close {
+  position: absolute;
+  z-index: 1;
+  top: -28.125upx;
+  right: 0;
+  background: #FFF;
+  width: 42.1875upx;
+  height: 42.1875upx;
+  padding: 7.03125upx;
+  border-radius: 100%;
+  .i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://test.shopsuite.cn/wap/images/close_window.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    opacity: 23.4375upx;
+  }
+}
+
+.sstouch-bottom-mask-rolling {
+  min-height: 89.0625upx;
+  max-height: 562.5upx;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/*页内大图显示*/
+
+.sstouch-bigimg-layout {
+  display: block;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  .close {
+    position: absolute;
+    z-index: 1;
+    top: 23.4375upx;
+    right: 23.4375upx;
+    width: 56.25upx;
+    height: 56.25upx;
+    background-color: #FFF;
+    background-image: url(https://test.shopsuite.cn/wap/images/close_window.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 90%;
+    border-radius: 100%;
+    opacity: 0.5;
+  }
+  .pic-box {
+    margin: 25% auto 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 750upx;
+    z-index: 1;
+    view {
+      font-size: 0;
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      position: relative;
+      width: 750upx;
+      height: 750upx;
+      text-align: center;
+      z-index: auto;
+      padding: 0 !important;
+      margin: 0 !important;
+      background-color: transparent !important;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+}
+
+.sstouch-bigimg-turn {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  view {
+    font-size: 0;
+    margin: 0 auto;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    view {
+      display: inline-block;
+      min-width: 19%;
+      max-width: 99%;
+      margin: 0 1% 0 0 !important;
+      height: 11.71875upx;
+      padding: 0 !important;
+      background: rgba(255, 255, 255, 0.75);
+      &.cur {
+        background-color: $main-skin-color;
+      }
+    }
+  }
+}
+
+/*选择型按钮*/
+
+.sstouch-sel-box {
+  display: block;
+  background: #FFF;
+  padding: 0 37.5upx;
+  .tit {
+    display: block;
+    padding: 23.4375upx 0;
+    font-size: 32.8125upx;
+    line-height: 42.1875upx;
+  }
+  .sel-con {
+    padding: 0 0 23.4375upx 0;
+    .a {
+      display: inline-block;
+      height: 42.1875upx;
+      padding: 11.71875upx 23.4375upx;
+      margin: 14.0625upx 14.0625upx 0 0;
+      font-size: 25.781250000000004upx;
+      color: $main-text-color;
+      line-height: 42.1875upx;
+      background: #FFF;
+      border: solid 2.34375upx #BBB;
+      border-radius: 7.03125upx;
+      &.sel {
+        padding: 13.125000000000002upx 24.84375upx;
+        color: #FFF;
+        background: $main-skin-color;
+        border: none;
+      }
+    }
+  }
+}
+
+.sstouch-sel-list {
+  background-color: #FFF;
+  margin-top: 23.4375upx;
+  label {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 42.1875upx;
+    padding: 23.4375upx 0;
+    margin: 0 23.4375upx;
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    border-bottom: solid 2.34375upx #EEE;
+    input[type="radio"] {
+      display: none;
+    }
+    .i {
+      position: relative;
+      display: inline-block;
+      width: 35.15625upx;
+      height: 35.15625upx;
+      margin-right: 9.375upx;
+      background-color: $body-bg;
+      border: 2.34375upx solid #CCC;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    &.checked .i {
+      border-color: $main-skin-color;
+      background-color: $main-skin-color;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 4.6875upx;
+        top: 8.203125upx;
+        width: 18.75upx;
+        height: 9.375upx;
+        border-left: 3.046875upx solid #fff;
+        border-bottom: 3.046875upx solid #fff;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .a.del-invoice {
+    position: absolute;
+    z-index: 1;
+    top: 23.4375upx;
+    right: 23.4375upx;
+    display: block;
+    width: 37.5upx;
+    height: 42.1875upx;
+    background-image: url(https://test.shopsuite.cn/wap/images/del_b.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
+  }
+}
+
+.sstouch-inp-con .input-box {
+  &.btn-style label {
+    display: inline-block !important;
+    height: 42.1875upx !important;
+    padding: 11.71875upx 23.4375upx !important;
+    margin: 14.0625upx 14.0625upx 0 0 !important;
+    font-size: 25.781250000000004upx !important;
+    color: $main-text-color !important;
+    line-height: 42.1875upx !important;
+    background: #FFF !important;
+    border: solid 2.34375upx #BBB !important;
+    border-radius: 7.03125upx !important;
+    width: auto;
+    &.checked {
+      padding: 13.125000000000002upx 24.84375upx !important;
+      color: #FFF !important;
+      background: $main-skin-color !important;
+      border: none !important;
+    }
+  }
+  label input[type="radio"] {
+    display: none;
+  }
+}
+
+/*店铺优惠券*/
+
+.store-voucher {
+  font-size: 32.8125upx;
+  .i.icon-store {
+    display: inline-block;
+    width: 37.5upx;
+    height: 42.1875upx;
+    margin-right: 9.375upx;
+    vertical-align: middle;
+    background: url(https://test.shopsuite.cn/wap/images/store_b.png) no-repeat 50% 50%;
+    background-size: 90%;
+    opacity: 0.8;
+  }
+}
+
+.sstouch-voucher-list {
+  margin-left: 23.4375upx;
+  view {
+    position: relative;
+    z-index: 1;
+    background-color: #FFF;
+    border-top: solid #EEE 2.34375upx;
+    padding: 23.4375upx 23.4375upx 23.4375upx 0;
+  }
+  .dl {
+    margin: 0 140.625upx 0 0;
+  }
+  .dt {
+    font-size: 25.781250000000004upx;
+    color: $main-skin-color;
+    line-height: 56.25upx;
+    .em {
+      font-size: 56.25upx;
+      margin: 0 4.6875upx;
+    }
+  }
+  .dd {
+    &.need {
+      font-size: 25.781250000000004upx;
+      line-height: 28.125upx;
+      color: #333;
+    }
+    &.time {
+      font-size: 21.09375upx;
+      line-height: 28.125upx;
+      color: $main-text-color;
+    }
+  }
+  .a {
+    position: absolute;
+    z-index: 1;
+    top: 46.875upx;
+    right: 46.875upx;
+  }
+}
+
+/*020店铺地址*/
+
+.sstouch-o2o-tip {
+  padding: 0 23.4375upx;
+  font-size: 32.8125upx;
+  line-height: 84.375upx;
+  display: block;
+  .a {
+    font-weight: 600;
+    color: #000;
+    display: block;
+    position: relative;
+    .i {
+      display: inline-block;
+      vertical-align: top;
+      width: 46.875upx;
+      height: 46.875upx;
+      margin: 14.0625upx 9.375upx 0 0;
+      background-image: url(https://test.shopsuite.cn/wap/images/mc_03.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 80%;
+      opacity: 1;
+    }
+    view {
+      position: absolute;
+      z-index: 1;
+      top: 23.4375upx;
+      right: 23.4375upx;
+      width: 37.5upx;
+      height: 42.1875upx;
+      font-size: 46.875upx;
+      /*      background-image: url(https://test.shopsuite.cn/wap/images/arrow_right_b.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 78%;*/
+      opacity: 0.5;
+    }
+  }
+}
+
+.sstouch-o2o-list {
+  background: #FFF;
+  view {
+    position: relative;
+    padding: 23.4375upx 0 23.4375upx 23.4375upx;
+    border-bottom: solid 2.34375upx #EEE;
+  }
+  .dl {
+    margin-right: 140.625upx;
+    .a {
+      display: block;
+    }
+  }
+  .dt {
+    display: block;
+    font-size: 32.8125upx;
+    line-height: 46.875upx;
+    font-weight: 600;
+    color: #000;
+    view {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 46.875upx;
+      font-size: 28.125upx;
+      color: #AC92ED;
+      .i {
+        display: inline-block;
+        vertical-align: top;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin-right: 9.375upx;
+        background-image: url(https://test.shopsuite.cn/wap/images/location_b.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 70%;
+        opacity: 0.9;
+      }
+    }
+  }
+  .dd {
+    display: block;
+    font-size: 28.125upx;
+    line-height: 46.875upx;
+    color: #555;
+  }
+  .tel {
+    position: absolute;
+    z-index: 1;
+    right: 23.4375upx;
+    top: 23.4375upx;
+    border-left: solid 2.34375upx #EEE;
+    padding-left: 23.4375upx;
+    .a {
+      display: block;
+      width: 93.75upx;
+      height: 93.75upx;
+      background-image: url(https://test.shopsuite.cn/wap/images/tel_b.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 50%;
+      opacity: 0.65;
+    }
+  }
+}
+
+.sstouch-map-layout {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sstouch-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

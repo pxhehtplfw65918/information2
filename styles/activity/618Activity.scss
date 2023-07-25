@@ -1,0 +1,257 @@
+$signInButton: 'https://qnsp.zcskjy.com/zc_images/activity/618Activity01.png';
+$couponBg: 'https://qnsp.zcskjy.com/zc_images/activity/coupon-bg.png';
+
+.content {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #f54737;
+  .receiveBenefits {
+    position: absolute;
+    top: 887rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    &-title {
+      width: 459rpx;
+      height: 83rpx;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 99;
+    }
+    &-content {
+      width: 690rpx;
+      height: 540rpx;
+      background: #f4f5f1;
+      border-radius: 14rpx;
+      overflow: hidden;
+      margin-top: 44rpx;
+      position: relative;
+      ::v-deep .signIn {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        .oBorder {
+          height: 104rpx;
+          line-height: 104rpx;
+          padding: 0;
+          margin: 0 auto;
+          margin-bottom: 40rpx;
+          border-radius: 52rpx;
+          box-sizing: border-box;
+          overflow: hidden;
+
+          .main-input {
+            font-family: SourceHanSansSC-Regular, SourceHanSansSC;
+            font-weight: 400;
+            font-size: 32rpx;
+            font-family: SourceHanSansSC-Regular, SourceHanSansSC;
+            font-weight: 400;
+            color: #333333;
+            margin-left: 0;
+          }
+        }
+        .user_mobile {
+          width: 603rpx;
+          background: #ebe9ea;
+          padding-left: 42rpx;
+          .country-int-code {
+            display: none;
+          }
+        }
+        .mobileCode {
+          width: 603rpx;
+          background: transparent;
+          border-radius: 0;
+          box-shadow: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .main-input {
+            width: 288rpx;
+            height: 104rpx;
+            line-height: 104rpx;
+            border-radius: 52rpx;
+            padding-left: 42rpx;
+            margin: 0;
+            margin-right: 20rpx;
+            background: #ebe9ea;
+            box-sizing: border-box;
+            overflow: hidden;
+          }
+          .vercode {
+            width: 242rpx;
+            height: 104rpx;
+            line-height: 104rpx;
+            border-radius: 52rpx;
+            text-align: center;
+            background: #ebe9ea;
+            font-size: 32rpx;
+            font-family: SourceHanSansSC-Regular, SourceHanSansSC;
+            font-weight: 400;
+            color: #ff0019;
+            margin: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+          }
+        }
+        .signIn-button {
+          margin: 0 auto;
+          position: relative;
+          .buttonBorder {
+            background: transparent;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 604rpx;
+            height: 104rpx;
+            background: url($signInButton) no-repeat center;
+            background-size: 100% 100%;
+          }
+        }
+      }
+      .receivedSuccessfully {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .couponBg {
+          width: 650rpx;
+          height: 180rpx;
+          background: url($couponBg) no-repeat center;
+          background-size: 100% 100%;
+          display: flex;
+          align-content: center;
+          justify-content: space-between;
+          margin: 0 30rpx;
+          font-size: 26rpx;
+          margin-top: 108rpx;
+          margin-bottom: 65rpx;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #ffffff;
+          .couponBg-left {
+            width: 226rpx;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &-content {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+            }
+            &:after {
+              content: '';
+              width: 2rpx;
+              height: 121rpx;
+              border-right: 1rpx dashed #ffffff;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            .coupon-price {
+              display: flex;
+              align-items: baseline;
+              font-size: 60rpx;
+              line-height: 60rpx;
+              font-family: DINAlternate-Bold, DINAlternate;
+              font-weight: bold;
+              color: #ffffff;
+            }
+            .coupon-unit {
+              font-size: 30rpx;
+            }
+          }
+          .couponBg-right {
+            width: 443rpx;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &-content {
+              text-align: left;
+            }
+            .couponBg-name {
+              font-size: 28rpx;
+              padding-bottom: 20rpx;
+              // text-indent: -15rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+  ::v-deep .u-popup__content {
+    width: 590rpx;
+    height: 600rpx;
+    background: #ffffff;
+    border-radius: 12rpx;
+    text-align: center;
+    .modalClose {
+      width: 70rpx;
+      height: 70rpx;
+      position: absolute;
+      left: 50%;
+      bottom: -110rpx;
+      transform: translateX(-50%);
+    }
+    .modalContent {
+      font-size: 36rpx;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #131415;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .modalSure-text {
+        font-size: 40rpx;
+        font-weight: 600;
+      }
+    }
+    .modalSure {
+      width: 176rpx;
+      height: 176rpx;
+      margin-top: 30rpx;
+    }
+    .addAdviser {
+      width: 496rpx;
+      height: 146rpx;
+      margin-top: 38rpx;
+      cursor: pointer;
+    }
+    .u-modal__button-group__wrapper--only-confirm {
+      display: none;
+    }
+  }
+}
+.buttonUse {
+  width: 604rpx;
+  height: 114rpx;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.statusBarHeight {
+  height: calc(44px + var(--status-bar-height));
+}
+.articleDetail-scroll {
+  // position: fixed;
+  // top:calc(44px + var(--status-bar-height));
+}
+.activity {
+  width: 750rpx;
+  height: 2255rpx;
+}

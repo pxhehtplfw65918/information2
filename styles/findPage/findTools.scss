@@ -1,0 +1,198 @@
+@mixin text-line($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* #ifndef APP-NVUE */
+  word-break: break-all;
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  /* #endif */
+  /* #ifdef APP-NVUE */
+  lines: $line;
+  /* #endif */
+}
+
+.findTools {
+  width: 750rpx;
+  overflow-x: hidden;
+  margin-top: 26rpx;
+
+  &-child {
+    padding: 0 38rpx;
+    width: 690rpx;
+    height: 310rpx;
+    background: #ffffff linear-gradient(270deg, #ffe2cc 0%, #fff3e7 100%);
+    box-shadow: 0 4rpx 8rpx 0 rgba(229, 229, 229, 0.5);
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    position: relative;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      // padding-top: 34rpx;
+      // padding: 30rpx 0;
+
+      .title-child {
+        width: 160rpx;
+        height: 43rpx;
+        margin-right: 28rpx;
+
+        .uni-image {
+          width: 100%;
+          height: 100%;
+          margin-right: 33rpx;
+        }
+
+        .uni-image:nth-child(2) {
+          width: 201rpx;
+          height: 28rpx;
+        }
+      }
+
+      .title-child:nth-child(2) {
+        width: 160rpx;
+        height: 30rpx;
+
+        .uni-image {
+          width: 160rpx;
+          height: 30rpx;
+        }
+      }
+    }
+
+    .price-content {
+      padding-bottom: 10rpx;
+    }
+
+    &-text {
+      color: #9c5d3a;
+      width: 100%;
+      max-width: 100%;
+      // height: 90rpx;
+      // max-height: 90rpx;
+      line-height: 42rpx;
+      @include text-line(1);
+    }
+
+    &-bottom {
+      width: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+    }
+
+    &-price {
+      font-family: DINAlternate-Bold, DINAlternate;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70%;
+
+      text {
+        vertical-align: middle;
+      }
+
+      .price-unit {
+        padding-right: 0rpx;
+      }
+
+      .discountPrice {
+        font-size: 43rpx;
+        color: #ff3a3c;
+        vertical-align: middle;
+        display: inline-block;
+
+        .price-unit {
+          font-size: 24rpx;
+        }
+      }
+
+      .originalPrice {
+        vertical-align: middle;
+        display: inline-block;
+        // padding-left: 40rpx;
+        font-size: 34rpx;
+        color: #999999;
+        text-decoration: line-through;
+
+        .price-unit {
+          font-size: 18rpx;
+        }
+      }
+    }
+  }
+
+  .button-list {
+    &-child {
+      width: 160rpx;
+      height: 60rpx;
+      line-height: 60rpx;
+      text-align: center;
+      background: linear-gradient(90deg, #ff6161 0%, #ff9661 100%);
+      border-radius: 45px;
+      font-size: 28rpx;
+      font-family: PingFangSC-Semibold, PingFang SC;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+
+  &-child:nth-child(1) {
+    .title-child:nth-child(2) {
+      width: 201rpx;
+      height: 28rpx;
+
+      .uni-image {
+        width: 201rpx;
+        height: 28rpx;
+      }
+    }
+  }
+ &-child:nth-child(4n+1) {
+    background: linear-gradient(270deg, #FFE2CC 0%, #FFF3E7 100%);
+	.findTools-child-text{
+		color: #9C5D3A;
+	}
+  }
+  &-child:nth-child(4n+2) {
+    background: linear-gradient(270deg, #FFEDE7 0%, #FFF2F2 100%);
+	.findTools-child-text{
+		color: #9C5D3A;
+	}
+  }
+
+  &-child:nth-child(4n+3) {
+    background: linear-gradient(270deg, #DEDBDB 0%, #F4F4F4 100%);
+	.findTools-child-text{
+		color: #333333;
+	}
+  }
+
+  &-child:nth-child(4n+4) {
+    background: linear-gradient(270deg, #E2DDFF 0%, #F7F6FF 100%);
+	.findTools-child-text{
+		color: #333333;
+	}
+  }
+}
+
+.gift-title {
+  width: 219rpx;
+  height: 47rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,207 @@
+.page {
+  background-color: rgba(246, 246, 246, 1);
+  position: relative;
+  width: 750rpx;
+  height: 2396rpx;
+  overflow: hidden;
+  .block_1 {
+    background-color: rgba(240, 48, 54, 1);
+    padding: 24rpx 28rpx 20rpx 42rpx;
+	padding-top:calc(50rpx  + var(--status-bar-height));
+    .block_2 {
+      margin-left: 14rpx;
+      .text_1 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 30rpx;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 42rpx;
+      }
+      .label_1 {
+        width: 34rpx;
+        height: 21rpx;
+        margin: 9rpx 0 12rpx 457rpx;
+      }
+      .label_2 {
+        width: 31rpx;
+        height: 22rpx;
+        margin: 9rpx 0 11rpx 10rpx;
+      }
+      .image_1 {
+        width: 50rpx;
+        height: 24rpx;
+        margin: 8rpx 0 10rpx 9rpx;
+      }
+    }
+    .block_3 {
+      margin: 35rpx 2rpx 0 0;
+      .image_2 {
+        width: 16rpx;
+        height: 33rpx;
+        margin: 9rpx 0 3rpx 0;
+      }
+      .text_2 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 32rpx;
+        letter-spacing: 1.2999999523162842px;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45rpx;
+        margin-left: 217rpx;
+      }
+      .label_3 {
+        width: 38rpx;
+        height: 38rpx;
+        margin: 4rpx 0 3rpx 207rpx;
+      }
+    }
+  }
+  .block_4 {
+    padding: 52rpx 30rpx 139rpx 30rpx;
+    .text_3 {
+      width: 690rpx;
+      height: 183rpx;
+      overflow-wrap: break-word;
+      color: rgba(51, 51, 51, 1);
+      font-size: 44rpx;
+      letter-spacing: 1.2315673828125px;
+      font-family: PingFangSC-Semibold;
+      font-weight: 600;
+      text-align: justify;
+      line-height: 61rpx;
+    }
+    .section_1 {
+      margin-top: 40rpx;
+      .text_4 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 22rpx;
+        font-weight: NaN;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+      }
+      .text_5 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 22rpx;
+        font-weight: NaN;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-left: 14rpx;
+      }
+      .text-wrapper_1 {
+        background-color: rgba(254, 246, 242, 1);
+        border-radius: 21px;
+        margin: 4rpx 0 0 369rpx;
+        padding: 0 22rpx 0 26rpx;
+        .text_6 {
+          overflow-wrap: break-word;
+          color: rgba(254, 0, 0, 1);
+          font-size: 20rpx;
+          font-weight: NaN;
+          text-align: justify;
+          line-height: 42rpx;
+        }
+      }
+    }
+    .image_3 {
+      width: 649rpx;
+      height: 360rpx;
+      margin: 13rpx 20rpx 0 21rpx;
+    }
+    .text_7 {
+      overflow-wrap: break-word;
+      color: rgba(60, 100, 166, 1);
+      font-size: 36rpx;
+      letter-spacing: 1.0076459646224976px;
+      font-weight: NaN;
+      text-align: justify;
+      white-space: nowrap;
+      line-height: 61rpx;
+      margin: 44rpx 52rpx 0 0;
+    }
+    .text-wrapper_2 {
+      width: 690rpx;
+      height: 305rpx;
+      overflow-wrap: break-word;
+      font-size: 0;
+      letter-spacing: 1.0076459646224976px;
+      font-weight: NaN;
+      text-align: justify;
+      line-height: 61rpx;
+      margin-top: 28rpx;
+      .text_8 {
+        width: 690rpx;
+        height: 305rpx;
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 36rpx;
+        font-weight: NaN;
+        text-align: left;
+        line-height: 61rpx;
+      }
+      .text_9 {
+        width: 690rpx;
+        height: 305rpx;
+        overflow-wrap: break-word;
+        color: rgba(60, 100, 166, 1);
+        font-size: 36rpx;
+        font-weight: NaN;
+        text-align: left;
+        line-height: 61rpx;
+      }
+      .text_10 {
+        width: 690rpx;
+        height: 305rpx;
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 36rpx;
+        font-weight: NaN;
+        text-align: left;
+        line-height: 61rpx;
+      }
+    }
+    .text_11 {
+      width: 690rpx;
+      height: 366rpx;
+      overflow-wrap: break-word;
+      color: rgba(51, 51, 51, 1);
+      font-size: 36rpx;
+      letter-spacing: 1.0076459646224976px;
+      font-weight: NaN;
+      text-align: justify;
+      line-height: 61rpx;
+      margin-top: 40rpx;
+    }
+    .text_12 {
+      width: 690rpx;
+      height: 427rpx;
+      overflow-wrap: break-word;
+      color: rgba(51, 51, 51, 1);
+      font-size: 36rpx;
+      letter-spacing: 1.0076459646224976px;
+      font-weight: NaN;
+      text-align: justify;
+      line-height: 61rpx;
+      margin-top: 45rpx;
+    }
+    .text_13 {
+      overflow-wrap: break-word;
+      color: rgba(153, 153, 153, 1);
+      font-size: 22rpx;
+      font-weight: NaN;
+      text-align: justify;
+      white-space: nowrap;
+      line-height: 42rpx;
+      margin: 40rpx 500rpx 0 0;
+    }
+  }
+}

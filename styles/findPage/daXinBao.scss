@@ -1,0 +1,39 @@
+$daXinBao-navbar1: 'https://qnsp.zcskjy.com/zc_images/findTools/daXinBao-navbar1.png';
+$daXinBao-navbar2: 'https://qnsp.zcskjy.com/zc_images/findTools/daXinBao-navbar2.png';
+
+.content {
+  ::v-deep .toolTemplate {
+    .toolTemplatenav {
+      width: 750rpx;
+      height: 165rpx;
+      background: url($daXinBao-navbar1);
+      background-size: 750rpx 253rpx;
+      background-position: center 100%;
+      background-repeat: repeat-y;
+
+      .toolTemplatenav-navbar {
+        width: 750rpx;
+        height: 100%;
+        background: url($daXinBao-navbar2) no-repeat center;
+        background-size: 539rpx 78rpx;
+      }
+    }
+  }
+  .onlineAccount{
+	  width: 650rpx;
+	  height: 90rpx;
+	  margin: 0 auto;
+	  background: linear-gradient(90deg, #FF6161 0%, #FF9661 100%);
+	  border-radius: 45rpx;
+	  font-size: 32rpx;
+	  font-family: PingFangSC-Medium, PingFang SC;
+	  font-weight: 500;
+	  color: #FFFFFF;
+	  line-height:90rpx;
+	  text-align: center;
+	  position: fixed;
+	  left: 50%;
+	  bottom: 100rpx;
+	  transform: translateX(-50%);
+  }
+}

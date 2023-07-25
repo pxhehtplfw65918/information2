@@ -1,0 +1,121 @@
+.m-search-box{
+	background-color: #FFFFFF;
+	position: fixed;
+	top:calc(44px + var(--status-bar-height));
+	left:50%;
+	transform: translateX(-50%);
+	z-index: 99;
+	padding: 0 40rpx;
+	.u-input-search{
+		width: 710rpx;
+		height: 80rpx;
+		line-height: 80rpx;
+		background: #FAFAFA;
+		border-radius: 40rpx;
+		margin: 0 auto;
+		border: 0;
+		.uni-label{
+			height: 100%;
+			line-height: 80rpx;
+		}
+		.u-btn{
+			width: 134rpx;
+			height: 80rpx;
+			background: #F43D3E;
+			border-radius: 0px 40px 40px 0px;
+			border: 0;
+			font-size: 30rpx;
+			font-family: PingFangSC-Medium, PingFang SC;
+			font-weight: 500;
+			color: #FFFFFF;
+			line-height: 80rpx;
+		}
+	}
+
+}
+.m-product-list{
+	padding-top: calc(44px + var(--status-bar-height) + 40rpx);
+	padding-bottom: calc(83rpx + var(--status-bar-height) );
+}
+.m-product-item{
+	border-bottom: 0;
+	margin-bottom: 25rpx;
+	&:after{
+		border-bottom: 0;
+	}
+}
+.fabu_box {
+    position: fixed;
+	bottom: 80rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.m-product-name {
+	height:auto;
+	uni-label{
+		font-size: 34rpx;
+		font-family: PingFangSC-Medium, PingFang SC;
+		font-weight: 500;
+		color: #333333;
+	}
+
+}
+.m-product-price{
+	font-size: 36rpx;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: #F43D3E;
+}
+.product_tips{
+	font-size: 24rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #666666;
+	max-width: 100%;
+	max-height: 25px;
+	line-height: 22px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+  .playback-area-describe-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffa312;
+    margin-top: 12upx;
+	.describe-list-child {
+	     background: #fff5ed;
+	     border-radius: 6rpx;
+	     padding: 7rpx 10rpx;
+	     margin-right: 10rpx;
+	     white-space: nowrap;
+	
+	     &-text {
+	       // transform: scale(0.9);
+	       display: inline-block;
+	       white-space: nowrap;
+			vertical-align: text-top;
+	     }
+	   }
+	}
+
+.fabu_box_fb{
+	width: 620rpx;
+	height: 90rpx;
+	background: #F43D3E;
+	border-radius: 45rpx;
+}
+.m-product-img {
+     uni-image{
+		border-radius: 10rpx; 
+	 }
+}
+.m-product-info{
+	margin-left: 26rpx;
+}

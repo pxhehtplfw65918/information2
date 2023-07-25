@@ -1,0 +1,89 @@
+$navbar1: 'https://f.integrity.com.cn/tj/uploads/20230630/f87a1bb31f22a48bb0d54c5cceaffb60.png';
+$navbar2: 'https://f.integrity.com.cn/tj/uploads/20230630/7b420b459b5a821802b56592101c5d76.png';
+$navbar1Height: 253rpx; // 同saoLeiBao.scss里$navbar1图片高度同步
+.content {
+	width: 750rpx;
+	background-color: #FFFFFF;
+	overflow: hidden;
+  ::v-deep .toolTemplate {
+	  .toolTemplate-content{
+		height: max-content;
+		top: calc( #{$navbar1Height} - 20px  + var(--status-bar-height));
+	  }
+    .toolTemplatenav {
+      width: 750rpx;
+      height: 253rpx;
+      background: url($navbar1);
+      background-size:100% 100%;
+      background-position: center 100%;
+      background-repeat: repeat;
+	  left:50%;
+	  top:-4rpx;
+	  transform: translateX(-50%);
+      .toolTemplatenav-navbar {
+        width: 750rpx;
+        height: 100%;
+        background: url($navbar2) no-repeat center;
+        background-size: 530rpx 79rpx;
+      }
+    }
+  }
+  .onlineAccount{
+	  width: 650rpx;
+	  height: 90rpx;
+	  margin: 0 auto;
+	  background: linear-gradient(90deg, #FF6161 0%, #FF9661 100%);
+	  border-radius: 45rpx;
+	  font-size: 32rpx;
+	  font-family: PingFangSC-Medium, PingFang SC;
+	  font-weight: 500;
+	  color: #FFFFFF;
+	  line-height:90rpx;
+	  text-align: center;
+	  position: fixed;
+	  left: 50%;
+	  bottom: 100rpx;
+	  transform: translateX(-50%);
+  }
+}
+::v-deep .topTabs{
+	position: relative;
+	&::before{
+		content:'';
+		width: 200%;
+		height: 100%;
+		position:absolute;
+		left: -50%;
+		bottom: 0;
+		border-bottom: 2rpx solid #F0F0F0;
+	}
+}
+::v-deep .priceBottom{
+		left:0;
+	 .price-parent{
+		 margin: 0 auto;
+		 .price-content{
+			height: 90rpx; 
+			.findTools-child-price{
+				width: auto;
+				align-items: flex-end;
+				.originalPrice{
+				    transform: scale(0.9);
+				}
+			}
+		 }
+
+	}
+	.safe-bottom-tip{
+		width: 315rpx;
+		height: 56rpx;
+		line-height: 52rpx;
+		white-space: nowrap;
+	}
+	
+	.button-list{
+		// flex-grow: 1;
+
+	}
+}
+

@@ -1,0 +1,68 @@
+.content{
+	.msg-list{
+		 .row{
+			  .my{
+				   .left{
+					   .bubble{
+							background: #F7F7F7;
+					   }
+				   }
+			  }
+			  .other{
+				   .right{
+					    .bubble{
+							background: #F7F7F7;
+						}
+				   }
+			  }
+		 }
+	}
+}
+.input-box {
+	width: 750rpx;
+	background-color: #FFFFFF;
+	.send{
+		.btn{
+			width: 103rpx;
+			height: 60rpx;
+			background: #F43D3E;
+			border-radius: 30rpx;
+			font-size: 28rpx;
+			font-family: PingFangSC-Medium, PingFang SC;
+			font-weight: 500;
+			color: #FFFFFF;
+		}
+	}
+	.textbox{
+		width: auto;
+		 .text-mode{
+			  .box{
+				 width: 400rpx;
+				 height: 70rpx;
+				 line-height: 70rpx;
+				 background: #FAFAFA;
+				 border-radius: 4rpx;
+			  }
+			  .em{
+				  .biaoqing{
+					  font-size: 40rpx;
+				  }
+			  }
+		 }
+	}
+	.more{
+	  width: 40rpx;	
+	
+	  margin: 0 20rpx;
+	  .icon.add:before {
+	      font-size: 40rpx;
+	  }
+	}
+}
+::v-deep .textbox{
+	.text-mode{
+		.box{
+			overflow-y: auto;
+		}
+	}
+}

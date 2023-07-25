@@ -1,0 +1,303 @@
+$navbar-bg: 'https://qnsp.zcskjy.com/zc_images/findTools/navbar-bg.png';
+$iconRibbon: 'https://qnsp.zcskjy.com/zc_images/findTools/icon-ribbon.png';
+$navbarHeight: 165rpx;
+$navbar-bg1: 'https://qnsp.zcskjy.com/zc_images/findTools/navbar-bg1.png';
+$navbar-bg2: 'https://qnsp.zcskjy.com/zc_images/findTools/navbar-bg2.png';
+// $openAppHeight: 100rpx;
+$openAppHeight: 0;
+
+
+page {
+  background: #ffffff;
+}
+
+.toolTemplate {
+  width: 750rpx;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: fixed;
+  .normal_navbarContent{
+	  width: 750rpx;
+	  position: fixed;
+	  top:0;
+	  z-index: 99999;
+	  background: #ffffff;
+	 .normal_navbar{
+		::v-deep .u-navbar--fixed{
+			position: fixed;
+			z-index: 999999999;
+			background: #ffffff;
+			padding-top: var(--status-bar-height) !important;
+		}
+
+	}
+  }
+  
+  &-navbar {
+    background-color: #ffffff;
+  }
+
+  &-content {
+    width: 750rpx;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 20rpx;
+    margin: 0 auto;
+    // padding-top: calc(253rpx + var(--status-bar-height));
+    // overflow: hidden;
+    position: relative;
+    top: calc(145rpx + var(--status-bar-height));
+    padding-bottom: 160rpx;
+
+    &-box {
+      width: 690rpx;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 20rpx;
+      margin: 0 auto;
+    }
+  }
+
+  &-scroll {
+    width: 100%;
+	background-color: #ffffff;
+    // padding-bottom: 10000px;
+  }
+
+  /deep/ .uni-scroll-view-content {
+    // height: max-content;
+    position: relative;
+    height: 100%;
+  }
+
+  .layout-row {
+    margin-top: 40rpx;
+    margin-bottom: 28rpx;
+  }
+
+  .toolTemplatenav {
+    position: absolute;
+    width: 750rpx;
+    //   height: 253rpx;
+    // height: calc(165rpx + var(--status-bar-height));
+    height: 165rpx;
+    padding-top: var(--status-bar-height);
+    background: url($navbar-bg1);
+    background-size: 750rpx 253rpx;
+    background-position: center 100%;
+    background-repeat: repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: content-box;
+
+    ::v-deep .toolTemplatenav-navbar {
+      width: 750rpx;
+      height: 100%;
+      // height: calc(165rpx + var(--status-bar-height));
+      background: url($navbar-bg2) no-repeat center;
+      background-size: 498rpx 45rpx;
+      // position: relative;
+
+      //   top: -88rpx;
+      //   opacity: 0.3;
+      .u-navbar__content {
+        height: $navbarHeight !important;
+        background: transparent !important;
+
+        .u-icon__icon {
+          color: #ffffff !important;
+        }
+      }
+
+      .back-icon {
+        width: 44rpx;
+        height: 24rpx;
+        transform: rotate(90deg);
+        margin-left: 36rpx;
+      }
+
+      .navbar {
+        width: 750rpx;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: flex-start;
+      }
+    }
+  }
+// 多元导航统一适配
+  ::v-deep .u-navbar {
+    .u-status-bar {
+      height: 0 !important;
+    }
+
+    .toolTemplatenav {
+      padding-top: var(--status-bar-height) !important;
+    }
+
+    .u-navbar__content__left,
+    .u-navbar__content__right {
+      width: 100rpx;
+      height: 100%;
+      padding: 0 40rpx;
+      top: var(--status-bar-height);
+      left: 10rpx;
+      box-sizing: border-box;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .u-navbar__content__right {
+      left: inherit;
+      right: 10rpx;
+    }
+  }
+  ::v-deep .animation_navbar{
+    .u-navbar__content__title {
+      position: absolute;
+      // top: var(--status-bar-height);
+      z-index: 999;
+    }
+  }
+// 多元导航统一适配 end
+  .navbar-text {
+    position: relative;
+    z-index: 999999;
+
+    /deep/ .u-status-bar {
+      height: var(--status-bar-height) !important;
+    }
+  }
+}
+
+/deep/ .u-navbar--fixed {
+  z-index: 9999999;
+}
+
+::v-deep .navbar-leftIcon {
+  padding-top: var(--status-bar-height);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 11;
+  z-index: 999999999;
+}
+
+.subsection-content {
+  /deep/ .u-line {
+    span {
+      width: 1rpx !important;
+      height: 40rpx !important;
+    }
+  }
+}
+
+::v-deep .topTabs {
+  .u-tabs__wrapper__nav__item__text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.android {
+  // .animation_navbar{
+  // 	::v-deep .u-navbar {
+  // 	  .u-navbar__content__left,.u-navbar__content__right {
+  // 	    top: calc(30rpx + var(--status-bar-height)) !important;
+  // 	  }
+  // 	}
+  // }
+
+}
+
+// h5适配开始
+.toolTemplate_h5 {
+  .toolTemplate-scroll {
+    padding-top: $openAppHeight;
+  }
+
+  ::v-deep .u-navbar {
+    top: $openAppHeight;
+
+    .toolTemplatenav {
+      padding-top: calc($openAppHeight) !important;
+      top: $openAppHeight;
+    }
+
+    .u-navbar--fixed {
+      top: $openAppHeight;
+    }
+
+    .u-navbar__content__left,
+    .u-navbar__content__right {
+      top: 0;
+    }
+
+    // H5需要去除分享
+    //    .uicon-share-square{
+    //   display: none !important;
+    // }
+  }
+}
+
+// nnoh5适配开始
+.toolTemplate_Nh5 {
+  ::v-deep .openApp {
+    display: none;
+  }
+
+}
+
+::v-deep .toolTemplatenav-navbar,
+::v-deep .navbar-text {
+
+  .u-navbar__content__left,
+  .u-navbar__content__right {
+    display: none !important;
+  }
+}
+
+// 适配未购买-有价格栏
+.toolTemplate_h5 {
+  .toolTemplate-content-price {
+    padding-bottom: calc(160rpx + $openAppHeight);
+  }
+}
+
+// 适配未购买-有价格栏 end
+// h5适配结束
+.toolTemplate-price {
+  ::v-deep .newChance {
+    padding-bottom: 160rpx;
+  }
+}
+
+.toolTemplate_normalNavbar {
+  .toolTemplate-scroll {
+    padding-top: 0;
+  }
+
+  .toolTemplate-content {
+    top: 0;
+
+    &-box {
+      width: 100%;
+    }
+  }
+}
+
+::v-deep .normal_navbar {
+  .u-navbar--fixed {
+    // padding-top: var(--status-bar-height);
+    box-sizing: content-box;
+    z-index: 1;
+  }
+
+  .u-navbar__content__left,
+  .u-navbar__content__right {
+    top: 0 !important;
+    padding-top: 0 !important;
+  }
+}

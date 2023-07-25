@@ -1,0 +1,253 @@
+.search {
+	width: 690rpx;
+	height: 80rpx;
+	margin:0 auto;
+	background: #FAFAFA;
+	border-radius: 40rpx;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  z-index: 999;
+  position: relative;
+  input {
+    width: 612upx;
+    height: 80upx;
+    // background: #fafafa;
+    // border-radius: 40upx;
+    font-size: 30upx;
+    padding-top: 4upx;
+    // padding-left: 78upx;
+  }
+  .voice-icon {
+    width: 36upx;
+    height: 36upx;
+    padding: 16upx 20upx 16upx 0;
+    position: absolute;
+    left: 16upx;
+    top: 4upx;
+    z-index: 10;
+  }
+  .search-icon {
+    width: 36upx;
+    height: 36upx;
+    padding: 16upx 20upx 16upx 0;
+    margin-left: 35rpx;
+    z-index: 10;
+    transform: scale(0.85);
+  }
+  .clear-button{
+	 width: 60upx;
+	 height: 60upx; 
+	 position: absolute;
+	 right: 60upx;
+	 z-index: 10;
+	 display: flex;
+	 align-items: center;
+	 justify-content: flex-end;
+  }
+  .clear-icon {
+    width: 30upx;
+    height: 30upx;
+    &::before{
+      content: '';
+      display: inline-block;
+      width: 100upx;
+      height: 100upx;
+      position: absolute;
+      left: 50%;
+      top:-120%;
+      transform: translate(-50%);
+    }
+  }
+}
+.s-block {
+  margin-top: 30upx;
+  .header {
+    font-size: 32upx;
+    padding: 30upx;
+    position: relative;
+    image {
+      width: 36upx;
+      height: 36upx;
+      padding: 10upx;
+      position: absolute;
+      right: 40upx;
+      top: 24upx;
+    }
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    view {
+      width: 50%;
+      color: #8a8a8a;
+      font-size: 28upx;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 20upx 0;
+      border-top: 2upx solid #fff;
+      border-left: 2upx solid #fff;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: #ffffff;
+    }
+  }
+}
+.s-circle {
+  margin-top: 16upx;
+  .header {
+    font-size: 32upx;
+    padding: 0 30upx;
+    position: relative;
+    padding-bottom: 24upx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    image {
+      width: 28upx;
+      height: 28upx;
+      margin: 10upx;
+      // position: absolute;
+      // right: 40upx;
+      // top: 0;
+    }
+  }
+}
+.wanted-block {
+  margin-top: 30upx;
+  .header {
+    font-size: 32upx;
+    padding: 30upx;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    view {
+      width: 50%;
+      color: #8a8a8a;
+      font-size: 28upx;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 20upx 0;
+      border-top: 2upx solid #fff;
+      border-left: 2upx solid #fff;
+      background-color: #f7f7f7;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.wanted-circle {
+  .header {
+    font-size: 32upx;
+    padding: 0 30upx 6px;
+  }
+}
+.hList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30upx 26upx;
+  &-text {
+    vertical-align: middle;
+  }
+  view {
+    width: 210upx;
+    height: 80upx;
+    text-align: center;
+    margin-right: 18upx;
+    margin-bottom: 24upx;
+    background: #ffffff;
+    border-radius: 40upx;
+    border: 1px solid #e5e5e5;
+    font-size: 30upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #333333;
+    background: #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 40upx;
+    max-width: 210upx;
+    max-height: 88upx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 弹性伸缩盒子模型显示 */
+    display: -webkit-box;
+    /* 限制在一个块元素显示的文本行数 */
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.deleteTip {
+  position: fixed;
+  left: 12%;
+  top: 20%;
+  /deep/ .uni-dialog-button-group {
+    .uni-dialog-button-text {
+      font-size: 32upx;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #000000;
+    }
+    .uni-button-color {
+      color: #f43d3e;
+    }
+    .uni-dialog-title {
+      font-size: 34upx;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+}
+::v-deep .u-popup__content {
+  .u-modal__title {
+    font-size: 34upx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+  }
+  .u-modal__content__text {
+    text-align: center;
+    font-size: 26upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+  }
+  .u-modal__button-group__wrapper__text {
+    color: #000000 !important;
+  }
+  .u-modal__button-group__wrapper--cancel {
+    .u-modal__button-group__wrapper__text {
+      font-size: 32upx;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #f43d3e !important;
+    }
+  }
+}
+::v-deep .uni-input-wrapper {
+  // padding-left: 28upx;
+  .uni-input-placeholder {
+    left: inherit;
+  }
+}
+.startButton{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+.search_app.platform{
+  ::v-deep .uni-input-wrapper {
+    // padding-left: 40upx;
+    // .uni-input-placeholder {
+    //   left: 40upx;
+    // }
+  }
+}

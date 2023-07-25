@@ -1,0 +1,291 @@
+	.content {
+		.playback-area {
+			padding: 0 0;
+		}
+
+		.uni-tabVideo {
+			margin-top: 0;
+			margin-bottom: 20upx;
+		}
+	}
+
+	.home-content {
+		width: 750upx;
+		background: #ffffff;
+		overflow-x: hidden;
+
+		// padding-bottom: 10000px;
+
+		.uni-content {
+			padding: 0 0;
+
+			.live-play-history {
+				padding-top: 14upx;
+			}
+		}
+
+		.course-area {
+			padding-top: 25upx;
+		}
+
+		.search-seat {
+			width: 750upx;
+			height: 3248upx;
+		}
+
+		// @media (max-width: 365px) {
+		// 	.search-seat{
+		// 		width: 750upx;
+		// 		height: 3248upx;
+		// 	}
+		// }
+
+		.search {
+			width: 690upx;
+			height: 100upx;
+			margin: 0 30upx;
+			padding-top: 14upx;
+			padding-bottom: 22upx;
+			position: relative;
+			background-color: #ffffff;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			.searchNavigate {
+				background-color: #F7F7F7;
+				width: 520upx;
+				height: 60upx;
+				background: #FAFAFA;
+				border-radius: 40upx;
+				font-size: 28upx;
+				border-radius: 50upx;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				// padding-left: 67upx;
+				// margin-left: 30upx;
+			}
+
+			.input-placeholder {
+				font-size: 26upx;
+				font-family: PingFangSC-Regular, PingFang SC;
+				font-weight: 400;
+				color: #999999;
+				padding-left: 62upx;
+			}
+
+			.search-icon {
+				width: 40upx;
+				height: 40upx;
+				padding: 16upx 20upx 16upx 0;
+				position: absolute;
+				left: 20upx;
+				z-index: 10;
+			}
+
+			.clear-icon {
+				width: 30upx;
+				height: 30upx;
+				position: absolute;
+				right: 60upx;
+				z-index: 10;
+			}
+
+			.message-icon,
+			.customer-icon {
+				width: 42upx;
+				height: 42upx;
+
+			}
+
+			.messageCenter {
+				position: relative;
+				.messageCenter-tip{
+					position: absolute;
+					top: -12rpx;
+					right: -23rpx;
+					width: 23rpx;
+					height: 23rpx;
+					line-height: 23rpx;
+					text-align: center;
+					background: #EF3737;
+					font-size: 16rpx;
+					color: #ffffff;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					&-text{
+						font-size: 16rpx;
+						line-height: 16rpx;
+						font-family: PingFangSC-Regular, PingFang SC;
+						font-weight: 400;
+						color: #FFFFFF;
+						transform: scale(0.6);
+						transform-origin:center;
+					}
+				}
+				.messageCenter-moreTip{
+					.messageCenter-tip-text{
+						transform-origin:top;
+					}
+				}
+			}
+
+			// .newMessage::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	width: 10upx;
+			// 	height: 10upx;
+			// 	background: #EF3737;
+			// 	border-radius: 50%;
+			// }
+		}
+
+		.content-scroll.liveScroll {
+			// padding-top: calc(142upx + var(--status-bar-height));
+			padding-top: 142upx;
+			overflow-x: hidden;
+		}
+
+		.nav-curriculum {
+			font-size: 28upx;
+			height:170rpx;
+			font-family: PingFangSC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #333333;
+			margin-top: 20upx;
+			// padding-bottom: 18upx;
+			// display: flex;
+			// flex-wrap:nowrap;
+			// align-items: center;
+			text-align: center;
+			overflow: hidden;
+			.nav-item {
+				width: 161upx;
+				display: inline-block;
+				margin-right: 27upx;
+				position: relative;
+			}
+
+			.hot::before {
+				content: '';
+				width: 44upx;
+				height: 36upx;
+				background: url("https://qnsp.zcskjy.com/zc_images/home/icon-home-5.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0;
+				right: 16upx;
+				z-index: 2;
+			}
+			.videoLisText{
+				position: relative;
+				top:-50rpx;
+			}
+			&-image {
+				width: 161upx;
+				height: 161upx;
+				// background: url("https://qnsp.zcskjy.com/zc_images/home/icon-tab1.png?20220611");
+				// background-size: 161upx 161upx;
+				// background-position: center 0;
+				// background-repeat: no-repeat;
+			}
+
+			// .nav-item:nth-child(2) {
+			// 	.nav-curriculum-image {
+			// 		background: url("https://qnsp.zcskjy.com/zc_images/home/icon-tab3.png?2022061");
+			// 		background-size: 161upx 161upx;
+			// 		background-position: center 0;
+			// 		background-repeat: no-repeat;
+			// 	}
+			// }
+
+			// .nav-item:nth-child(3) {
+			// 	.nav-curriculum-image {
+			// 		background: url("https://qnsp.zcskjy.com/zc_images/home/icon-tab4.png?2022061");
+			// 		background-size: 161upx 161upx;
+			// 		background-position: center 0;
+			// 		background-repeat: no-repeat;
+			// 	}
+			// }
+
+			// .nav-item:nth-child(4) {
+			// 	.nav-curriculum-image {
+			// 		background: url("https://qnsp.zcskjy.com/zc_images/home/icon-tab2.png");
+			// 		background-size: 161upx 161upx;
+			// 		background-position: center 0;
+			// 		background-repeat: no-repeat;
+			// 	}
+			// }
+
+		}
+
+		.icon-curriculum {
+			width: 23upx;
+			height: 23upx;
+		}
+
+		.uni-tabVideo {
+			.nav-item {
+				position: relative;
+			}
+
+			.nav-item::after {
+				content: '';
+				width: 1upx;
+				height: 40upx;
+				background: #CCCCCC;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				// border-right: 1px solid #CCCCCC;
+			}
+
+			.select {
+				position: relative;
+
+			}
+
+			.nav-item.select::after {
+				width: 106%;
+				height: 100%;
+				background: #ffffff;
+			}
+
+			.nav-item.select:nth-child(1)::after {
+				content: '精品课';
+			}
+
+			.nav-item.select:nth-child(2)::after {
+				content: '训练营';
+			}
+
+			.nav-item.select:nth-child(3)::after {
+				content: '导师课';
+			}
+
+			.zero:first-child::before {
+				content: '';
+				width: 44upx;
+				height: 36upx;
+				background: url("https://qnsp.zcskjy.com/zc_images/home/icon-home-6.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0;
+				right: 24upx;
+			}
+		}
+	}
+
+	.home-content_h5 {
+	}

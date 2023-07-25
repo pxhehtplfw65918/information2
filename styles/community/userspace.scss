@@ -1,0 +1,190 @@
+::v-deep .userVideo{
+	.m-section-header{
+		display: none;
+	}
+}
+.attention{
+	text-align: center;
+}
+.follow{
+	background: #F43D3E;
+	color: #FFFFFF;
+	font-size: 36rpx;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+}
+
+.btn{
+	width: 750rpx;
+	margin-left: -30rpx;
+	justify-content: space-evenly;
+	.attention{
+		width: 100%;
+		margin-right: 0;
+	}
+	.btnFollow{
+		width: 260rpx;;
+	}
+	.onPosting{
+		width: 260rpx;
+		height: 80rpx;
+		background: #F6F6F6 linear-gradient(130deg, #FFE7C6 0%, #F3D6AD 100%);
+		border-radius: 40rpx;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		font-size: 30rpx;
+		font-family: PingFangSC-Medium, PingFang SC;
+		font-weight: 500;
+		color: #AF6B03;
+		.editLable{
+			width: 40rpx;
+			height: 40rpx;
+			padding-right: 25rpx;
+		}
+	}
+	.look-message{
+		width: 380rpx;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		position: relative;
+		.privateLetter-text{
+			// font-weight: bold;
+			// padding-left: 50rpx;
+		}
+		.messageCenter{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 30%;
+			right: 23%;
+			::v-deep .messageCenter-tip{
+				background-color: transparent;
+				.messageCenter-tip-text{
+					font-size: 26rpx;
+					font-family: PingFangSC-Regular, PingFang SC;
+					font-weight: 400;
+					color: #FFFFFF;
+					transform: scale(1);
+				}
+			}
+			
+		}
+	}
+}
+.privateLetter,.investment{
+	width: 380rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
+	border: 1rpx solid #F43D3E;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 28rpx;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: #F43D3E;
+	.email{
+		width: 36rpx;
+		height: 29rpx;
+		padding-right: 35rpx;
+	}
+}
+.investment{
+	text-align: center;
+	color: #FFFFFF;
+}
+.userspace{
+	::v-deep .button-list-child{
+		background: linear-gradient(130deg, #FFE7C6 0%, #F3D6AD 100%);
+		font-size: 28rpx;
+		font-family: PingFangSC-Semibold, PingFang SC;
+		font-weight: 600;
+		color: #AF6B03;
+		position: relative;
+		padding-left: 38rpx;
+		&:after{
+			content: '';
+			width: 31rpx;
+			height: 31rpx;
+			position: absolute;
+			top:50%;
+			left: 28rpx;
+			transform: translateY(-50%);
+			background: url('https://qnsp.zcskjy.com/zc_images/community/icon_vip.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+	}
+}
+.userspace-padding{
+	.m-orderlist{
+		padding-bottom: 160rpx;
+	}
+	
+}
+
+.circle-fans{
+	width: 570rpx;
+	margin-left: 150rpx;
+	justify-content: space-evenly;
+	.circle-child{
+		position: relative;
+		&::after{
+			position: absolute;
+			width: 1rpx;
+			height: 65rpx;
+			background-color: #E3E3E3;
+			content: '';
+			left: 150%;
+			top:50%;
+			transform: translateY(-50%);
+		}
+	}
+	.circle-child:last-child{
+		position: relative;
+		&::after{
+			background-color: transparent;
+		}
+	}
+}
+.isChat{
+	margin-left:0;
+	justify-content: flex-start;
+	.attention{
+		width: 690rpx;
+	}
+}
+
+::v-deep .u-sticky{
+  top:43px !important;
+}
+::v-deep .u-tabs{
+	border-bottom: 1rpx solid #F5F5F5;
+	margin-bottom: 30rpx;
+}
+::v-deep .liveContent{
+	.context_box{
+		top:0;
+	}
+}
+::v-deep .no-data{
+	.no-data-icon{
+		margin-top: 100rpx;
+		margin-bottom: 50rpx;
+	}
+}
+
+/deep/ .video-contentview{
+	justify-content: space-around;
+
+}
+.rmtz_box_content_Img {
+  width: 315rpx;
+  height: 420rpx;
+   border-radius: 12rpx;
+   background-size: contain;
+}

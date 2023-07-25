@@ -1,0 +1,199 @@
+{
+	"pages": [
+		// #ifdef APP-PLUS
+		// {
+		// 	"path": "pages/index/privacy",
+		// 	"style": {
+		// 		"navigationBarTitleText": "隐私协议",
+		// 		"app-plus": {
+		// 			"titleNView": false
+		// 		}
+		// 	}
+		// },
+		// #endif
+		{
+			"path": "pages/index/launch",
+			"style": {
+				"navigationBarTitleText": "启动页",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/NoticePage/NoticePage",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/NoticePage/NoticeReminderPage",
+			"style": {
+				"navigationBarTitleText": "公告详情",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "资讯",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "资讯",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/stockInformation",
+			"style": {
+				"navigationBarTitleText": "资讯",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/researchReport",
+			"style": {
+				"navigationBarTitleText": "研报",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/researchReportCenter",
+			"style": {
+				"navigationBarTitleText": "研报中心",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#F03036",
+						"titleColor": "#ffffff",
+						"buttons": [{
+							// "type": "share1"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/index/centerlookMore",
+			"style": {
+				"navigationBarTitleText": "研报中心",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#F03036",
+						"titleColor": "#ffffff",
+						"buttons": [{
+							"type": ""
+						}]
+					}
+				}
+			}
+		},
+
+		{
+			"path": "pages/index/informationDetails",
+			"style": {
+				"navigationBarTitleText": "资讯详情",
+				"navigationStyle": "custom",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"subPackages": [{
+			"root": "debug",
+			"pages": [{
+				"path": "debug",
+				"style": {
+					"navigationBarTitleText": "调试"
+				}
+			}]
+		}
+	],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "中和应泰",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "default",
+
+		"renderingMode": "seperated", // 仅微信小程序，webrtc 无法正常时尝试强制关闭同层渲染
+		"pageOrientation": "portrait", //横屏配置，全局屏幕旋转设置(仅 APP/微信/QQ小程序)，支持 auto / portrait / landscape
+		"rpxCalcMaxDeviceWidth": 960,
+		"rpxCalcBaseDeviceWidth": 375,
+		"rpxCalcIncludeWidth": 750
+	},
+	// 这个换成下面的多个引入规则，不然u-view样式一直报错导致无法解决
+	// "easycom": {
+	//   "autoscan": false
+	// },
+	"easycom": {
+		"custom": {
+			"autoscan": true,
+			"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+		}
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+
+		"selectedColor": "#DB384C",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/tabBar1.png",
+				"selectedIconPath": "static/images/tabBar_sel1.png",
+				"text": "首页"
+			}
+		]
+	},
+	"condition": {
+		//模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

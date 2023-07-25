@@ -1,0 +1,12 @@
+  ::v-deep .u-navbar--fixed,  ::v-deep .uni-navbar--fixed {
+  	background: #F03036 !important;
+    .navbar-text,.u-navbar__content,.uni-navbar__header{
+      background: #F03036 !important;
+	  color: #ffffff !important;
+    }
+    .newSharesTitle,.u-icon--right .u-icon__icon,.u-navbar--fixed .u-icon--right .u-icon__icon,
+	.u-navbar__content__title,.uni-nav-bar-text{
+      color: #ffffff !important;
+    }
+  }
+

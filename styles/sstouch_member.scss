@@ -1,0 +1,2317 @@
+@charset "UTF-8";
+
+/* ================================ */
+
+/* 触屏版会员中心、登录、订单等样式		*/
+
+/* Author:			qianyistore	    	*/
+
+/* Support Site:	www.qianyistore.com	*/
+
+/* Retrofit Date:	Aug-08-2016		*/
+
+/* ================================ */
+
+/*注册登录*/
+
+.form-item .input-box {
+  .input-del.code {
+    right: 281.25upx;
+  }
+  .code-countdown, .code-again {
+    position: absolute;
+    right: 23.4375upx;
+    top: 14.0625upx;
+    z-index: 1;
+    width: 201.5625upx;
+    height: 65.625upx;
+  }
+  .code-countdown {
+    .p {
+      display: block;
+      font-size: 25.781250000000004upx;
+      line-height: 32.8125upx;
+      color: #999;
+      text-align: center;
+      width: 100%;
+      height: 32.8125upx;
+    }
+    .em {
+      color: #ff6700;
+      margin: 0 4.6875upx;
+      font-weight: 600;
+    }
+  }
+  .code-again .a {
+    display: block;
+    font-size: 28.125upx;
+    font-weight: 600;
+    text-decoration: underline;
+    line-height: 65.625upx;
+    color: #3BAEDA;
+    text-align: center;
+    width: 100%;
+    height: 65.625upx;
+  }
+  .code-img {
+    position: absolute;
+    right: 23.4375upx;
+    top: 14.0625upx;
+    z-index: 1;
+    width: 187.5upx;
+    height: 65.625upx;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.remember-form {
+  height: 42.1875upx;
+  margin: 46.875upx 93.75upx 0 93.75upx;
+  position: relative;
+  input[type="checkbox"] {
+    margin-top: -9.375upx;
+    &:checked {
+      border-color: #48CFAE;
+      background-color: #48CFAE;
+    }
+  }
+  label {
+    display: inline-block;
+    height: 42.1875upx;
+    line-height: 42.1875upx;
+    font-size: 28.125upx;
+    color: #666;
+    vertical-align: top;
+  }
+  .forgot-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 42.1875upx;
+    font-size: 28.125upx;
+    color: #5D9CEC;
+    &:visited {
+      color: #4B89DC;
+    }
+  }
+  .reg-cms {
+    line-height: 42.1875upx;
+    font-size: 28.125upx;
+    vertical-align: top;
+    display: inline-block;
+    height: 42.1875upx;
+    color: #5D9CEC;
+    &:visited {
+      color: #4B89DC;
+    }
+  }
+}
+
+.register-mobile-tip {
+  height: 42.1875upx;
+  padding: 28.125upx 46.875upx;
+  font-size: 28.125upx;
+  line-height: 42.1875upx;
+  color: #212121;
+  .em {
+    margin: 0 4.6875upx;
+    font-size: 28.125upx;
+    color: #999;
+    font-weight: 600;
+  }
+}
+
+.form-notes {
+  text-align: center;
+  font-size: 25.781250000000004upx;
+  line-height: 32.8125upx;
+  color: #999;
+  margin: 46.875upx 70.3125upx;
+}
+
+/*注册协议*/
+
+.reg-document {
+  padding: 46.875upx;
+  .p {
+    font-size: 65.625upx;
+    line-height: 20upx;
+    overflow: hidden;
+  }
+  strong {
+    font-size: 70.3125upx;
+    font-weight: 600;
+    line-height: 24upx;
+  }
+  .ol, .ul {
+    margin-left: 24upx;
+  }
+  .ol .li {
+    font-size: 60.9375upx;
+    line-height: 20upx;
+  }
+  .ul .li {
+    font-size: 56.25upx;
+    line-height: 20upx;
+  }
+}
+
+/*我的商城*/
+
+.transparent .header-r navigator sup {
+  right: 14.0625upx !important;
+  top: 14.0625upx !important;
+}
+
+.member-body .header-back {
+  display: none;
+}
+
+.member-top {
+  -webkit-animation: changeBg 20s infinite;
+  -moz-animation: changeBg 20s infinite;
+  animation: changeBg 20s infinite;
+  background-color: #ff6700;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  height: 515.625upx;
+  position: relative;
+  z-index: 1;
+}
+
+@-webkit-keyframes changeBg {
+  0% {
+    background-color: #ff6700;
+  }
+
+  10% {
+    background-color: #FB6E52;
+  }
+
+  20% {
+    background-color: #FFCE55;
+  }
+
+  30% {
+    background-color: #A0D468;
+  }
+
+  40% {
+    background-color: #48CFAE;
+  }
+
+  50% {
+    background-color: #4FC0E8;
+  }
+
+  60% {
+    background-color: #5D9CEC;
+  }
+
+  70% {
+    background-color: #AC92ED;
+  }
+
+  80% {
+    background-color: #EC87BF;
+  }
+
+  90% {
+    background-color: #ff6700;
+  }
+}
+
+
+@-moz-keyframes changeBg {
+  0% {
+    background-color: #ff6700;
+  }
+
+  10% {
+    background-color: #FB6E52;
+  }
+
+  20% {
+    background-color: #FFCE55;
+  }
+
+  30% {
+    background-color: #A0D468;
+  }
+
+  40% {
+    background-color: #48CFAE;
+  }
+
+  50% {
+    background-color: #4FC0E8;
+  }
+
+  60% {
+    background-color: #5D9CEC;
+  }
+
+  70% {
+    background-color: #AC92ED;
+  }
+
+  80% {
+    background-color: #EC87BF;
+  }
+
+  90% {
+    background-color: #ff6700;
+  }
+}
+
+
+@keyframes changeBg {
+  0% {
+    background-color: #ff6700;
+  }
+
+  10% {
+    background-color: #FB6E52;
+  }
+
+  20% {
+    background-color: #FFCE55;
+  }
+
+  30% {
+    background-color: #A0D468;
+  }
+
+  40% {
+    background-color: #48CFAE;
+  }
+
+  50% {
+    background-color: #4FC0E8;
+  }
+
+  60% {
+    background-color: #5D9CEC;
+  }
+
+  70% {
+    background-color: #AC92ED;
+  }
+
+  80% {
+    background-color: #EC87BF;
+  }
+
+  90% {
+    background-color: #ff6700;
+  }
+}
+
+
+.member-info {
+  width: 562.5upx;
+  height: 281.25upx;
+  margin: -164.0625upx 0 0 -281.25upx;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  animation: memberInfoDown 1000ms  ease-in;
+  -webkit-animation: memberInfoDown 1000ms ease-in;
+  .default-avatar {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60%;
+    width: 187.5upx;
+    height: 187.5upx;
+    margin: 0 auto;
+    border-radius: 100%;
+  }
+  .to-login {
+    font-size: 37.5upx;
+    color: #FFF;
+    line-height: 46.875upx;
+    height: 46.875upx;
+    margin: 11.71875upx auto;
+  }
+  .user-avatar {
+    background-color: #FFF;
+    width: 187.5upx;
+    height: 187.5upx;
+    margin: 0 auto;
+    border-radius: 100%;
+    image {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+    }
+  }
+  .user-name, .store-name {
+    color: #FFF;
+  }
+  .user-name span, .store-name .span {
+    font-weight: lighter;
+    font-size: 37.5upx;
+    line-height: 56.25upx;
+    height: 56.25upx;
+    position: relative;
+    z-index: 1;
+  }
+  .user-name sup, .store-name sup {
+    font-size: 21.09375upx;
+    line-height: 28.125upx;
+    background-color: #ff6700;
+    display: block;
+    height: 28.125upx;
+    padding: 0 4.6875upx;
+    margin-left: 9.375upx;
+    border-radius: 4.6875upx;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -42.1875upx;
+    box-shadow: 1upx 1upx 1upx rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes memberInfoDown {
+  0% {
+    top: -50%;
+  }
+
+  30% {
+    top: -10%;
+  }
+
+  75% {
+    top: 55%;
+  }
+
+  85% {
+    top: 47%;
+  }
+
+  95% {
+    top: 52%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+
+@-webkit-keyframes memberInfoDown {
+  0% {
+    top: -50%;
+  }
+
+  30% {
+    top: -10%;
+  }
+
+  75% {
+    top: 55%;
+  }
+
+  85% {
+    top: 47%;
+  }
+
+  95% {
+    top: 52%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+
+.member-collect {
+  font-size: 0;
+  height: 140.625upx;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#19000000', endColorstr='#19000000');
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .span {
+    display: inline-block;
+    width: 33.33%;
+    height: 93.75upx;
+    padding: 23.4375upx 0;
+    .a {
+      display: block;
+    }
+    .em {
+      font-weight: lighter;
+      font-size: 42.1875upx;
+      color: #FFF;
+      line-height: 46.875upx;
+      text-align: center;
+      vertical-align: top;
+      display: inline-block;
+      min-width: 46.875upx;
+      height: 46.875upx;
+      margin: 0 auto;
+    }
+    .i {
+      vertical-align: top;
+      display: inline-block;
+      width: 46.875upx;
+      height: 46.875upx;
+      margin: 0 auto;
+      &.favorite-goods, &.favorite-store {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+      }
+      &.goods-browse {
+        /*
+          background-image: url(../images/goods-browse_w.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 100%;*/
+        font-family: "zc" !important;
+        font-size: 46.875upx;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #ffffff;
+        &:before {
+          content: "\e662";
+        }
+      }
+    }
+    .p {
+      font-size: 28.125upx;
+      line-height: 46.875upx;
+      color: #FFF;
+      height: 46.875upx;
+    }
+  }
+}
+
+.member-center {
+  .dl {
+    background-color: #FFF;
+    box-shadow: 0 1upx 0 rgba(0, 0, 0, 0.05);
+  }
+  .dt {
+    line-height: 42.1875upx;
+    display: block;
+    height: 46.875upx;
+    padding: 23.4375upx 32.8125upx 23.4375upx 0;
+    margin-left: 23.4375upx;
+    border-bottom: solid 2.34375upx #EEE;
+    &:last-child {
+      border-bottom: none;
+    }
+    .a {
+      display: block;
+    }
+    .h3 {
+      font-size: 32.8125upx;
+      line-height: 46.875upx;
+      color: #111;
+      vertical-align: top;
+      display: inline-block;
+      height: 46.875upx;
+      .i {
+        vertical-align: top;
+        display: inline-block;
+        width: 46.875upx;
+        height: 46.875upx;
+        font-size: 46.875upx;
+        margin-right: 4.6875upx;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 70%;
+        color: #212121;
+      }
+    }
+    .h5 {
+      font-size: 28.125upx;
+      color: #999;
+      float: right;
+      line-height: 46.875upx;
+      .i {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 46.875upx;
+        margin-bottom: 4.6875upx;
+        /*    background-image: url(../images/arrow_right_b.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 75%;*/
+        opacity: 0.4;
+      }
+    }
+  }
+  .dd {
+    display: block;
+    padding: 9.375upx 0;
+    .ul {
+      font-size: 0;
+      .li {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        padding: 23.4375upx 0 9.375upx 0;
+        .a {
+          display: block;
+          position: relative;
+          .em {
+            background-color: #ff6700;
+            border-radius: 10upx;
+            position: absolute;
+            top: -7.03125upx;
+            right: calc(50% - 28upx);
+            padding: 3upx;
+            color: #fff;
+            line-height: 10upx;
+            font-size: 10upx;
+            /*
+                top: -8upx;
+                right: calc(50% - 25upx);
+                border-radius: 10upx;*/
+          }
+        }
+        .i {
+          vertical-align: top;
+          display: inline-block;
+          width: 46.875upx;
+          height: 46.875upx;
+          margin: 0 auto 9.375upx auto;
+          /*opacity: 0.6;*/
+          font-size: 46.875upx;
+          color: #888;
+        }
+        .p {
+          font-size: 25.781250000000004upx;
+          color: #888;
+          line-height: 46.875upx;
+          height: 46.875upx;
+        }
+        .number {
+          font-size: 46.875upx;
+          font-weight: bold;
+          color: #06bf04;
+        }
+      }
+    }
+  }
+}
+
+/*每日签到*/
+
+.my-pointnum {
+  position: absolute;
+  z-index: 1;
+  top: 117.1875upx;
+  left: 37.5upx;
+  text-align: center;
+  font-size: 25.781250000000004upx;
+  color: #FFF;
+  line-height: 42.1875upx;
+  text-shadow: 2.34375upx 2.34375upx 0 rgba(0, 0, 0, 0.15);
+  .span {
+    display: block;
+    font-size: 32.8125upx;
+    font-weight: 600;
+    color: #FF0;
+  }
+}
+
+.sign-box {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 187.5upx;
+  height: 187.5upx;
+  padding: 9.375upx;
+  margin: -93.75upx auto auto -93.75upx;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  border-radius: 100%;
+}
+
+.sign-btn {
+  width: 140.625upx;
+  height: 93.75upx;
+  padding: 28.125upx 23.4375upx 35.15625upx 23.4375upx;
+  color: #ff6700;
+  .h2 {
+    font-size: 37.5upx;
+    line-height: 65.625upx;
+    font-weight: 500;
+  }
+  .h6 {
+    font-size: 28.125upx;
+    line-height: 56.25upx;
+    border-top: solid 2.34375upx #EEE;
+  }
+}
+
+.signin-help {
+  position: absolute;
+  z-index: 1;
+  top: 117.1875upx;
+  right: 37.5upx;
+  text-align: center;
+  font-size: 25.781250000000004upx;
+  color: #FFF;
+  line-height: 42.1875upx;
+  text-shadow: 2.34375upx 2.34375upx 0 rgba(0, 0, 0, 0.15);
+  .i {
+    border: solid 2.34375upx #FFF;
+    width: 32.8125upx;
+    height: 32.8125upx;
+    display: block;
+    border-radius: 100%;
+    line-height: 32.8125upx;
+    color: #FFF;
+    font-weight: 600;
+    margin: 4.6875upx auto 0 auto;
+  }
+}
+
+.signin-list {
+  display: block;
+  .h3 {
+    font-size: 32.8125upx;
+    line-height: 46.875upx;
+    padding: 18.75upx;
+    overflow: hidden;
+    .a {
+      float: right;
+      font-size: 25.781250000000004upx;
+      line-height: 46.875upx;
+      color: #333;
+    }
+  }
+}
+
+.signin-c {
+  font-size: 28.125upx;
+  line-height: 46.875upx;
+  .em {
+    font-size: 46.875upx;
+    color: #ff6700;
+    margin: 0 23.4375upx 0 9.375upx;
+  }
+  .span {
+    color: #999;
+    font-size: 25.781250000000004upx;
+  }
+}
+
+/*订单搜索*/
+
+.sstouch-order-search {
+  height: 91.40625upx;
+  background-color: #FAFAFA;
+  border-bottom: solid #EEE 2.34375upx;
+  .form {
+    position: relative;
+    z-index: 1;
+  }
+  .input-del {
+    position: absolute;
+    z-index: 1;
+    top: 23.4375upx;
+    left: 75%;
+    display: none;
+    width: 45.703125upx;
+    height: 45.703125upx;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60%;
+    opacity: 0.4;
+  }
+  .write .input-del {
+    display: block;
+  }
+  input {
+    &[type="text"] {
+      display: inline-block;
+      width: 75%;
+      height: 46.875upx;
+      padding: 11.71875upx;
+      margin: 11.71875upx auto auto 35.15625upx;
+      border: none;
+      border-radius: 9.375upx;
+      font-size: 28.125upx;
+      background-color: #EEE;
+      line-height: 46.875upx;
+    }
+    &[type="button"] {
+      display: inline-block;
+      width: 46.875upx;
+      height: 46.875upx;
+      margin-left: 23.4375upx;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 100%;
+      opacity: 0.5;
+      border: none;
+    }
+  }
+}
+
+/*订单列表*/
+
+.sstouch-order-list {
+  display: block;
+  clear: both;
+  width: 100%;
+  padding-bottom: 117.1875upx;
+}
+
+.sstouch-order-item {
+  width: 95%;
+  padding: 0 2.5%;
+  background-color: #FFF;
+  border-bottom: solid 2.34375upx #EEE;
+  margin-bottom: 12.890625000000002upx;
+}
+
+.sstouch-order-item-head {
+  height: 42.1875upx;
+  padding: 23.4375upx 0;
+  border-bottom: solid 2.34375upx #EEE;
+  line-height: 42.1875upx;
+  .store {
+    display: block;
+    float: left;
+    font-size: 32.8125upx;
+    line-height: 42.1875upx;
+    color: #000;
+    .i {
+      &.icon {
+        display: inline-block;
+        width: 37.5upx;
+        height: 42.1875upx;
+        margin: 0 14.0625upx 0 4.6875upx;
+        vertical-align: top;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 80%;
+      }
+      &.arrow-r {
+        width: 37.5upx;
+        height: 42.1875upx;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 46.875upx;
+        color: #212121;
+        opacity: 0.75;
+      }
+    }
+  }
+  .state {
+    dispaly: blcok;
+    float: right;
+    font-size: 28.125upx;
+    color: #ff6700;
+  }
+}
+
+.sstouch-order-item-con {
+  .goods-block {
+    position: relative;
+    z-index: 1;
+    border-bottom: solid #EEE 2.34375upx;
+    &:nth-last-child(1) {
+      border: none;
+    }
+    &.detail {
+      height: 201.5625upx;
+    }
+    .a {
+      display: block;
+      color: #111;
+    }
+  }
+  .goods-pic {
+    display: block;
+    width: 131.25upx;
+    height: 131.25upx;
+    position: absolute;
+    z-index: 1;
+    top: 17.8125upx;
+    left: 0;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .goods-info {
+    display: block;
+    height: 131.25upx;
+    padding: 17.8125upx 0;
+    margin: 0 187.5upx 0 145.3125upx;
+    position: relative;
+    z-index: 1;
+    .goods-name {
+      overflow: hidden;
+      height: 70.3125upx;
+      font-size: 26upx;
+      line-height: 35.15625upx;
+      margin-bottom: 4.6875upx;
+      color: #333;
+    }
+    .goods-type {
+      overflow: hidden;
+      height: 56.25upx;
+      font-size: 21.09375upx;
+      line-height: 28.125upx;
+      color: #999;
+    }
+  }
+  .goods-subtotal {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 17.8125upx;
+    right: 0;
+    width: 159.375upx;
+    text-align: right;
+    overflow: hidden;
+    .goods-price {
+      display: block;
+      color: #888;
+      font-size: 25.781250000000004upx;
+      font-weight: 600;
+      .em {
+        font-size: 28.125upx;
+      }
+    }
+    .goods-num {
+      display: block;
+      font-size: 25.781250000000004upx;
+      color: #888;
+      font-weight: 600;
+    }
+  }
+  .goods-return {
+    position: absolute;
+    z-index: 2;
+    right: 0upx;
+    bottom: 18.75upx;
+    display: block;
+    font-size: 28.125upx;
+    line-height: 56.25upx;
+    height: 56.25upx;
+    padding: 0 18.75upx;
+    border: solid 2.34375upx #EEE;
+    border-radius: 9.375upx;
+    color: #ff6700 !important;
+    background-color: #FFF;
+  }
+  .goods-refund {
+    position: absolute;
+    z-index: 2;
+    right: 103.12500000000001upx;
+    bottom: 18.75upx;
+    display: block;
+    font-size: 28.125upx;
+    line-height: 56.25upx;
+    height: 56.25upx;
+    padding: 0 18.75upx;
+    border: solid 2.34375upx #EEE;
+    border-radius: 9.375upx;
+    color: #ff6700 !important;
+    background-color: #FFF;
+  }
+  .goods-gift {
+    display: block;
+    clear: both;
+    padding: 9.375upx;
+    margin: 18.75upx 0 0;
+    border: dashed 1upx #EEE;
+    background-color: #FCFCFC;
+    .span {
+      display: block;
+      font-size: 25.781250000000004upx;
+      line-height: 42.1875upx;
+      /* height: 0.9rem; */
+      border-bottom: solid 2.34375upx #EEE;
+      padding-bottom: 9.375upx;
+      margin-bottom: 9.375upx;
+      color: #212121;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:last-child {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .em {
+        display: inline-block;
+        height: 23.4375upx;
+        vertical-align: middle;
+        padding: 4.6875upx 9.375upx;
+        margin-right: 9.375upx;
+        background: #BBB;
+        font-size: 21.09375upx;
+        line-height: 23.4375upx;
+        color: #FFF;
+        border-radius: 4.6875upx;
+      }
+    }
+  }
+  .goods-subtotle {
+    padding: 18.75upx 0;
+    .dl {
+      font-size: 25.781250000000004upx;
+      line-height: 42.1875upx;
+      overflow: hidden;
+      margin-bottom: 4.6875upx;
+    }
+    .dt {
+      float: left;
+      color: #999;
+    }
+    .dd {
+      float: right;
+      color: #000;
+      text-align: right;
+      .span {
+        display: block;
+        width: 375upx;
+        height: 42.1875upx;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 25.781250000000004upx;
+        line-height: 42.1875upx;
+        color: #000;
+      }
+      .em {
+        font-weight: 600;
+      }
+    }
+    .dl.t {
+      font-size: 28.125upx;
+      line-height: 46.875upx;
+      .dt {
+        color: #333;
+      }
+      .dd {
+        color: #ff6700;
+        .em {
+          font-size: 32.8125upx;
+        }
+      }
+    }
+  }
+}
+
+/*订单商品图片*/
+
+/*订单商品简介*/
+
+.sstouch-order-item-bottom {
+  font-size: 0;
+  border-top: solid 2.34375upx #EEE;
+  padding: 23.4375upx 0;
+  .span {
+    display: inline-block;
+    height: 46.875upx;
+    width: 49%;
+    &:first-child {
+      border-right: #DDD 2.34375upx solid;
+    }
+    .a {
+      display: block;
+      text-align: center;
+      font-size: 32.8125upx;
+      line-height: 46.875upx;
+      color: #000;
+      .i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin-right: 9.375upx;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.sstouch-order-item-footer {
+  border-top: solid 2.34375upx #EEE;
+  margin-top: 18.75upx;
+  .store-totle {
+    min-height: 42.1875upx;
+    padding: 23.4375upx 0;
+    font-size: 0;
+    text-align: right;
+    border-bottom: solid 2.34375upx #EEE;
+    .span {
+      vertical-align: middle;
+      display: inline-block;
+      font-size: 28.125upx;
+      line-height: 42.1875upx;
+    }
+    .sum {
+      font-size: 25.781250000000004upx;
+      font-weight: 600;
+      color: #ff6700;
+      margin: 0 7.03125upx;
+      .em {
+        font-size: 32.8125upx;
+      }
+    }
+    .freight {
+      font-size: 21.09375upx;
+      color: #999;
+    }
+    time {
+      float: left;
+      font-size: 25.781250000000004upx;
+      line-height: 42.1875upx;
+      color: #BBB;
+    }
+    .refund-sum {
+      font-size: 28.125upx;
+      color: #000;
+      line-height: 42.1875upx;
+      .em {
+        color: #ff6700;
+        font-weight: 600;
+      }
+    }
+  }
+  .handle {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    height: 56.25upx;
+    padding: 18.75upx 0;
+    .del {
+      position: absolute;
+      z-index: 1;
+      top: 18.75upx;
+      left: 0;
+      display: block;
+      height: 56.25upx;
+      font-size: 28.125upx;
+      line-height: 56.25upx;
+      color: #212121;
+      .i {
+        display: inline-block;
+        vertical-align: top;
+        width: 56.25upx;
+        height: 56.25upx;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 50%;
+        opacity: 0.9;
+      }
+    }
+    .p {
+      position: absolute;
+      z-index: 1;
+      top: 18.75upx;
+      left: 0;
+      display: block;
+      font-size: 28.125upx;
+      line-height: 56.25upx;
+      color: #ff6700;
+      display: inline-block;
+    }
+  }
+}
+
+.check-payment em {
+  font-size: 32.8125upx;
+  font-weight: 600;
+}
+
+/*订单详情*/
+
+.sstouch-oredr-detail-block {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 18.75upx 0;
+  background: #FFF;
+  border-bottom: solid 2.34375upx #EEE;
+  .h3 {
+    display: inline-block;
+    vertical-align: top;
+    height: 46.875upx;
+    margin-left: 18.75upx;
+    font-size: 32.8125upx;
+    line-height: 46.875upx;
+    color: #000;
+    .i {
+      display: inline-block;
+      vertical-align: top;
+      width: 46.875upx;
+      height: 46.875upx;
+      margin-right: 9.375upx;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      opacity: 0.9;
+    }
+  }
+  .order-state {
+    float: right;
+    height: 46.875upx;
+    margin-right: 23.4375upx;
+    font-size: 28.125upx;
+    color: #ff6700;
+    line-height: 46.875upx;
+  }
+  .msg-phone {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 28.125upx;
+    font-weight: 600;
+    line-height: 46.875upx;
+    color: #000;
+    height: 46.875upx;
+    margin-left: 9.375upx;
+  }
+  .msg-again {
+    position: absolute;
+    z-index: 1;
+    top: 9.375upx;
+    right: 23.4375upx;
+    background: #F5F5F5;
+    font-size: 28.125upx;
+    line-height: 46.875upx;
+    padding: 9.375upx 14.0625upx;
+    color: #333;
+    border: solid #EEE 2.34375upx;
+    border-radius: 9.375upx;
+  }
+  .info {
+    margin-left: 75upx;
+    font-size: 25.781250000000004upx;
+    line-height: 42.1875upx;
+  }
+  .i.icon-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 23.4375upx;
+    display: block;
+    font-size: 46.875upx;
+    margin-bottom: 4.6875upx;
+    /*  background-image: url(../images/arrow_right_b.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;*/
+    opacity: 0.5;
+  }
+}
+
+.sstouch-oredr-detail-add {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  .i.icon-add {
+    position: absolute;
+    z-index: 1;
+    top: 0upx;
+    left: 18.75upx;
+    display: block;
+    width: 46.875upx;
+    height: 46.875upx;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
+  }
+  .dl {
+    margin: 0 0 0 75upx;
+    padding: 0 23.4375upx 0 0;
+  }
+  .dt {
+    display: block;
+    height: 46.875upx;
+    font-size: 32.8125upx;
+    line-height: 46.875upx;
+    .span {
+      margin-left: 14.0625upx;
+      font-weight: 600;
+    }
+  }
+  .dd {
+    display: block;
+    min-height: 42.1875upx;
+    max-height: 75upx;
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+  }
+}
+
+/*虚拟订单码列表*/
+
+.sstouch-vr-order-codes {
+  background-color: #FFF;
+  margin-top: 23.4375upx;
+  border-top: solid 2.34375upx #EEE;
+  .tit {
+    display: block;
+    overflow: hidden;
+    height: 46.875upx;
+    padding: 18.75upx;
+    .h3 {
+      float: left;
+      font-size: 32.8125upx;
+      line-height: 46.875upx;
+      .i {
+        display: inline-block;
+        vertical-align: top;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin-right: 9.375upx;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 70%;
+        opacity: 0.9;
+      }
+    }
+    .span {
+      float: right;
+      text-align: right;
+      width: 60%;
+      height: 46.875upx;
+      overflow: hidden;
+      font-size: 25.781250000000004upx;
+      line-height: 46.875upx;
+      color: #333;
+    }
+  }
+  .ul {
+    border-top: solid #EEE 2.34375upx;
+    padding-left: 23.4375upx;
+  }
+  .li {
+    display: block;
+    height: 46.875upx;
+    padding: 18.75upx 9.375upx;
+    font-size: 37.5upx;
+    line-height: 46.875upx;
+    color: #36BC9B;
+    border-bottom: solid #EEE 2.34375upx;
+    .em {
+      font-size: 25.781250000000004upx;
+      line-height: 28.125upx;
+      display: inline-block;
+      vertical-align: top;
+      color: #FFF;
+      background: #36BC9B;
+      padding: 2.34375upx 7.03125upx;
+      border-radius: 7.03125upx;
+      margin: 4.6875upx 23.4375upx;
+    }
+    &.lose {
+      color: #AAA;
+      text-decoration: line-through;
+      .em {
+        background-color: #BBB;
+      }
+    }
+  }
+}
+
+/*虚拟订单店铺信息*/
+
+.sstouch-vr-order-location {
+  background-color: #FFF;
+  margin-top: 23.4375upx;
+  border-top: solid 2.34375upx #EEE;
+  .tit {
+    display: block;
+    overflow: hidden;
+    height: 46.875upx;
+    padding: 18.75upx;
+    .h3 {
+      float: left;
+      font-size: 32.8125upx;
+      line-height: 46.875upx;
+      .i {
+        display: inline-block;
+        vertical-align: top;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin-right: 9.375upx;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 70%;
+        opacity: 0.9;
+      }
+    }
+  }
+  .default {
+    margin-left: 23.4375upx;
+    border-top: solid #EEE 2.34375upx;
+    position: relative;
+    z-index: 1;
+    .dl {
+      padding: 37.5upx 0;
+    }
+    .dt {
+      display: block;
+      font-size: 32.8125upx;
+      line-height: 42.1875upx;
+      font-weight: 600;
+    }
+    .dd {
+      display: block;
+      font-size: 28.125upx;
+      line-height: 42.1875upx;
+      color: #999;
+    }
+    .p {
+      position: absolute;
+      z-index: 1;
+      right: 23.4375upx;
+      top: 23.4375upx;
+      border-left: solid 2.34375upx #EEE;
+      padding-left: 23.4375upx;
+      .a {
+        display: block;
+        width: 93.75upx;
+        height: 93.75upx;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 50%;
+        opacity: 0.65;
+      }
+    }
+  }
+  .more-location {
+    border-top: solid #EEE 2.34375upx;
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    padding: 23.4375upx;
+    position: relative;
+    .a {
+      display: block;
+      color: #ff6700;
+      font-weight: 600;
+    }
+    .i {
+      position: absolute;
+      z-index: 1;
+      top: 23.4375upx;
+      right: 23.4375upx;
+      font-size: 46.875upx;
+      margin-bottom: 4.6875upx;
+      /*   background-image: url(../images/arrow_right_b.png);
+       background-repeat: no-repeat;
+       background-position: 50% 50%;
+       background-size: 78%;*/
+      opacity: 0.65;
+    }
+  }
+}
+
+.transparent-map {
+  background-color: transparent;
+  border-bottom: none;
+  .header-l .a {
+    width: 63.28125000000001upx;
+    height: 63.28125000000001upx;
+    margin: 13.007812500000002upx;
+    padding: 0;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#BFFFFFFF', endColorstr='#BFFFFFFF');
+    background: rgba(255, 255, 255, 0.75);
+    border: solid 2.34375upx #EEE;
+    border-radius: 100%;
+    .i.back {
+      width: 60%;
+      height: 60%;
+      color: #ff6700;
+      font-size: 56.25upx;
+      /*
+       background-image: url(../images/arrow_left_r.png);
+       background-repeat: no-repeat;
+       background-position: 50% 50%;
+       background-size: 100%;*/
+      opacity: 1;
+    }
+  }
+}
+
+/* 虚拟码再次发送 */
+
+.msg-again-layout {
+  text-align: center;
+  display: block;
+  padding: 23.4375upx 0;
+  .h4 {
+    font-size: 30.46875upx;
+    line-height: 42.1875upx;
+    color: #000;
+  }
+  .h5 {
+    font-size: 25.781250000000004upx;
+    line-height: 42.1875upx;
+    color: #212121;
+    margin-bottom: 46.875upx;
+  }
+  .inp-tel {
+    display: block;
+    width: 80%;
+    height: 56.25upx;
+    padding: 9.375upx;
+    margin: 4.6875upx auto 0 auto;
+    border: solid #ff6700 2.34375upx;
+    border-radius: 9.375upx;
+    font-size: 37.5upx;
+    text-align: center;
+    line-height: 56.25upx;
+    background-color: #FEF6F7;
+    color: #000;
+  }
+}
+
+.rpt_error_tip {
+  font-size: 28.125upx;
+  color: #ff6700 !important;
+  display: none;
+  text-align: center;
+}
+
+.sstouch-oredr-detail-block .order-log {
+  padding: 0 23.4375upx;
+  .li {
+    display: block;
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    color: #999;
+  }
+}
+
+.sstouch-oredr-detail-bottom {
+  position: fixed;
+  z-index: 1;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 93.75upx;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-top: solid 2.34375upx #EEE;
+  .a.btn {
+    display: inline-block;
+    height: 56.25upx;
+    padding: 0 18.75upx;
+    margin: 16.40625upx 18.75upx 0 0;
+    line-height: 56.25upx;
+  }
+  .p {
+    font-size: 32.8125upx;
+    line-height: 93.75upx;
+    color: #ff6700;
+    margin-right: 23.4375upx;
+  }
+}
+
+.sstouch-oredr-detail-delivery {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 18.75upx;
+  background-color: #FAFAFA;
+  border-bottom: solid 1.171875upx #DDD;
+  .time-line {
+    position: absolute;
+    top: 28.125upx;
+    left: 37.5upx;
+    bottom: 18.75upx;
+    z-index: auto;
+    border-left: dotted #36BC9B 1upx;
+    .i {
+      position: absolute;
+      top: -7.5upx;
+      left: -17.8125upx;
+      display: block;
+      width: 15.937500000000002upx;
+      height: 15.937500000000002upx;
+      background-color: #36BC9B;
+      border: solid 9.375upx #A3E7D6;
+      border-radius: 100%;
+    }
+  }
+  .info {
+    margin: 0 46.875upx 0 56.25upx;
+    min-height: 75upx;
+    .p {
+      font-size: 32.8125upx;
+      line-height: 42.1875upx;
+      color: #000;
+    }
+    time {
+      font-size: 28.125upx;
+      line-height: 42.1875upx;
+      color: #777;
+    }
+  }
+  .arrow-r {
+    position: absolute;
+    z-index: 1;
+    top: 42.1875upx;
+    right: 23.4375upx;
+    display: block;
+    width: 37.5upx;
+    height: 42.1875upx;
+    font-size: 46.875upx;
+    color: #212121;
+    opacity: 0.65;
+  }
+}
+
+/*订单物流*/
+
+.sstouch-order-deivery-info {
+  background: #FFF;
+  position: relative;
+  z-index: 1;
+  .i {
+    position: absolute;
+    z-index: 1;
+    top: 37.5upx;
+    left: 28.125upx;
+    width: 46.875upx;
+    height: 46.875upx;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    opacity: 0.7;
+  }
+  .dl {
+    height: 84.375upx;
+    margin-left: 117.1875upx;
+    padding: 23.4375upx 0;
+  }
+  .dt {
+    font-size: 32.8125upx;
+    line-height: 46.875upx;
+    color: #333;
+  }
+  .dd {
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    color: #212121;
+  }
+}
+
+.sstouch-order-deivery-con {
+  background-color: #FFF;
+  margin-top: 11.71875upx;
+  .ul {
+    padding: 0 2.5%;
+    overflow: hidden;
+    .li {
+      position: relative;
+      z-index: 1;
+      border-bottom: solid #EEE 2.34375upx;
+      margin-left: 93.75upx;
+      padding: 23.4375upx 11.71875upx;
+      font-size: 28.125upx;
+      line-height: 42.1875upx;
+      color: #666;
+      &:nth-child(1) {
+        color: #36BC9B;
+      }
+      &:nth-last-child(1) {
+        border: none;
+        .span {
+          border: none;
+        }
+      }
+      .span {
+        position: absolute;
+        z-index: auto;
+        left: -58.59375upx;
+        top: 35.15625upx;
+        rgiht: -4.6875upx;
+        bottom: -46.875upx;
+        border-left: dotted 1upx #CCC;
+        .i {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: -9.375upx;
+          width: 15.937500000000002upx;
+          height: 15.937500000000002upx;
+          border-radius: 100%;
+          background-color: #CCC;
+        }
+      }
+      &:nth-child(1) .span {
+        border-color: #36BC9B;
+        .i {
+          width: 15.937500000000002upx;
+          height: 15.937500000000002upx;
+          top: -2.8125upx;
+          left: -18.75upx;
+          background: #36BC9B;
+          border: solid 9.375upx #A3E7D6;
+        }
+      }
+    }
+  }
+}
+
+.sstouch-delivery-tip {
+  font-size: 21.09375upx;
+  line-height: 32.8125upx;
+  color: #999;
+  text-align: center;
+  width: 60%;
+  margin: 11.71875upx auto 0 auto;
+}
+
+/*订单评价*/
+
+.sstouch-evaluation-goods .li {
+  width: 95%;
+  padding: 18.75upx 2.5%;
+  background-color: #FFF;
+  border-bottom: solid 2.34375upx #EEE;
+  margin-bottom: 12.890625000000002upx;
+}
+
+.evaluation-info {
+  position: relative;
+  z-index: 1;
+  display: block;
+  .goods-pic {
+    display: block;
+    width: 131.25upx;
+    height: 131.25upx;
+    position: absolute;
+    z-index: 1;
+    top: 17.8125upx;
+    left: 0;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .goods-info {
+    display: block;
+    min-height: 131.25upx;
+    padding: 17.8125upx 0;
+    margin: 0 0 0 145.3125upx;
+    position: relative;
+    z-index: 1;
+    .goods-name {
+      overflow: hidden;
+      height: 75upx;
+      font-size: 26upx;
+      line-height: 42.1875upx;
+      margin-bottom: 18.75upx;
+      color: #333;
+    }
+    .goods-rate {
+      display: block;
+      min-height: 42.1875upx;
+      font-size: 25.781250000000004upx;
+      color: #212121;
+      line-height: 42.1875upx;
+    }
+  }
+  .star-level {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 0;
+    margin-left: 9.375upx;
+    .i {
+      display: inline-block;
+      vertical-align: top;
+      width: 35.15625upx;
+      height: 35.15625upx;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 90%;
+      &.star-level-hollow {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.evaluation-inp-block {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 0 18.75upx 0;
+  input[type="text"] {
+    display: block;
+    width: 80%;
+    height: 75upx;
+    padding: 9.375upx;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 9.375upx;
+    font-size: 25.781250000000004upx;
+    line-height: 42.1875upx;
+    resize: none;
+  }
+  label {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 9.375upx;
+    display: block;
+    width: 93.75upx;
+    text-align: center;
+    input[type="checkbox"] {
+      margin: 0 auto;
+    }
+    .p {
+      display: block;
+      height: 42.1875upx;
+      font-size: 25.781250000000004upx;
+      color: #212121;
+      line-height: 42.1875upx;
+    }
+  }
+}
+
+.evaluation-upload-block {
+  font-size: 0;
+  .tit {
+    display: inline-block;
+    vertical-align: top;
+    width: 70.3125upx;
+    height: 79.6875upx;
+    padding: 14.0625upx 14.0625upx 0 0;
+    .i {
+      display: block;
+      width: 100%;
+      height: 42.1875upx;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 70%;
+      opacity: 0.15;
+    }
+    .p {
+      display: block;
+      width: 100%;
+      height: 42.1875upx;
+      text-align: center;
+      color: #BBB;
+      font-size: 25.781250000000004upx;
+      line-height: 42.1875upx;
+    }
+  }
+  .sstouch-upload {
+    margin-right: 14.0625upx;
+  }
+}
+
+.sstouch-evaluation-store {
+  background-color: #FFF;
+  padding: 23.4375upx;
+  .dl {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 75upx;
+  }
+  .dt {
+    position: absolute;
+    z-index: 1;
+    top: 18.75upx;
+    left: 93.75upx;
+    display: block;
+    width: 140.625upx;
+    height: 42.1875upx;
+    font-size: 32.8125upx;
+    line-height: 42.1875upx;
+  }
+  .dd {
+    display: block;
+    margin: 0 0 0 281.25upx;
+    padding-top: 18.75upx;
+    height: 42.1875upx;
+  }
+  .star-level {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 0;
+    margin-left: 9.375upx;
+    .i {
+      display: inline-block;
+      vertical-align: top;
+      width: 37.5upx;
+      height: 42.1875upx;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 95%;
+      &.star-level-hollow {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+/*我的收货地址*/
+
+.sstouch-address-list .li {
+  background-color: #FFF;
+  padding: 0 0 0 23.4375upx;
+  margin-bottom: 23.4375upx;
+  .dl {
+    border-bottom: solid 2.34375upx #EEE;
+    padding: 23.4375upx 23.4375upx 23.4375upx 0;
+  }
+  .dt {
+    height: 42.1875upx;
+    margin-bottom: 14.0625upx;
+    font-size: 0;
+    .span {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 42.1875upx;
+      height: 42.1875upx;
+      &.name {
+        min-width: 187.5upx;
+        font-size: 32.8125upx;
+        font-weight: 600;
+        color: #999;
+      }
+      &.phone {
+        font-size: 28.125upx;
+        color: #333;
+      }
+    }
+  }
+  .dd {
+    height: 60.9375upx;
+    font-size: 28.125upx;
+    line-height: 30.46875upx;
+    color: #777;
+  }
+  .handle {
+    height: 42.1875upx;
+    padding: 23.4375upx 0;
+    position: relative;
+    z-index: 1;
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    color: #999;
+    .span {
+      display: block;
+      height: 42.1875upx;
+      position: absolute;
+      z-index: 1;
+      top: 23.4375upx;
+      right: 0;
+      .a {
+        font-size: 28.125upx;
+        color: #999;
+        margin-right: 23.4375upx;
+        .i {
+          display: inline-block;
+          width: 37.5upx;
+          height: 42.1875upx;
+          vertical-align: top;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 60%;
+          margin-right: 4.6875upx;
+          margin-top: 2.34375upx;
+          &.del, &.edit {
+            font-size: 32.8125upx;
+            line-height: 32.8125upx;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 触屏版用户账户资产简介 */
+
+.sstouch-asset-info {
+  display: block;
+  .container {
+    position: relative;
+    z-index: 1;
+    height: 140.625upx;
+    &.pre {
+      background: #ff6700;
+    }
+    &.voucher {
+      background: #FB6E52;
+    }
+    &.point {
+      background: #F6BB43;
+    }
+    &.rcard {
+      background: #EC87BF;
+    }
+    &.packet {
+      background: #AC92ED;
+    }
+    .icon {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 70.3125upx;
+      display: block;
+      width: 140.625upx;
+      height: 140.625upx;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      opacity: 0.3;
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(25deg);
+      transform: rotate(25deg);
+    }
+    .dl {
+      margin: 0 23.4375upx 0 234.375upx;
+      padding: 23.4375upx 0;
+      text-align: right;
+    }
+    .dt {
+      font-size: 28.125upx;
+      line-height: 42.1875upx;
+      color: #FFF;
+      height: 42.1875upx;
+      margin-bottom: 9.375upx;
+    }
+    .dd {
+      font-size: 28.125upx;
+      line-height: 46.875upx;
+      color: #FFF;
+      height: 46.875upx;
+      .em {
+        font-size: 46.875upx;
+      }
+    }
+    .rule {
+      .dt {
+        font-size: 32.8125upx;
+        margin-bottom: 9.375upx;
+        height: auto;
+      }
+      .dd {
+        font-size: 23.4375upx;
+        line-height: 31.875000000000004upx;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* 触屏版资产日志形列表 */
+
+.sstouch-log-list {
+  padding-left: 23.4375upx;
+  background-color: #FFF;
+  .li {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 23.4375upx 0;
+    border-bottom: solid 2.34375upx #EEE;
+    .detail {
+      min-height: 84.375upx;
+      margin: 0 50% 0 0;
+      font-size: 25.781250000000004upx;
+      word-wrap: break-word;
+      line-height: 42.1875upx;
+      color: #999;
+    }
+    .money {
+      position: absolute;
+      z-index: 1;
+      top: 23.4375upx;
+      right: 23.4375upx;
+      height: 42.1875upx;
+      font-weight: 32.8125upx;
+      line-height: 42.1875upx;
+    }
+  }
+  &.tx .money {
+    right: 70.3125upx;
+  }
+  .li {
+    .money {
+      &.add {
+        color: #ff6700;
+      }
+      &.reduce {
+        color: #36BC9B;
+      }
+    }
+    .date {
+      position: absolute;
+      z-index: 1;
+      bottom: 18.75upx;
+      right: 23.4375upx;
+      height: 42.1875upx;
+      font-size: 23.4375upx;
+      line-height: 42.1875upx;
+      color: #999;
+    }
+  }
+  &.tx .date {
+    right: 70.3125upx;
+  }
+  .li {
+    .dt {
+      font-size: 23.4375upx;
+      line-height: 46.875upx;
+      font-weight: 600;
+      color: #333;
+      height: 46.875upx;
+      margin-bottom: 9.375upx;
+      .i {
+        display: inline-block;
+        vertical-align: top;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin-right: 4.6875upx;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 65%;
+        opacity: 0.4;
+      }
+      .span {
+        font-size: 25.781250000000004upx;
+        color: #4FC0E8;
+      }
+    }
+    .dd {
+      font-size: 25.781250000000004upx;
+      line-height: 30.46875upx;
+      color: #777;
+    }
+    .arrow-r {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      right: 18.75upx;
+      display: block;
+      width: 37.5upx;
+      height: 42.1875upx;
+      margin-top: -23.4375upx;
+      font-size: 46.875upx;
+      color: #212121;
+      opacity: 0.3;
+    }
+  }
+}
+
+/* 触屏版代金卡券列表 */
+
+.sstouch-tickets {
+  display: block;
+  padding: 23.4375upx 23.4375upx 0 23.4375upx;
+  .ticket-item {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-bottom: 23.4375upx;
+    .border-left {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 9.375upx;
+      background-repeat: repeat-y;
+      background-position: 0 50%;
+      background-size: 89%;
+    }
+    .border-right {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 9.375upx;
+      background-repeat: repeat-y;
+      background-position: 0 50%;
+      background-size: 89%;
+    }
+    .block-center {
+      display: block;
+      height: 140.625upx;
+      margin: 0 9.375upx;
+      background: #FFF;
+      font-size: 0;
+      box-shadow: 0 2.34375upx 2.34375upx rgba(0, 0, 0, 0.1);
+    }
+    .store-info {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      vertical-align: top;
+      width: 65%;
+      height: 140.625upx;
+    }
+    .store-avatar {
+      position: absolute;
+      z-index: 1;
+      top: 23.4375upx;
+      left: 23.4375upx;
+      width: 93.75upx;
+      height: 93.75upx;
+      background: #FFF;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .store-info {
+      .dl {
+        padding: 23.4375upx 0 23.4375upx 140.625upx;
+      }
+      .dt {
+        font-size: 28.125upx;
+        line-height: 46.875upx;
+        color: #212121;
+      }
+      .dd {
+        /*font-size: 0.55rem;*/
+        font-size: 12upx;
+        line-height: 46.875upx;
+        color: #212121;
+      }
+    }
+    .ticket-info {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      vertical-align: top;
+      width: 35%;
+      height: 140.625upx;
+    }
+  }
+  .normal .ticket-info {
+    background-color: #ff6700;
+  }
+  .invalid .ticket-info {
+    background-color: #AAB2BD;
+  }
+  .ticket-item .bg-ico {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+    opacity: 0.15;
+  }
+  .invalid .watermark {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 60% 50%;
+    background-size: 50%;
+    opacity: 0.50;
+  }
+  .ticket-item .ticket-info {
+    .dl {
+      position: absolute;
+      z-index: 2;
+      right: 23.4375upx;
+      bottom: 23.4375upx;
+      display: block;
+      text-align: right;
+      height: 84.375upx;
+    }
+    .dt {
+      font-size: 46.875upx;
+      line-height: 56.25upx;
+      color: #FFF;
+    }
+    .dd {
+      font-size: 23.4375upx;
+      line-height: 28.125upx;
+      color: #FFF;
+    }
+  }
+}
+
+.spacing-div {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 46.875upx;
+  margin: -23.4375upx 23.4375upx 46.875upx 23.4375upx;
+  border-bottom: solid #CCC 2.34375upx;
+  .span {
+    position: absolute;
+    z-index: 1;
+    bottom: -14.0625upx;
+    left: 50%;
+    display: block;
+    width: 234.375upx;
+    margin-left: -117.1875upx;
+    text-align: center;
+    font-size: 25.781250000000004upx;
+    line-height: 28.125upx;
+    height: 28.125upx;
+    background-color: #F5F5F5;
+    color: #212121;
+  }
+}
+
+/*用户反馈*/
+
+.feedback textarea {
+  background-color: #FFF;
+  width: 90%;
+  height: 187.5upx;
+  padding: 23.4375upx 2.5%;
+  margin: 23.4375upx 2.5%;
+  border: none;
+  font-size: 28.125upx;
+  line-height: 42.1875upx;
+}
+
+/*返利A*/
+
+.invitea {
+  position: absolute;
+  z-index: 1;
+  margin: 23.4375upx 2.5%;
+  border: none;
+  font-size: 28.125upx;
+  line-height: 42.1875upx;
+}

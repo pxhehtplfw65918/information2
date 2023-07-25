@@ -1,0 +1,189 @@
+$openAppHeight: 100rpx;
+$navbar-bg: 'https://qnsp.zcskjy.com/zc_images/findTools/navbar-bg.png';
+$navbar-bg1: 'https://qnsp.zcskjy.com/zc_images/findTools/navbar-bg1.png';
+// $navbar-bg2: 'https://qnsp.zcskjy.com/zc_images/findTools/navbar-bg2.png';
+$navbarHeight: 165rpx;
+.panZhongbao-content{
+	&-box {
+	  width: 690rpx;
+	  height: 100%;
+	  background: #ffffff;
+	  border-radius: 20rpx;
+	  margin: 0 auto;
+	}
+	
+	&-title {
+	  width: 100%;
+	  height: 91rpx;
+	  border-bottom: 1rpx solid #eeeeee;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	
+	  .iconTitle {
+	    width: 220rpx;
+	    height: 33rpx;
+	  }
+	
+	  .introduce {
+	    width: 91rpx;
+	    height: 32rpx;
+	    background: url('https://qnsp.zcskjy.com/zc_images/findTools/icon-bg.png') no-repeat center;
+	    background-size: contain;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-around;
+	    font-size: 22px;
+	    font-family: PingFangSC-Regular, PingFang SC;
+	    font-weight: 400;
+	    color: #ffffff;
+	  }
+	
+	  .button-list {
+	    .iconPushed {
+	      width: 140rpx;
+	      height: 60rpx;
+	    }
+	   }
+	}
+ }
+ .button-list {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+ 
+   &-child {
+     width: 160rpx;
+     height: 60rpx;
+     line-height: 60rpx;
+     text-align: center;
+     background: linear-gradient(90deg, #ff6161 0%, #ff9661 100%);
+     border-radius: 45px;
+     font-size: 28rpx;
+     font-family: PingFangSC-Semibold, PingFang SC;
+     font-weight: 600;
+     color: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+ 
+     .iconAdd {
+       width: 27rpx;
+       height: 27rpx;
+     }
+   }
+ }
+ 
+ .button-push {
+   justify-content: center;
+   .iconAdd {
+     margin-right: 12rpx;
+   }
+ }
+ .subsectionTab {
+   margin-top: 40rpx;
+   margin-bottom: 28rpx;
+ }
+  .toolTemplatenav {
+    position: absolute;
+    width: 750rpx;
+    //   height: 253rpx;
+    // height: calc(165rpx + var(--status-bar-height));
+    height: 165rpx;
+    padding-top: var(--status-bar-height);
+    background: url($navbar-bg1);
+    background-size: 750rpx 253rpx;
+    background-position: center 100%;
+    background-repeat: repeat-y;
+    box-sizing: content-box;
+	&-navbar {
+      width: 750rpx;
+      height: 100%;
+      // height: calc(165rpx + var(--status-bar-height));
+      // background: url($navbar-bg2) no-repeat center;
+      // background-size: 498rpx 45rpx;
+      // background-position: center;
+      // animation: mymove 3s;
+      // position: relative;
+      //   top: -88rpx;
+      //   opacity: 0.3;
+      .u-navbar__content {
+        height: $navbarHeight !important;
+        background: transparent !important;
+
+        .u-icon__icon {
+          color: #ffffff !important;
+        }
+      }
+
+      .back-icon {
+        width: 44rpx;
+        height: 24rpx;
+        transform: rotate(90deg);
+        margin-left: 36rpx;
+      }
+
+      .navbar {
+        width: 750rpx;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: flex-start;
+      }
+    }
+  }
+
+::v-deep .navbar-leftIcon {
+  padding-top: var(--status-bar-height);
+}
+.android {
+ //  ::v-deep .u-navbar {
+ //    .u-navbar__content__left {
+ //      top: calc(30rpx + var(--status-bar-height)) !important;
+ //    }
+	// .u-navbar__content__right{
+	//   top: calc(30rpx + var(--status-bar-height)) !important;
+	// }
+ //  }
+}
+.panZhongbao-price {
+  ::v-deep .newChance {
+	// padding-top:160rpx;
+  }
+}
+// h5适配开始
+  ::v-deep .toolTemplate_h5{
+	.newChance {
+		padding-bottom: calc( 44px + var(--status-bar-height) );
+	}
+	.toolTemplate-content-price {
+	   .newChance {
+		padding-bottom: calc( 44px + 100rpx + #{$openAppHeight}  + var(--status-bar-height) );
+	  }
+	}
+	 // .panZhongbao-scroll{
+		// padding-top: $openAppHeight; 
+	 // }
+	 // ::v-deep .u-navbar{
+		//  top: $openAppHeight; 
+		//  .panZhongbaonav {
+		//  	padding-top:calc($openAppHeight + var(--status-bar-height)) !important;
+		//  	top: $openAppHeight;  
+		//  }
+		//  .u-navbar--fixed{
+		// 	top: $openAppHeight; 
+		//  }
+	 // }
+}
+// h5适配结束
+@keyframes mymove {
+  from {
+    top: 0;
+    opacity: 100;
+  }
+
+  to {
+    top: -400px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,318 @@
+uni-page-body {
+  background-color: #FCFCFC !important;
+  background-color: #f8f8f8 !important;
+}
+
+.withdrawal {
+  input {
+    outline: none;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  }
+
+  &-content {
+    width: 690upx;
+    margin: 30upx auto;
+    overflow: hidden;
+
+    &-child {
+      width: 690upx;
+      height: 200upx;
+      background: #ffffff;
+      border-radius: 10upx 10upx 0 0;
+      // border-bottom: 2upx solid #f6f6f6;
+      padding: 0 42upx;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 7upx 12upx 0 rgba(229, 229, 229, 0.5);
+
+      &-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        /deep/ .u-input__content__field-wrapper__field {
+          font-size: 56upx !important;
+          line-height: 56upx !important;
+          font-family: DIN-Medium, DIN !important;
+          font-weight: 500;
+
+        }
+
+        .uni-input-placeholder {
+          font-size: 32upx !important;
+        }
+
+        .unit-amount {
+          padding-right: 20upx;
+        }
+      }
+
+      &-title {
+        font-size: 28upx;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #333333;
+        padding-top: 32upx;
+        padding-bottom: 26upx;
+      }
+    }
+
+    .withdrawal-bankCard {
+      height: auto;
+      background: #ffffff;
+      border-radius: 0 0 10upx 10upx;
+
+      .withdrawal-content-child-title {
+        padding-bottom: 0;
+      }
+
+      .icon-brank {
+        margin-right: 16upx;
+      }
+
+      .withdrawal-button {
+        width: 600upx;
+        height: 90upx;
+        line-height: 90upx;
+        background: linear-gradient(90deg, #ff6161 0%, #ff9661 100%);
+        border-radius: 55upx;
+        font-size: 36upx;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 34upx;
+        margin-bottom: 82upx;
+      }
+
+      .disableButton {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .unit-amount {
+    font-size: 36upx;
+    font-family: DIN-Medium, DIN;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  .allWithdrawal {
+    font-size: 28upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #f43d3e;
+  }
+
+  .allWithdrawal-disable {
+    opacity: 0.5;
+  }
+
+  .icon-brank {
+    width: 28upx;
+    height: 28upx;
+  }
+
+  .withdrawalRule {
+    width: 690upx;
+    font-size: 24upx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #909090;
+    padding-top: 60upx;
+    overflow: hidden;
+
+    &-title {
+      font-size: 28upx;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #909090;
+      padding-bottom: 30upx;
+    }
+  }
+
+  ::v-deep .u-cell-group {
+    .u-cell__title-text {
+      font-size: 28upx;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #333333;
+      text-align: left;
+    }
+
+    .u-line {
+      border-bottom: 0 !important;
+      border-top: 0 !important;
+    }
+  }
+
+  ::v-deep .bank-action {
+    .u-action-sheet__item-wrap__item {
+      align-items: flex-start;
+    }
+
+    .u-action-sheet__item-wrap__item__text__content {
+      line-height: 24upx;
+    }
+
+    .u-action-sheet__item-wrap__item__name {
+      font-size: 32upx;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #333333;
+    }
+
+    .u-action-sheet__item-wrap__item__subname {
+      font-size: 24upx;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #999999;
+    }
+
+    .icon-brank {
+      width: 36upx;
+      height: 32upx;
+      margin-left: 0;
+      margin-right: 30upx;
+    }
+
+    .u-cell__title-text {
+      color: #666666;
+    }
+
+    .u-action-sheet--hover {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 53upx;
+        width: 36upx;
+        height: 100%;
+        background: url('https://qnsp.zcskjy.com/zc_images/home/icon-check.png');
+        background-size: 36upx 28upx;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .hiddenContnt {
+    display: none;
+  }
+
+  ::v-deep .uni-input-input {
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-transition-delay: 111111s;
+      -webkit-transition: color 11111s ease-out, background-color 111111s ease-out;
+    }
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    }
+  }
+
+  ::v-deep .u-popup {
+    .u-popup-slot {
+      background: #f7f7f7;
+    }
+
+    .u-icon__icon {
+      position: absolute;
+      top: 18px !important;
+      left: 30upx;
+    }
+
+    .u-popup__content {
+      border-radius: 24upx 24upx 0 0;
+      overflow: hidden;
+    }
+
+    .u-popup__content__close {
+      left: 30upx;
+    }
+
+    .u-demo-block {
+      width: 750upx;
+      background: #f7f7f7;
+
+      &__title {
+        width: 750upx;
+        height: 130upx;
+        background: #ffffff;
+        border-radius: 24upx 24upx 0px 0px;
+        font-size: 32upx;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #333333;
+        line-height: 130upx;
+        text-align: center;
+      }
+
+      .u-demo-sure {
+        font-size: 28upx;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #F43D3E;
+        position: absolute;
+        top: 0;
+        right: 30upx;
+      }
+
+
+      &__content {
+        width: 750upx;
+        height: 176upx;
+        line-height: 96upx;
+        overflow: hidden;
+        background: #f7f7f7;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        .inputPassWord-content {
+          width: 702upx;
+          margin: 0 auto;
+          // background: #ffffff;
+          // border-radius: 16upx;
+          // border: 2upx solid #e5e5e5;
+        }
+      }
+
+      .u-input {
+        width: 702upx;
+        height: 96upx;
+        line-height: 96upx;
+        background: #ffffff;
+        border-radius: 16upx;
+        border: 2upx solid #e5e5e5;
+        margin: 40upx auto;
+      }
+
+      .uni-input-placeholder {
+        padding-left: 0;
+      }
+    }
+  }
+
+  ::v-deep .u-cell__body {
+    padding-top: 6upx;
+  }
+}
+
+::v-deep .u-popup {
+  .u-transition.u-fade-enter-to {
+    z-index: 999 !important;
+  }
+}

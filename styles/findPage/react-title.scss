@@ -1,0 +1,77 @@
+.react-title{
+	 position: relative;
+	 .receiveBenefits {
+	   &-title {
+	     width: 272rpx;
+	     height: 56rpx;
+	     margin: 0 auto;
+	     position: absolute;
+	     top: 4rpx;
+	     left: 50%;
+	     transform: translateX(-50%);
+	     z-index: 99;
+	   }
+	   &-content {
+		width: 690rpx;
+		height: 159rpx;
+		 border-radius: 20rpx;
+	     overflow: hidden;
+	     position: relative;
+		 top:28rpx;
+		 padding-bottom: 45rpx;
+		}
+	}
+	.makeMoney{
+		width: 690rpx;
+		height: 159rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		background: #FFF1D9;
+		border-radius: 20rpx;
+		
+		&-pre{
+			font-size: 36rpx;
+			font-family: DIN-Medium, DIN;
+			font-weight: 500;
+			color: #333333;
+		}
+		&-key{
+			font-size: 28rpx;
+			font-family: PingFangSC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #666666;
+		}
+		&-child{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			flex-direction: column;
+			width: 33.33%;
+			line-height: 42rpx;
+			&:after{
+				content: '';
+				position: absolute;
+				right: 0;
+				top:50%;
+				transform: translateY(-50%);
+				width: 1rpx;
+				height: 40rpx;
+				
+				border-right: 1rpx solid #FFD391;
+			}
+			&:last-child:after{
+				width: 0;
+				height: 40rpx;
+				border: 0px;
+			}
+			&:first-child{
+				.makeMoney-pre{
+					color: #F43D3E;
+				}
+				
+			}
+		}
+	}
+}

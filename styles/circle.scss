@@ -1,0 +1,141 @@
+.uni-scroll-view-content {
+  position: relative;
+}
+
+.circle-content {
+  position: relative;
+  top: -20px;
+  width: 750rpx;
+  // height: 1386rpx;
+  background: #ffffff;
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+}
+
+.content {
+  padding-left: 30rpx;
+}
+
+.circle-fans {
+  display: flex;
+  text-align: center;
+  margin-left: 229rpx;
+  padding-top: 25rpx;
+}
+
+.fans_num {
+  font-size: 36rpx;
+  font-family: DIN-Bold, DIN;
+  font-weight: bold;
+  color: #333333;
+}
+
+.fans_lable {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #999999;
+}
+
+.fans-between {
+  margin: 0 94rpx;
+}
+
+.teacher-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #000000;
+}
+
+.teacher-desc {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #666666;
+  line-height: 33rpx;
+  letter-spacing: 1rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; //使用自适应布局
+  -webkit-line-clamp: 1; //设置超出行数，要设置超出几行显示省略号就把这里改成几
+  -webkit-box-orient: vertical;
+}
+.openMoreText{
+	  -webkit-line-clamp: initial; //设置超出行数，要设置超出几行显示省略号就把这里改成几
+}
+.lable-list {
+  display: flex;
+  margin-top: 17rpx;
+  margin-bottom: 20rpx;
+}
+
+.lable {
+  background: #FFF5ED;
+  border-radius: 20rpx;
+  padding: 6rpx 20rpx;
+  margin-right: 20rpx;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #FFA312;
+}
+
+.filed {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #666666;
+}
+
+.btn {
+  display: flex;
+  // align-items: center;
+  margin-top: 18rpx;
+  // margin-bottom: 35rpx;
+}
+
+.attention {
+  width: 260rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #F6F6F6;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #999999;
+  margin-right: 50rpx;
+}
+
+.investment {
+  width: 380rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #F43D3E;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+::v-deep .u-tabs__wrapper__nav__line {
+  width: 40rpx !important;
+  height: 10rpx !important;
+  background-color: #F43D3E !important;
+  border-radius: 5rpx !important;
+}
+
+::v-deep .u-icon {
+  margin-right: 18rpx;
+}
+
+.quicknav1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140rpx;
+  height: 140rpx;
+  text-align: center;
+  background: linear-gradient(130deg, #FFE7C6 0%, #F3D6AD 100%);
+  box-shadow: 0rpx 2rpx 9rpx 0rpx rgba(245, 207, 178, 0.5);
+  border-radius: 50%;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #AF6B03;
+}

@@ -1,0 +1,1104 @@
+.page {
+  background-color: rgba(246, 246, 246, 1);
+  position: relative;
+  width: 750rpx;
+  height: 1624rpx;
+  overflow: hidden;
+  .section_1 {
+    background-color: rgba(240, 48, 54, 1);
+    padding: 24rpx 28rpx 20rpx 42rpx;
+    .group_1 {
+      margin-left: 14rpx;
+      .text_1 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 30rpx;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 42rpx;
+      }
+      .label_1 {
+        width: 34rpx;
+        height: 21rpx;
+        margin: 9rpx 0 12rpx 457rpx;
+      }
+      .label_2 {
+        width: 31rpx;
+        height: 22rpx;
+        margin: 9rpx 0 11rpx 10rpx;
+      }
+      .image_1 {
+        width: 50rpx;
+        height: 24rpx;
+        margin: 8rpx 0 10rpx 9rpx;
+      }
+    }
+    .group_2 {
+      margin: 35rpx 2rpx 0 0;
+      .image_2 {
+        width: 16rpx;
+        height: 33rpx;
+        margin: 8rpx 0 4rpx 0;
+      }
+      .text_2 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 32rpx;
+        letter-spacing: 1.2999999523162842px;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45rpx;
+        margin-left: 250rpx;
+      }
+      .label_3 {
+        width: 38rpx;
+        height: 38rpx;
+        margin: 4rpx 0 3rpx 240rpx;
+      }
+    }
+  }
+  .section_2 {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 22rpx 25rpx 73rpx 30rpx;
+    .group_3 {
+      width: 695rpx;
+      .image-text_1 {
+        width: 182rpx;
+        .text-group_1 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 34rpx;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 48rpx;
+        }
+        .label_4 {
+          width: 30rpx;
+          height: 30rpx;
+          margin: 10rpx 0 8rpx 0;
+        }
+      }
+      .image-text_2 {
+        width: 132rpx;
+        margin: 6rpx 0 5rpx 0;
+        .text-group_2 {
+          overflow-wrap: break-word;
+          color: rgba(102, 102, 102, 1);
+          font-size: 26rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 37rpx;
+        }
+        .image_3 {
+          width: 21rpx;
+          height: 11rpx;
+          margin: 13rpx 0 13rpx 0;
+        }
+      }
+    }
+    .group_4 {
+      width: 604rpx;
+      margin: 30rpx 91rpx 0 0;
+      .text-wrapper_1 {
+        background-color: rgba(255, 237, 237, 1);
+        border-radius: 6px;
+        padding: 16rpx 31rpx 16rpx 31rpx;
+        .text_3 {
+          overflow-wrap: break-word;
+          color: rgba(254, 0, 0, 1);
+          font-size: 28rpx;
+          letter-spacing: -0.8029419779777527px;
+          font-weight: NaN;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 28rpx;
+        }
+      }
+      .text-wrapper_2 {
+        border-radius: 6px;
+        border: 1px solid rgba(222, 222, 222, 1);
+        padding: 15rpx 31rpx 15rpx 31rpx;
+        .text_4 {
+          overflow-wrap: break-word;
+          color: rgba(102, 102, 102, 1);
+          font-size: 28rpx;
+          letter-spacing: -0.8029419779777527px;
+          font-weight: NaN;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 28rpx;
+        }
+      }
+      .text-wrapper_3 {
+        border-radius: 6px;
+        border: 1px solid rgba(222, 222, 222, 1);
+        padding: 15rpx 23rpx 15rpx 23rpx;
+        .text_5 {
+          overflow-wrap: break-word;
+          color: rgba(102, 102, 102, 1);
+          font-size: 28rpx;
+          letter-spacing: -0.8029419779777527px;
+          font-weight: NaN;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 28rpx;
+        }
+      }
+      .text-wrapper_4 {
+        border-radius: 6px;
+        border: 1px solid rgba(222, 222, 222, 1);
+        padding: 15rpx 23rpx 15rpx 23rpx;
+        .text_6 {
+          overflow-wrap: break-word;
+          color: rgba(102, 102, 102, 1);
+          font-size: 28rpx;
+          letter-spacing: -0.8029419779777527px;
+          font-weight: NaN;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 28rpx;
+        }
+      }
+    }
+    .text-wrapper_5 {
+      margin: 40rpx 5rpx 0 0;
+      .text_7 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 28rpx;
+        letter-spacing: -0.0977562963962555px;
+        font-weight: NaN;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 28rpx;
+      }
+      .text_8 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 28rpx;
+        letter-spacing: -0.0977562963962555px;
+        font-weight: NaN;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 28rpx;
+        margin-left: 30rpx;
+      }
+      .text_9 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 28rpx;
+        letter-spacing: -0.0977562963962555px;
+        font-weight: NaN;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 28rpx;
+        margin-left: 141rpx;
+      }
+      .text_10 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 28rpx;
+        letter-spacing: -0.0977562963962555px;
+        font-weight: NaN;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 28rpx;
+        margin-left: 20rpx;
+      }
+      .text_11 {
+        overflow-wrap: break-word;
+        color: rgba(153, 153, 153, 1);
+        font-size: 28rpx;
+        letter-spacing: -0.0977562963962555px;
+        font-weight: NaN;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 28rpx;
+        margin-left: 40rpx;
+      }
+    }
+    .group_5 {
+      margin: 35rpx 5rpx 0 20rpx;
+      .text_12 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_3 {
+        margin-left: 50rpx;
+        .text_13 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_14 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_15 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_16 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_17 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+    .group_6 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_18 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_4 {
+        margin-left: 50rpx;
+        .text_19 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_20 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_21 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_22 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_23 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+    .group_7 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_24 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_5 {
+        margin-left: 50rpx;
+        .text_25 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_26 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_27 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_28 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_29 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+    .group_8 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_30 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_6 {
+        margin-left: 50rpx;
+        .text_31 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_32 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_33 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_34 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_35 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+    .group_9 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_36 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_7 {
+        margin-left: 50rpx;
+        .text_37 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_38 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_39 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_40 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_41 {
+        overflow-wrap: break-word;
+        color: rgba(254, 0, 0, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 135rpx;
+      }
+    }
+    .group_10 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_42 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_8 {
+        margin-left: 50rpx;
+        .text_43 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_44 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_45 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_46 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_47 {
+        overflow-wrap: break-word;
+        color: rgba(254, 0, 0, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 135rpx;
+      }
+    }
+    .group_11 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_48 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_9 {
+        margin-left: 50rpx;
+        .text_49 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_50 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_51 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_52 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_53 {
+        overflow-wrap: break-word;
+        color: rgba(254, 0, 0, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 135rpx;
+      }
+    }
+    .group_12 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_54 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_10 {
+        margin-left: 50rpx;
+        .text_55 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_56 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_57 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_58 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_59 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+    .group_13 {
+      margin: 30rpx 5rpx 0 20rpx;
+      .text_60 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_11 {
+        margin-left: 50rpx;
+        .text_61 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_62 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 27rpx 0 0;
+        }
+      }
+      .text_63 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 154rpx;
+      }
+      .text_64 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_65 {
+        overflow-wrap: break-word;
+        color: rgba(254, 0, 0, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 135rpx;
+      }
+    }
+    .group_14 {
+      margin: 30rpx 5rpx 0 12rpx;
+      .text_66 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_12 {
+        margin-left: 42rpx;
+        .text_67 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_68 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_69 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_70 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_71 {
+        overflow-wrap: break-word;
+        color: rgba(254, 0, 0, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 135rpx;
+      }
+    }
+    .group_15 {
+      margin: 30rpx 5rpx 0 12rpx;
+      .text_72 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_13 {
+        margin-left: 42rpx;
+        .text_73 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_74 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_75 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_76 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_77 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+    .group_16 {
+      margin: 30rpx 5rpx 0 12rpx;
+      .text_78 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin-top: 5rpx;
+      }
+      .text-group_14 {
+        margin-left: 42rpx;
+        .text_79 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          letter-spacing: -0.10473889112472534px;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 32rpx;
+        }
+        .text_80 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 22rpx;
+          letter-spacing: -0.07680851966142654px;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 24rpx;
+          margin: 10rpx 57rpx 0 0;
+        }
+      }
+      .text_81 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 124rpx;
+      }
+      .text_82 {
+        overflow-wrap: break-word;
+        color: rgba(51, 51, 51, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 115rpx;
+      }
+      .text_83 {
+        overflow-wrap: break-word;
+        color: rgba(39, 168, 39, 1);
+        font-size: 34rpx;
+        font-family: DINAlternate-Bold;
+        font-weight: 700;
+        text-align: justify;
+        white-space: nowrap;
+        line-height: 42rpx;
+        margin: 12rpx 0 0 121rpx;
+      }
+    }
+  }
+}

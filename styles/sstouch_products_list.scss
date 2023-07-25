@@ -1,0 +1,1028 @@
+@import "./_variables.scss";
+
+@charset "UTF-8";
+
+/* ================================ */
+
+/* 触屏版商品列表样式类型				*/
+
+/* by qianyistore.com v 5                 */
+
+/* ================================ */
+
+/*商品列表头部特征*/
+
+.sstouch-product-header {
+  .header-inp {
+    margin: 12.890625000000002upx 178.125upx 0 93.75upx;
+  }
+  .header-r .a {
+    padding: 23.4375upx 28.125upx 23.4375upx 9.375upx;
+    .i {
+      width: 100%;
+      font-size: 46.875upx;
+      color: $main-text-color;
+      opacity: 0.60;
+      display: block;
+      width: 100%;
+      height: 100%;
+      &.categroy {
+        margin-top: 4.6875upx;
+        font-size: 37.5upx;
+      }
+    }
+  }
+}
+
+/* 商品列表筛选条 */
+
+.goods-search-list-nav {
+  display: block;
+  width: 100%;
+  height: 91.40625upx;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: solid 2.34375upx #EEE;
+  position: fixed;
+  z-index: 2;
+  top: 93.75upx;
+  left: 0;
+  right: 0;
+  view {
+    font-size: 0;
+    display: block;
+    width: 85%;
+    float: left;
+    view {
+      vertical-align: top;
+      display: inline-block;
+      width: 30%;
+      &:first-child {
+        width: 40%;
+      }
+      label {
+        font-size: 30.46875upx;
+        color: $main-text-color;
+        line-height: 91.40625upx;
+        text-align: center;
+        display: block;
+        height: 91.40625upx;
+        &.current {
+          color: $main-skin-color;
+        }
+        .aa {
+          font-size: 0upx;
+          line-height: 0;
+          vertical-align: middle;
+          display: inline-block;
+          width: 0upx;
+          height: 0upx;
+          margin-left: 9.375upx;
+          border-width: 9.375upx;
+          border-color: #AAA transparent transparent transparent;
+          border-style: solid dashed dashed dashed;
+
+          position:absolute;
+          top:46upx;
+        }
+        &.current .aa {
+          border-color: $main-skin-color transparent transparent transparent;
+        }
+        view.screen {
+          background-image: url(https://test.shopsuite.cn/wap/images/screen.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+  .browse-mode {
+    display: block;
+    width: 14.5%;
+    float: right;
+    border-left: solid 2.34375upx #EEE;
+    label {
+      text-align: center;
+      display: block;
+      height: 91.40625upx;
+      view {
+        display: inline-block;
+        width: 56.25upx;
+        height: 56.25upx;
+        opacity: 0.5;
+        margin: 0upx auto  18.75upx 24upx;
+      }
+    }
+    .browse-list {
+      /*background-image: url(https://test.shopsuite.cn/wap/images/browse_list.png);*/
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 80%;
+      font-size: 60.9375upx;
+      color: $main-text-color;
+      font-family: "zc" !important;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-left: 30upx;
+    }
+    .browse-grid {
+      /*background-image: url(https://test.shopsuite.cn/wap/images/browse_grid.png);*/
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 80%;
+      font-size: 60.9375upx;
+      color: $main-text-color;
+      font-family: "zc" !important;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-left: 30upx;
+      &:before {
+        content: "\e6b0";
+      }
+    }
+    .browse-list:before {
+      content: "\e625";
+    }
+  }
+}
+
+.goods-sort-inner {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#19000000', endColorstr='#19000000');
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 4;
+  top: 185.15625upx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  view {
+    background-color: #FFF;
+    display: block;
+    padding-left: 17.8125upx;
+    label {
+      font-size: 28.125upx;
+      line-height: 46.875upx;
+      color: #777;
+      display: block;
+      height: 46.875upx;
+      padding: 23.4375upx 35.15625upx 23.4375upx 17.8125upx;
+      border-top: solid 2.34375upx #EEE;
+      .aa{
+        background-image: url(https://test.shopsuite.cn/wap/images/ok.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+        display: none;
+        width: 32.8125upx;
+        height: 32.8125upx;
+        float: right;
+        margin: 7.03125upx;
+      }
+      &.cur {
+        color: $main-skin-color;
+        .aa {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*商品筛选层*/
+
+.secreen-layout {
+  .dl {
+    display: block;
+    padding: 0 23.4375upx;
+    background-color: #FFF;
+    border-bottom: solid #EEE 2.34375upx;
+  }
+  .dt {
+    display: block;
+    height: 42.1875upx;
+    padding: 23.4375upx 0 0 0;
+    font-size: 28.125upx;
+    color: $main-text-color;
+    line-height: 42.1875upx;
+  }
+  .dd {
+    display: block;
+    font-size: 0;
+    padding: 0 0 23.4375upx 0;
+    view.inp-balck {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      height: 42.1875upx;
+      padding: 11.71875upx 23.4375upx;
+      margin-top: 14.0625upx;
+      color: $main-text-color;
+      line-height: 42.1875upx;
+      background: $body-bg;
+      border: solid 2.34375upx #EEE;
+      border-radius: 7.03125upx;
+      &.add {
+        padding-right: 46.875upx;
+        .i {
+          position: absolute;
+          z-index: 1;
+          right: 9.375upx;
+          top: 11.71875upx;
+          display: block;
+          width: 37.5upx;
+          height: 42.1875upx;
+          background-image: url(https://test.shopsuite.cn/wap/images/location_b.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 80%;
+        }
+      }
+    }
+    select {
+      height: 42.1875upx;
+      font-size: 25.781250000000004upx;
+      background-color: transparent;
+      line-height: 42.1875upx;
+      border: 0 none;
+      appearance: none;
+      -webkit-appearance: none;
+      /*for chrome*/
+    }
+    .a {
+      display: inline-block;
+      height: 42.1875upx;
+      padding: 11.71875upx 23.4375upx;
+      margin-left: 14.0625upx;
+      margin-top: 14.0625upx;
+      font-size: 25.781250000000004upx;
+      color: $main-text-color;
+      line-height: 42.1875upx;
+      background: #FFF;
+      border: solid 2.34375upx #EEE;
+      border-radius: 7.03125upx;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.current {
+        padding: 13.125000000000002upx 24.84375upx;
+        color: #FFF;
+        background: $main-skin-color;
+        border: none;
+      }
+    }
+    .line {
+      display: inline-block;
+      vertical-align: top;
+      width: 37.5upx;
+      height: 42.1875upx;
+      margin: 23.4375upx 9.375upx;
+      background-image: url(https://test.shopsuite.cn/wap/images/value_minus.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 60%;
+      opacity: 0.5;
+    }
+    .inp {
+      width: 140.625upx;
+      height: 42.1875upx;
+      text-align: center;
+      border: none 0;
+      font-size: 28.125upx;
+      line-height: 42.1875upx;
+      background-color: transparent;
+    }
+  }
+  .bottom {
+    padding: 46.875upx 0;
+    background-color: #FFF;
+  }
+}
+
+/*列表模式*/
+
+.list .goods-secrch-list {
+  display: block;
+  .a {
+    display: block;
+    color: #111;
+    line-height: 40upx;
+  }
+  .goods-item {
+    background-color: #FFF;
+    display: block;
+    clear: both;
+    position: relative;
+    z-index: auot;
+  }
+  .goods-pic {
+    display: block;
+    width: 218upx;
+    height: 218upx;
+    padding: 18upx;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    navigator, image {
+      width: 200upx;
+      height: 200upx;
+    }
+  }
+  .goods-info {
+    display: block;
+    height: 227.34374999999997upx;
+    padding: 17.8125upx 17.8125upx 0 0;
+    margin-left: 252.1875upx;
+    border-bottom: solid 2.34375upx #EEE;
+  }
+  .goods-name {
+    display: block;
+    height: 112.5upx;
+    overflow: hidden;
+    .h4 {
+      font-size: 30.46875upx;
+      line-height: 37.5upx;
+      height: 75upx;
+      overflow: hidden;
+    }
+    h6 {
+      font-size: 23.4375upx;
+      color: $main-text999-color;
+      line-height: 42.1875upx;
+      height: 42.1875upx;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .goods-sale {
+    display: block;
+    height: 42.1875upx;
+    padding: 9.375upx 0;
+    overflow: hidden;
+  }
+  .goods-price {
+    color: $main-skin-color;
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    display: block;
+    float: left;
+    label {
+      font-size: 37.5upx;
+      line-height: 42.1875upx;
+      vertical-align: top;
+      display: inline-block;
+    }
+    .phone-sale {
+      font-size: 21.09375upx;
+      line-height: 28.125upx;
+      vertical-align: top;
+      display: inline-block;
+      height: 28.125upx;
+      padding-right: 4.6875upx;
+      margin-top: 2.34375upx;
+      border: solid $main-skin-color 2.34375upx;
+      .i {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 4.6875upx;
+        width: 28.125upx;
+        height: 28.125upx;
+        background: $main-skin-color url(https://test.shopsuite.cn/wap/images/mobile_w.png) no-repeat 50% 50%;
+        background-size: 80%;
+      }
+    }
+  }
+  .sale-type {
+    float: right;
+    width: 32.8125upx;
+    height: 32.8125upx;
+    margin: 0 0 0 4.6875upx;
+    vertical-align: top;
+    text-align: center;
+    font-size: 21.09375upx;
+    color: #FFF;
+    line-height: 32.8125upx;
+    background-color: $main-skin-color;
+    border-radius: 4.6875upx;
+  }
+  .goods-assist {
+    display: block;
+    height: 46.875upx;
+    padding-bottom: 9.375upx;
+    overflow: hidden;
+  }
+  .goods-sold {
+    font-size: 25.781250000000004upx;
+    line-height: 46.875upx;
+    color: $main-text999-color;
+    display: block;
+    float: left;
+    width: 40%;
+    height: 46.875upx;
+    label {
+      color: $main-text999-color;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+  }
+  .goods-store {
+    font-size: 25.781250000000004upx;
+    line-height: 46.875upx;
+    text-align: right;
+    height: 46.875upx;
+    .mall {
+      display: inline-block;
+      padding: 0 4.6875upx;
+      font-size: 25.781250000000004upx;
+      line-height: 32.8125upx;
+      color: #FFF;
+      color: $main-skin-color;
+    }
+    .a {
+      color: #777;
+      white-space: nowrap;
+      overflow: hidden;
+      .i {
+        background-image: url(https://test.shopsuite.cn/wap/images/more_b.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 60%;
+        vertical-align: top;
+        display: inline-block;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin: 0 0 0 7.03125upx;
+        opacity: 0.4;
+      }
+    }
+  }
+  .add-cart {
+    float: right;
+    font-size: 25.781250000000004upx;
+    line-height: 56.25upx;
+    text-align: right;
+    width: 56.25upx;
+    height: 46.875upx;
+    .mall {
+      display: inline-block;
+      padding: 0 4.6875upx;
+      font-size: 21.09375upx;
+      line-height: 32.8125upx;
+      color: #FFF;
+      background-color: $main-skin-color;
+    }
+    .a {
+      font-size: 0;
+      color: $main-text-color;
+      .i {
+        background-image: url(https://test.shopsuite.cn/wap/images/cart_add.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+        vertical-align: top;
+        display: inline-block;
+        width: 56.25upx;
+        height: 56.25upx;
+        margin: 0 0 0 7.03125upx;
+        position: absolute;
+        right: 5upx;
+        bottom: 5upx;
+        opacity: 0.6;
+      }
+    }
+  }
+  .sotre-creidt-layout {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    .p {
+      width: 252.1875upx;
+      height: 252.1875upx;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+    }
+    .dl {
+      background-color: $body-bg;
+      height: 216.5625upx;
+      padding: 17.8125upx;
+      margin-left: 252.1875upx;
+    }
+  }
+}
+
+/*商品图片*/
+
+/*右侧商品介绍*/
+
+/*商品名称*/
+
+/*商品价格与促销*/
+
+/*商品相关信息*/
+
+/*店铺列表使用特殊样式*/
+
+.sotre-favorites-layout {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  .sotre-favorites-bg {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5FFFFFF', endColorstr='#E5FFFFFF');
+    background: rgba(255, 255, 255, 0.9);
+    border: solid 2.34375upx #EEE;
+  }
+  .add {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 140.625upx;
+    height: 140.625upx;
+    margin: -70.3125upx 0 0 -70.3125upx;
+    .i {
+      display: block;
+      width: 89.0625upx;
+      height: 89.0625upx;
+      margin: 0 auto 4.6875upx auto;
+      background-image: url(https://test.shopsuite.cn/wap/images/star_b.png);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 65%;
+      border: solid 3.515625upx #000;
+      border-radius: 100%;
+      opacity: 0.75;
+    }
+    .h5 {
+      display: block;
+      height: 46.875upx;
+      text-align: center;
+      font-size: 28.125upx;
+      line-height: 46.875upx;
+      color: #000;
+    }
+    &.added {
+      display: none;
+      .i {
+        background-image: url(https://test.shopsuite.cn/wap/images/star_r.png);
+        border-color: $main-skin-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/*大图模式*/
+
+.grid .goods-secrch-list {
+  font-size: 0;
+  display: block;
+  .goods-item {
+    background-color: #FFF;
+    vertical-align: top;
+    display: inline-block;
+    width: 49.25%;
+    margin-bottom: 9.375upx;
+    box-shadow: 0 1upx 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &:nth-of-type(even) {
+      margin-left: 1.5%;
+    }
+  }
+  .goods-pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    .a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    image {
+      width: 360upx;
+      height: 360upx;
+    }
+  }
+  .goods-info {
+    display: block;
+    padding: 0 11.71875upx;
+  }
+  .goods-name {
+    display: block;
+    min-height: 42.1875upx;
+    overflow: hidden;
+  }
+  .a {
+    display: block;
+    color: #111;
+    line-height: 40upx;
+  }
+  .goods-name .h4 {
+    font-size: 28.125upx;
+    line-height: 42.1875upx;
+    height: 42.1875upx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+/*商品图片*/
+
+/*下方商品介绍*/
+
+/*商品名称*/
+
+.fav-list .goods-name .h4 {
+  height: 84.375upx !important;
+  text-overflow: clip !important;
+  white-space: pre-wrap !important;
+}
+
+.grid .goods-secrch-list {
+  .goods-name h6 {
+    display: none;
+  }
+  .goods-sale {
+    display: inline-block;
+    height: 42.1875upx;
+    padding: 9.375upx 0;
+    overflow: hidden;
+  }
+  .goods-price {
+    color: $main-skin-color;
+    font-size: 25.781250000000004upx;
+    line-height: 42.1875upx;
+    display: block;
+    float: left;
+    label {
+      font-size: 37.5upx;
+      line-height: 42.1875upx;
+      vertical-align: top;
+      display: inline-block;
+    }
+    .phone-sale {
+      font-size: 0;
+      vertical-align: top;
+      display: inline-block;
+      width: 28.125upx;
+      height: 28.125upx;
+      border: solid $main-skin-color 0.9375upx;
+      .i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $main-skin-color url(https://test.shopsuite.cn/wap/images/mobile_w.png) no-repeat 50% 50%;
+        background-size: 80%;
+      }
+    }
+  }
+  .sale-type {
+    display: none;
+  }
+  .goods-assist {
+    display: block;
+    height: 46.875upx;
+    padding-bottom: 9.375upx;
+    overflow: hidden;
+  }
+  .goods-sold {
+    font-size: 25.781250000000004upx;
+    line-height: 46.875upx;
+    color: $main-text999-color;
+    display: block;
+    float: left;
+    label {
+      color: $main-text999-color;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+  }
+  .goods-store {
+    float: right;
+    font-size: 25.781250000000004upx;
+    line-height: 46.875upx;
+    .mall {
+      display: inline-block;
+      padding: 0 4.6875upx;
+      font-size: 21.09375upx;
+      line-height: 32.8125upx;
+      color: #FFF;
+      background-color: $main-skin-color;
+    }
+    .a {
+      font-size: 0;
+      color: $main-text-color;
+      .i {
+        background-image: url(https://test.shopsuite.cn/wap/images/more_b.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 60%;
+        vertical-align: top;
+        display: inline-block;
+        width: 46.875upx;
+        height: 46.875upx;
+        margin: 0 0 0 7.03125upx;
+        opacity: 0.5;
+      }
+    }
+  }
+  .add-cart {
+    float: right;
+    font-size: 25.781250000000004upx;
+    line-height: 56.25upx;
+    text-align: right;
+    width: 56.25upx;
+    height: 46.875upx;
+    .mall {
+      display: inline-block;
+      padding: 0 4.6875upx;
+      font-size: 21.09375upx;
+      line-height: 32.8125upx;
+      color: #FFF;
+      background-color: $main-skin-color;
+    }
+    .a {
+      font-size: 0;
+      color: $main-text-color;
+      .i {
+        background-image: url(https://test.shopsuite.cn/wap/images/cart_add.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+        vertical-align: top;
+        display: inline-block;
+        width: 56.25upx;
+        height: 56.25upx;
+        margin: 0 0 0 7.03125upx;
+        position: absolute;
+        right: 5upx;
+        bottom: 5upx;
+      }
+    }
+  }
+  .store-credit {
+    display: none;
+  }
+  .sotre-creidt-layout {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    .dl {
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#F2EEEEEE', endColorstr='#F2EEEEEE');
+      background: rgba(238, 238, 238, 0.95);
+      width: 90%;
+      height: 196.875upx;
+      padding: 5%;
+      position: absolute;
+      z-index: inherit;
+      bottom: 0;
+    }
+  }
+  .fav-del {
+    position: absolute;
+    z-index: 1;
+    bottom: 9.375upx;
+    right: 9.375upx;
+    width: 46.875upx;
+    height: 46.875upx;
+    background-image: url(https://test.shopsuite.cn/wap/images/del_b.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 65%;
+  }
+}
+
+/*商品价格与促销*/
+
+/*商品相关信息*/
+
+/*商品收藏列表删除*/
+
+.goods-secrch-list .sotre-creidt-layout {
+  .dt {
+    text-align: left;
+    display: block;
+    line-height: 46.875upx;
+    height: 46.875upx;
+    padding-bottom: 9.375upx;
+    margin-bottom: 18.75upx;
+    border-bottom: solid 1upx #EEE;
+    position: relative;
+    z-index: 1;
+    .a {
+      font-size: 28.125upx !important;
+      color: #333 !important;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      view {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 46.875upx;
+        height: 46.875upx;
+        /*        background-image: url(https://test.shopsuite.cn/wap/images/arrow_right_b.png);
+              background-repeat: no-repeat;
+              background-position: 50% 50%;
+              background-size: 50%;*/
+        opacity: 0.6;
+      }
+    }
+  }
+  .dd {
+    font-size: 21.09375upx;
+    color: #555;
+    line-height: 42.1875upx;
+    text-align: left;
+    height: 42.1875upx;
+    label {
+      font-size: 25.781250000000004upx;
+      font-weight: 600;
+    }
+    &.high label, &.equal label {
+      color: $main-skin-color;
+    }
+    &.low label {
+      color: #48CFAE;
+    }
+    .i {
+      vertical-align: top;
+      display: inline-block;
+      width: 25.781250000000004upx;
+      height: 25.781250000000004upx;
+      margin: 7.03125upx;
+      border-radius: 2upx;
+    }
+    &.high .i {
+      background: $main-skin-color url(https://test.shopsuite.cn/wap/images/creidt_high.png);
+      background-size: cover;
+    }
+    &.equal .i {
+      background: $main-skin-color url(https://test.shopsuite.cn/wap/images/creidt_equal.png);
+      background-size: cover;
+    }
+    &.low .i {
+      background: #48CFAE url(https://test.shopsuite.cn/wap/images/creidt_low.png);
+      background-size: cover;
+    }
+  }
+}
+
+/*店铺收藏列表*/
+
+.favorites-store-list view {
+  display: block;
+  clear: both;
+  position: relative;
+  z-index: 1;
+  /*padding: 0.5rem 0 0;*/
+  padding: 23.4375upx 0 23.4375upx 0;
+  background-color: #FFF;
+  border-bottom: 2.34375upx solid #EEE;
+  .a {
+    display: block;
+    color: #333;
+    margin-right: 93.75upx;
+  }
+  .store-avatar {
+    position: absolute;
+    z-index: 1;
+    top: 14.0625upx;
+    left: 23.4375upx;
+    display: block;
+    width: 93.75upx;
+    height: 93.75upx;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .store-info {
+    display: block;
+    margin: 0 0 0 140.625upx;
+    /*padding-bottom: 0.5rem;*/
+    vertical-align: top;
+    text-align: left;
+    /* border-bottom: 0.05rem solid #EEE;*/
+    width: 100%;
+    .dt {
+      font-size: 32.8125upx;
+      line-height: 42.1875upx;
+    }
+    .dd {
+      font-size: 0;
+      /*line-height: 1.1rem;*/
+      line-height: 37.5upx;
+      height: 37.5upx;
+      view {
+        display: inline-block;
+        /*font-size: 0.55rem;*/
+        /*font-size: 12upx;*/
+        font-size: 18.75upx;
+        color: $main-text-color;
+        label {
+          /*font-size: 0.65rem;*/
+          /* font-size: 12upx;*/
+          font-size: 18.75upx;
+          font-weight: 600;
+          margin: 0 4.6875upx;
+          /*color: #000;*/
+        }
+      }
+    }
+  }
+  .del-fav {
+    position: absolute;
+    z-index: 2;
+    right: 23.4375upx;
+    top: 46.875upx;
+    width: 46.875upx;
+    height: 46.875upx;
+    margin: 0;
+    background-image: url(https://test.shopsuite.cn/wap/images/del_b.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 65%;
+    opacity: 0.75;
+  }
+}
+
+/*店铺分页列表*/
+
+.pagination {
+  text-align: center;
+  font-size: 21.09375upx;
+  .a {
+    color: #6e6e6e;
+    &.disabled {
+      color: #ccc;
+    }
+  }
+}
+
+.pre-page, .page-warp, .next-page, .pagew-size {
+  border: 1upx solid #ccc;
+  cursor: pointer;
+  padding: 5upx 10upx;
+  background: #fff;
+}
+
+.pre-page, .page-warp, .next-page {
+  display: inline-block;
+}
+
+.pagination select {
+  padding: 4upx 8upx;
+  border: 1upx solid #ccc;
+  vertical-align: bottom;
+}
+
+.page-warp {
+  width: 80upx;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.pagew-size {
+  position: absolute;
+  width: 80upx;
+  z-index: 10;
+  left: -1upx;
+  bottom: 30upx;
+  display: none;
+  view {
+    border-bottom: 1upx dashed #ddd;
+    padding: 4upx 0upx;
+    .a {
+      display: block;
+    }
+  }
+}
