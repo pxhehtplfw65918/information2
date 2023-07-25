@@ -37,8 +37,6 @@
 			let that = this;
 			//console.log('App Launch')
 			//console.log(this.tabBar)
-			that.gVer();
-			that.initJauth();
 			// that.handleUniPushMsg();
 
 			uni.getSystemInfo({
