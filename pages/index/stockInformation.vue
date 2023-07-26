@@ -3,7 +3,7 @@
 		<view class="box_1 flex-row">
 			<view class="box_2 flex-col">
 
-				<view class="informationList" v-for="(item,index) in informationList" :key="index" @click="det(index)">
+				<view class="informationList" v-for="(item,index) in informationList" :key="index" @click="det(item.seq)">
 					<!-- < -->
 					<!-- <a class="text_8" href="#" target="_blank" rel="noopener noreferrer">{{item.title}}</a> -->
 				 <rich-text class="text_8" v-if="item.title != null " v-html="item.title"></rich-text>
@@ -75,7 +75,7 @@
 			},
 			det(i) {
 				uni.navigateTo({
-					url: '/pages/index/informationDetails?id=' + i
+					url: '/pages/index/informationDetails?seq=' + i
 				});
 			}
 		},
