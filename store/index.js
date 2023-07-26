@@ -30,37 +30,31 @@ uni.getSystemInfo({
 
 const store = new Vuex.Store({
 	state: {
-		//用户信息
-		userInfo:{},
-		SLNumber: 3, // 扫雷次数
-		SJBNumber: 3, // 扫雷次数
-		// noviceGuide:  uni.getStorageSync('guideCache_state'),// 新手引导
-		noviceGuide: uni.getStorageSync('guideCache_state').toString() === '' ? true : uni.getStorageSync(
-			'guideCache_state'), // 新手引导
-		noviceGuideIndex: 0,
 
+		plantformInfo: null, //平台信息
+
+
+		Config: Config, //配置信息
+		StateCode: StateCode, //状态码
+
+		$: $,
+		sprintf: $.sprintf,
+
+		$Socket: Socket,
+		$apiconfig: apiconfig,
 	},
 	mutations: {
 
-		updateSJBNumber(state, message) {
-			state.SJBNumber = message;
-		},
-		updateNoviceGuide(state, message) {
-			state.noviceGuide = message;
-		},
-		updateNoviceGuideIndex(state, message) {
-			state.noviceGuideIndex = message;
-		},
-		getUserInfo(state, callback) {
-			callback && callback($.isEmptyObject(state.userInfo) ? null : state.userInfo);
-		},
 		getPlantformInfo(state, callback) {
 			//读取APP平台信息
 			var that = this;
-		}
+		},
+
+
+
 	},
 	getters: {
-
+	
 	},
 
 	actions: {},

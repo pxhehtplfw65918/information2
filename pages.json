@@ -11,15 +11,15 @@
 		// 	}
 		// },
 		// #endif
-		{
-			"path": "pages/index/launch",
-			"style": {
-				"navigationBarTitleText": "启动页",
-				"app-plus": {
-					"titleNView": false
-				}
-			}
-		},
+		// {
+		// 	"path": "pages/index/launch",
+		// 	"style": {
+		// 		"navigationBarTitleText": "启动页",
+		// 		"app-plus": {
+		// 			"titleNView": false
+		// 		}
+		// 	}
+		// },
 		{
 			"path": "pages/NoticePage/NoticePage",
 			"style": {

@@ -1,77 +1,81 @@
 <template>
 	<view class="page flex-col">
-			<view class="box_1 flex-row">
-				<view class="box_2 flex-col">
-					
-					<view class="informationList" v-for="(item,index) in informationList" :key="index">
-						<!-- < -->
-						<!-- <a class="text_8" href="#" target="_blank" rel="noopener noreferrer">{{item.title}}</a> -->
-						<navigator :url="'/pages/f10/informationDetails?item='+ encodeURIComponent(JSON.stringify(item))">
-							<text class="text_8">{{item.title}}</text>
-						</navigator>
-						<text class="text_9">{{item.updateTime}}</text>
-					</view>
-			
+		<view class="box_1 flex-row">
+			<view class="box_2 flex-col">
+
+				<view class="informationList" v-for="(item,index) in informationList" :key="index" @click="det(index)">
+					<!-- < -->
+					<!-- <a class="text_8" href="#" target="_blank" rel="noopener noreferrer">{{item.title}}</a> -->
+				 <rich-text class="text_8" v-if="item.title != null " v-html="item.title"></rich-text>
+					<text class="text_9"  v-if="item.ctime != null " >{{item.ctime}}</text>
 				</view>
+
 			</view>
-	
+		</view>
+
 	</view>
 </template>
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex';
 	export default {
+		computed: {
+			...mapState(['Config']),
+		},
 		data() {
 			return {
 				constants: {},
 				tabCurrentIndex: 1,
-				navList: [{
-						text: '盘口'
-					},
-					{
-						text: '资金'
-					},
-					{
-						text: '股吧'
-					},
-					{
-						text: '资讯'
-					},
-					{
-						text: '公告'
-					},
-					{
-						text: '研报'
-					}
-				],
-				informationList: [{
-						title: '网传“降薪”风波 银行紧急回应',
-						updateTime: '2023-06-06'
-					},
-					{
-						title: '降薪导致员工“堵门”?上海浦发银行:两起独立事件 抗议者系外包公司',
-						updateTime: '2023-06-06'
-					},
-					{
-						title: '浦发银行回应员工“降薪”: 网传图片系两起独立事件 相关问题已在解决中浦发银行回应员工“降薪”: 网传图文',
-						updateTime: '2023-06-06'
-					},
-					{
-						title: '中央结算公司为浦发银行贸易融资业务提供第三方担保品管理服务',
-						updateTime: '2023-06-06'
-					}, {
-						title: '降薪导致员工“堵门”?上海浦发银行:两起独立事件 抗议者系外包公司',
-						updateTime: '2023-06-06'
-					}
-				]
+				stockCodes:'871857',
+				informationList: []
 			};
+		},
+		created() {
+			console.log("Config", this.Config)
+			this.stockList();
 		},
 		methods: {
 			tabClick(index) {
 				this.tabCurrentIndex = index;
 
 			},
-			det() {
+			stockList() {
+				let data = {
+					stockCodes: this.stockCodes,
+					type: "0",
+					stockName: "",
+					sort: "",
+					title: "",
+					page: "0",
+					size: "20"
+				}
+				const that= this;
+				uni.request({
+					url: this.Config.stockList,
+					method: 'POST',
+					dataType: 'jsonp',
+					data:data,
+					success: (res) => {
+						let data = JSON.parse(res.data);
+						console.log(data)
+						let list = data.result.newsList;
+						// list.map((item) =>{
+						// 	 that.informationList.push({})
+						// })
+						 that.informationList = that.informationList.concat(list);
+						 
+					},
+					fail: (res) => {
+
+					},
+					complete: () => {},
+				});
+			},
+			det(i) {
 				uni.navigateTo({
-					url: '/pages/f10/informationDetails'
+					url: '/pages/index/informationDetails?id=' + i
 				});
 			}
 		},

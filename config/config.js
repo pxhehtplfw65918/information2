@@ -15,33 +15,30 @@
  */
 let bu = 'https://xiaoetong-test.integrity.com.cn';
 
+
+
 let auth = bu + '/zc-auth';
 let shareu = bu;
 // let news = bu + '/zc-news';
 let news = bu + '/news';
-let zcpush = bu + '/zc-push';
-let zcconfig = bu + '/zc-config';
-let zcselfstock = bu + '/zc-selfstock'
-// 自选股票
-let pathUrl = zcselfstock + '/v1/selfStock/ocrByTx'
-//发现模块、小鹅登录
-// let bu = "https://zc-auth.zcskjy.com";
-// bu = "http://localhost:8201";
-let iu = bu + '/index.php';
-let au = bu + '/account.php';
-let mu = bu + '/admin.php';
-
-let su = bu + '/shop/static/src/default';
-let cdn = 'https://static.shopsuite.cn';
-
 let ip = bu + '/mobile/';
 let wx = bu + '/zc-wx/';
-// let ip = '/mobile/'
-// let ip = 'https://demo.mallsuite.cn/mobile/'
 
 export default {
-	basePath: au,
-	
+	stockList: news + '/v1/news/stockList', //  资讯列表 POST
+	stockDetail: news + '/v1/news/stockDetail', // 资讯详情 Get page=0是第一页
+
+
+	// that.Config.URL.newsUrl.newslist,
+	URL: {
+		newsUrl: {
+			newslist: news + '/v1/news/list?',
+		},
+		config: {
+
+		},
+		
+	},
 	tabBar: {
 		color: '#7A7E83',
 		borderStyle: 'black',
