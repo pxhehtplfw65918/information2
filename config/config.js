@@ -33,11 +33,14 @@ export default {
 	URL: {
 		newsUrl: {
 			newslist: news + '/v1/news/list?',
+			noticeTypeList: news + '/v1/news/noticeTypeList',
+			noticeList: news + '/v1/news/noticeList'
+
 		},
 		config: {
 
 		},
-		
+
 	},
 	tabBar: {
 		color: '#7A7E83',
