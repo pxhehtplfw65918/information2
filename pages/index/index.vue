@@ -9,8 +9,8 @@
 						{{ item.text }}
 					</view>
 				</view>
-				<scroll-view class="articleDetail-scroll" :style="{ height: scrollHeight + 'rpx' }" scroll-y="true">
-					<stockInformation v-if="tabCurrentIndex == 3" />
+				<scroll-view class="articleDetail-scroll" :style="{ height: scrollHeight + 'rpx' }" scroll-y="true" @scrolltolower="toLower">
+					<stockInformation v-if="tabCurrentIndex == 3" @toLower="toLower"/>
 					<researchReport v-if="tabCurrentIndex == 5" />
 				</scroll-view>
 			</view>

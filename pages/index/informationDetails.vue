@@ -27,7 +27,7 @@
 				let winWidth = sys.windowWidth;
 				let winrate = 750 / winWidth;
 				let winHeight = parseInt(sys.windowHeight * winrate);
-				return winHeight;
+				return winHeight - this.$FT.pxToRpx(44);
 			},
 		},
 		data() {
