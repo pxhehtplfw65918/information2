@@ -39,8 +39,8 @@
 			};
 		},
 		onLoad(e) {
-			this.id = e.seq;
-			this.stockList(e.seq)
+			this.id = e.id;
+			this.stockList()
 			console.log(e)
 		},
 		methods: {
@@ -55,19 +55,25 @@
 			},
 			stockList(id) {
 				let data = {
-					seq:id
+					stockCodes: this.stockCodes,
+					type: "0",
+					stockName: "",
+					sort: "",
+					title: "",
+					page: "0",
+					size: "20"
 				}
 				const that= this;
 				uni.request({
-					url: this.Config.stockDetail,
-					method: 'Get',
+					url: this.Config.stockList,
+					method: 'POST',
 					dataType: 'jsonp',
 					data:data,
 					success: (res) => {
 						let data = JSON.parse(res.data);
-						console.log("that.data",data.result.content)
-						let list = data.result.content;
-						that.content = list;
+					
+						let list = data.result.newsList;
+						that.content = list[that.id].summary;
 						console.log("that.content",that.content)
 						 // that.informationList = that.informationList.concat(list);
 					},
@@ -84,7 +90,4 @@
 	@import '@/styles/f10/common.css';
 	@import '@/styles/f10/informationDetails.scss';
 	@import '@/styles/new_nav.scss';
-	table{
-		display: none;
-	}
 </style>
