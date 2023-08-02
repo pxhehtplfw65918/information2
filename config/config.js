@@ -34,8 +34,8 @@ export default {
 		newsUrl: {
 			newslist: news + '/v1/news/list?',
 			noticeTypeList: news + '/v1/news/noticeTypeList',
-			noticeList: news + '/v1/news/noticeList'
-
+			noticeList: news + '/v1/news/noticeList',
+			eventReminderList: news + '/v1/news/eventReminderList'
 		},
 		config: {
 

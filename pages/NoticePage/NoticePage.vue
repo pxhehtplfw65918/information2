@@ -1,71 +1,76 @@
 <template>
 	<view class="container">
-		<view class="top-section">
-			<view class="top-content">
-				<p class="title">大事提醒</p>
-				<p class="more">
-					<span>更多</span>
-					<img src="../../static/icon/more.png" alt="" />
-				</p>
-			</view>
-			<view class="timeline-wrapper">
-				<el-timeline>
-					<el-timeline-item placement="top" size="normal" v-for="(activity, index) in activities"
-						:key="index">
-						<view class="custom-timestamp">
-							<span v-html="activity.timestamp"> </span>
-						</view>
-						<view class="custom-content">
-							<view class="title-content">
-								<p class="title">{{ activity.type }}</p>
+		<embed
+			src="http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2023-07-14/600519_20230714_NM31.pdf"
+			type="application/pdf" width="100%" height="100%" />
+		<view class="bottom-section">
+			<view class="bottom-content" style="">
+				<div class="infinite-list-wrapper" style="overflow:auto;max-height: 100vh;">
+					<view class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled"
+						style="overflow:hidden;">
+						<view class="top-section">
+							<view class="top-content">
+								<p class="title">大事提醒</p>
 								<p class="more">
-									同类事件
-									<img src="../../static/icon/more-1.png" alt="" />
+									<span>更多</span>
+									<img src="../../static/icon/more.png" alt="" />
 								</p>
 							</view>
-							<view class="wrapper">
-								<!-- <input id="exp1" class="exp" type="checkbox" /> -->
-								<view class="custom-notice">
-									<span class="btn">
-										<img src="../../static/icon/more-1.png" alt="" /></span>
-									<!-- <label class="btn" for="exp1"></label> -->
-									{{ activity.content }}
-								</view>
+							<view class="timeline-wrapper">
+								<el-timeline>
+									<el-timeline-item placement="top" size="normal"
+										v-for="(activity, index) in activities" :key="index">
+										<view class="custom-timestamp">
+											<view
+												style="font-size: 0.78rem;color: #333333;height:1.0725rem;line-height:1.0725rem;float:right; ">
+												{{formatTime(activity.date,1)}}
+											</view>
+											<view
+												style="font-size:0.65rem;color: #999999; transform: scale(0.833); float:right;height:0.11rem;line-height:0.81rem">
+												{{formatTime(activity.date,2)}}
+											</view>
+										</view>
+										<view class="custom-content">
+											<view class="title-content">
+												<p class="title">{{ activity.eventType }}</p>
+											</view>
+											<view class="wrapper">
+												<!-- <input id="exp1" class="exp" type="checkbox" /> -->
+												<view class="custom-notice" @click="expend(index)"
+													:ref="`itemElement${index}`" :isexpend="0">
+													<span class="btn">
+														<img src="../../static/icon/more-1.png" alt=""
+															:ref="`itemElement${index}`" />
+													</span>
+													<!-- <label class="btn" for="exp1"></label> -->
+													<span :ref="`itemElement${index}`" style="display: block;">
+														{{ activity.title}}
+													</span>
+												</view>
+											</view>
+										</view>
+									</el-timeline-item>
+								</el-timeline>
 							</view>
 						</view>
-					</el-timeline-item>
-				</el-timeline>
-			</view>
-		</view>
-		<view class="viewider"></view>
-		<view class="bottom-section">
-			<view class="title-content">
-				<p class="title">公告</p>
-				<p class="more" @click="isShow = !isShow">
-					全部公告
-					<img src="../../static/icon/more-2.png" alt="" />
-				</p>
-			</view>
-			<view class="bottom-content">
-				<view v-for="(item, index) in notice" :key="index">
-					<view>
-						<p class="content-area">{{ item.content }}</p>
-						<p class="time-area">{{ item.timestamp }}</p>
-					</view>
-					<view v-if="index < notice.length - 1" class="bottomLine"></view>
-				</view>
-				<div class="infinite-list-wrapper" style="overflow:auto">
-					<ul class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
-						<view v-for="(item, index) in notice" :key="index">
+						<view class="viewider"></view>
+						<view class="title-content" style="padding: 0 0.975rem;padding-top: 1rem;">
+							<p class="title">公告</p>
+							<p class="more" @click="isShow = !isShow">
+								全部公告
+								<img src="../../static/icon/more-2.png" alt="" />
+							</p>
+						</view>
+						<view v-for="(item, index) in notice" :key="index" style="padding: 0 0.975rem;">
 							<view>
-								<p class="content-area">{{ item.content }}</p>
-								<p class="time-area">{{ item.timestamp }}</p>
+								<p class="content-area">{{ item.title }}</p>
+								<p class="time-area">{{ formateData(item.crtDate)}}</p>
 							</view>
 							<view v-if="index < notice.length - 1" class="bottomLine"></view>
 						</view>
-					</ul>
-					<p v-if="loading">加载中...</p>
-					<p v-if="noMore">没有更多了</p>
+					</view>
+					<p v-if="loading" style="text-align: center;">加载中...</p>
+					<p v-if="noMore" style="text-align: center;">没有更多了</p>
 				</div>
 			</view>
 		</view>
@@ -81,6 +86,9 @@
 					<view v-for="(item, index) in notice_selector" @click="
               select_type = item.type;
               isShow = !isShow;
+			  page=0;
+			  notice=[];
+			  getNoticeList();
             " :key="index" :class="[
               item.type == select_type ? 'isSelected' : '',
               'type_option',
@@ -100,90 +108,22 @@
 	import {
 		mapState,
 		mapMutations
-	} from 'vuex';
+	} from "vuex";
 	export default {
 		data() {
 			return {
-				count: 10,
 				loading: false,
-				activities: [{
-						content: "06-06入选龙虎榜，买入总额3595万元，卖出总额3514万元，上榜原因: 有价格涨跌幅限…06-06入选龙虎榜，买入总额3595万元，卖出总额3514万元，上榜原因: 有价格涨跌幅限…",
-						timestamp: "2018-04-05",
-						type: "龙虎榜",
-					},
-					{
-						content: "06-06入选龙虎榜，买入总额3595万元，卖出总额3514万元，上榜原因: 有价格涨跌幅限…",
-						timestamp: "2018-04-13",
-						type: "分红转送",
-					},
-					{
-						content: "06-06入选龙虎榜，买入总额3595万元，卖出总额3514万元，上榜原因: 有价格涨跌幅限…",
-						timestamp: "2018-04-11",
-						type: "一季报披露",
-					},
-				],
-				notice: [{
-						content: "杭州热电:股票交易严重异常波动公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:关于对杭州热电集团股份有限公司股票交易严重异常波动问询函的回复",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-					{
-						content: "杭州热电:杭州热电集团股份有限公司 2022年年度权益分派实施公告杭州热电:股票交易风险提示公告",
-						timestamp: "2023-05-31",
-						type: "",
-					},
-				],
+				activities: [],
+				notice: [],
 				notice_selector: [],
 				select_type: "",
 				isShow: false,
 				code: "600519", //进入页面获取的股票代码
 				page: 1,
-				totalPage: ""
+				totalPage: "",
+				more1: "../../static/icon/more-1.png",
+				more2: "../../static/icon/more1-1.png"
+
 			};
 		},
 		watch: {
@@ -197,63 +137,129 @@
 			},
 		},
 		created() {
-			this.getNoticeTypeList(0)
-			this.getNoticeList()
+			this.getNoticeTypeList(0);
+			this.getNoticeList();
+			this.getEventReminderList();
 			this.initActivities();
+
 		},
 		methods: {
-			//加载数据
+			//加载公告数据
 			load() {
-				this.loading = true
+				this.loading = true;
 				setTimeout(() => {
-					this.count += 2
-					this.loading = false
-				}, 2000)
+					this.getNoticeList();
+				}, 2000);
+			},
+			//判断是否溢出
+			isOverflow(item) {
+				this.$nextTick(function() {
+
+				})
+			},
+			expend(index) {
+				var imageElement = this.$refs
+				for (var key in imageElement) {
+					if (key == 'itemElement' + index) {
+						var a = imageElement[key][2].$el.attributes.isexpend.value
+						if (a == 1) {
+							imageElement[key][0].src = "/html/static/icon/more-1.png"
+							imageElement[key][2].$el.style.maxHeight = "4.5em"
+							imageElement[key][2].$el.attributes.isexpend.value = 0
+						} else if (a == 0) {
+							imageElement[key][0].src = "/html/static/icon/more1-1.png"
+							imageElement[key][2].$el.style.maxHeight = "10rem"
+							imageElement[key][2].$el.attributes.isexpend.value = 1
+						}
+					}
+				}
+
 			},
 			initActivities() {
 				let that = this;
 				this.activities.map((item, i) => {
-					that.activities[i].timestamp = that.formatTime(item.timestamp)
-					console.log("", that.activities[i])
-				})
+					that.activities[i].data = that.formatTime(item.data);
+					console.log("", that.activities[i]);
+				});
 			},
 			//传入一个时间格式为2018-04-16转换为年月日返回一个html结构month不足10补0
-			formatTime(time) {
+			formatTime(time, a) {
 				const date = new Date(time);
 				const year = date.getFullYear();
 				const month = (date.getMonth() + 1).toString().padStart(2, "0");
 				const day = date.getDate().toString().padStart(2, "0");
-				return (
-					'<view style="font-size: 0.78rem;color: #333333;height:1.0725rem;line-height:1.0725rem;float:right; ">' +
-					month +
-					"-" +
-					day +
-					'</view><view style="font-size:0.65rem;color: #999999; transform: scale(0.833); float:right;height:0.11rem;line-height:0.81rem">' +
-					year +
-					"</view>"
-				);
+				if (a == 1) {
+					return month + "-" + day;
+				} else {
+					return year
+				}
+
+			},
+			//格式化公告时间
+			formateData(time) {
+				const date = new Date(time)
+				const year = date.getFullYear();
+				const month = (date.getMonth() + 1).toString().padStart(2, "0");
+				const day = date.getDate().toString().padStart(2, "0");
+				return year + "-" + month + "-" + day
+			},
+			//获取大事提醒列表
+			getEventReminderList() {
+
+				let data = {
+					code: this.code,
+				};
+
+				var that = this;
+				uni.request({
+					url: this.Config.URL.newsUrl.eventReminderList,
+					method: "Get",
+					dataType: "json",
+					data: data,
+					header: {
+						"content-type": "application/json",
+					},
+					success: (res) => {
+
+						this.activities = [
+							res.data.result.list[0],
+							res.data.result.list[1],
+							res.data.result.list[2]
+						]
+						this.$nextTick(() => {
+							var imageElement = this.$refs
+							for (var key in imageElement) {
+								if (imageElement[key][2].$el.clientHeight >= imageElement[key][1]
+									.clientHeight) {
+									console.log(imageElement[key][2].$el.children[0].style.display =
+										"none")
+								}
+							}
+
+						})
+					},
+					fail: (res) => {},
+					complete: () => {},
+				});
 			},
 			//获取公告类型列表
 			getNoticeTypeList(id) {
 				let data = {
-					code: id
-				}
+					code: id,
+				};
 				var that = this;
 				uni.request({
 					url: this.Config.URL.newsUrl.noticeTypeList,
-					method: 'Get',
-					dataType: 'json',
+					method: "Get",
+					dataType: "json",
 					data: data,
 					header: {
-						'content-type': 'application/json'
+						"content-type": "application/json",
 					},
 					success: (res) => {
-						that.notice_selector = res.data.result
-
+						that.notice_selector = res.data.result;
 					},
-					fail: (res) => {
-
-					},
+					fail: (res) => {},
 					complete: () => {},
 				});
 			},
@@ -262,84 +268,212 @@
 				let data = {
 					code: this.code,
 					type: this.select_type,
-					pageNum: this.page
-				}
+					pageNum: this.page,
+				};
 				var that = this;
 				uni.request({
 					url: this.Config.URL.newsUrl.noticeList,
-					method: 'Get',
-					dataType: 'json',
+					method: "Get",
+					dataType: "json",
 					data: data,
 					header: {
-						'content-type': 'application/json'
+						"content-type": "application/json",
 					},
 					success: (res) => {
-						that.totalPage = res.data.result.totalPage
-					},
-					fail: (res) => {
 
+						that.totalPage = res.data.result.totalPage;
+						const a = that.notice
+						that.notice = [...a, ...res.data.result.list]
+						that.page++
+						this.loading = false;
 					},
+					fail: (res) => {},
 					complete: () => {},
 				});
 			},
 		},
 		computed: {
-			...mapState(['Config']),
+			...mapState(["Config"]),
 			noMore() {
-				return this.count >= 20
+				return this.page >= this.totalPage;
 			},
 			disabled() {
-				return this.loading || this.noMore
-			}
+				return this.loading || this.noMore;
+			},
+
 		},
+		mounted() {
+
+		}
 	};
 </script>
 
 <style lang="scss" scoped>
 	.container {
+		height: 100vh;
 		font-size: 0.91rem;
+		overflow: hidden;
 	}
 
-	.top-section,
 	.bottom-section {
-		padding: 0 0.975rem;
-	}
 
-	.top-section {
-		min-height: 35%;
-	}
 
-	.top-section {
-		.top-content {
-			height: 3.75rem;
-			line-height: 3.75rem;
-			display: flex;
-			justify-content: space-between;
+		.top-section {
+			min-height: 25%;
+			padding: 0 0.975rem;
+		}
 
-			p {
-				margin: 0;
-				display: inline-block;
+		.top-section {
+			.top-content {
+				height: 3.75rem;
+				line-height: 3.75rem;
+				display: flex;
+				justify-content: space-between;
+
+				p {
+					margin: 0;
+					display: inline-block;
+				}
+
+				.title {
+					font-size: 1.105rem;
+					font-family: "PF Medium";
+				}
+
+				.more {
+					font-size: 0.845rem;
+					color: #999999;
+
+					img {
+						width: 0.625rem;
+						height: 0.625rem;
+					}
+				}
 			}
+		}
 
-			.title {
-				font-size: 1.105rem;
-				font-family: "PF Medium";
-			}
+		.custom-timestamp {
+			position: absolute;
+			top: -0.5em;
+			left: -2.7rem;
+			color: #333333;
+			white-space: pre-line;
+			width: 2.5rem;
+		}
 
-			.more {
-				font-size: 0.845rem;
-				color: #999999;
+		.custom-content {
+			.title-content {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 0;
+
+				p {
+					margin: 0;
+					display: inline-block;
+				}
+
+				.title {
+					font-size: 0.91rem;
+					font-family: "PF Medium";
+					color: #fe0000;
+				}
+
+				.more {
+					font-size: 0.715rem;
+					color: #999999;
+				}
 
 				img {
 					width: 0.625rem;
 					height: 0.625rem;
 				}
 			}
-		}
-	}
 
-	.bottom-section {
+			.wrapper {
+				display: flex;
+				overflow: hidden;
+
+				.custom-notice {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					text-align: justify;
+					/* display: flex; */
+					/*   display: -webkit-box;
+		  -webkit-line-clamp: 3;
+		  -webkit-box-orient: vertical; */
+					line-height: 1.5;
+					max-height: 4.5em;
+					position: relative;
+					transition: 0.3s max-height;
+
+					.btn {
+						position: relative;
+						float: right;
+						clear: both;
+						margin-left: 0.5rem;
+						line-height: 1rem;
+						cursor: pointer;
+						border: 0;
+
+						img {
+							width: 0.75rem;
+							height: 0.75rem;
+						}
+					}
+
+					.btn::before {
+						content: "";
+						position: absolute;
+						left: 0rem;
+						color: #333;
+						transform: translateX(-100%);
+					}
+
+					.btn::after {
+						content: "";
+					}
+				}
+
+				.custom-notice::before {
+					content: "";
+					height: calc(100% - 1.25rem);
+					float: right;
+				}
+
+				/* 	.custom-notice::after {
+					content: "";
+					width: 999vw;
+					height: 999vw;
+					position: absolute;
+					box-shadow: inset calc(6.25rem - 999vw) calc(1.875rem - 999vw) 0 0 #fff;
+					margin-left: -6.25rem;
+				} */
+
+				// .exp {
+				//   display: none;
+				// }
+				// .exp:checked + .custom-notice {
+				//   max-height: none;
+				// }
+				// .exp:checked + .custom-notice .btn::after {
+				//   content: "收起";
+				// }
+				// .exp:checked + .custom-notice .btn::before {
+				//   visibility: hidden; /*在展开状态下隐藏省略号*/
+				// }
+			}
+
+			// .custom-notice::before {
+			//   content: "";
+			//   float: right;
+			//   clear: both;
+			//   width: 0;
+			//   height: 1.5625rem; /*先随便设置一个高度*/
+			// }
+		}
+
 		.title-content {
+
 			padding-top: 1rem;
 			display: flex;
 			justify-content: space-between;
@@ -366,7 +500,10 @@
 		}
 
 		.bottom-content {
+
+
 			.time-area {
+
 				font-size: 0.845rem;
 				color: #999999;
 				display: flex;
@@ -410,133 +547,12 @@
 		border-left: 0.0625rem solid #e4e4e4;
 	}
 
-	::v-deep .el-timeline-item__node--normal {
-		left: 0;
-	}
-
 	::v-deep .el-timeline-item__wrapper {
 		padding-left: 1.3rem;
 		padding-top: -0.3125rem;
 	}
 
-	.custom-timestamp {
-		position: absolute;
-		top: -0.5em;
-		left: -2.7rem;
-		color: #333333;
-		white-space: pre-line;
-		width: 2.5rem;
-	}
 
-	.custom-content {
-		.title-content {
-			display: flex;
-			justify-content: space-between;
-
-			p {
-				margin: 0;
-				display: inline-block;
-			}
-
-			.title {
-				font-size: 0.91rem;
-				font-family: "PF Medium";
-				color: #fe0000;
-			}
-
-			.more {
-				font-size: 0.715rem;
-				color: #999999;
-			}
-
-			img {
-				width: 0.625rem;
-				height: 0.625rem;
-			}
-		}
-
-		.wrapper {
-			display: flex;
-			overflow: hidden;
-
-			.custom-notice {
-				overflow: hidden;
-				text-overflow: ellipsis;
-				text-align: justify;
-				/* display: flex; */
-				/*   display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical; */
-				line-height: 1.5;
-				max-height: 4.5em;
-				position: relative;
-				transition: 0.3s max-height;
-
-				.btn {
-					position: relative;
-					float: right;
-					clear: both;
-					margin-left: 1rem;
-					line-height: 1rem;
-					cursor: pointer;
-					border: 0;
-
-					img {
-						width: 0.75rem;
-						height: 0.75rem;
-					}
-				}
-
-				.btn::before {
-					content: "...";
-					position: absolute;
-					left: -0.5rem;
-					color: #333;
-					transform: translateX(-100%);
-				}
-
-				.btn::after {
-					content: "";
-				}
-			}
-
-			.custom-notice::before {
-				content: "";
-				height: calc(100% - 1.25rem);
-				float: right;
-			}
-
-			.custom-notice::after {
-				content: "";
-				width: 999vw;
-				height: 999vw;
-				position: absolute;
-				box-shadow: inset calc(6.25rem - 999vw) calc(1.875rem - 999vw) 0 0 #fff;
-				margin-left: -6.25rem;
-			}
-
-			// .exp {
-			//   display: none;
-			// }
-			// .exp:checked + .custom-notice {
-			//   max-height: none;
-			// }
-			// .exp:checked + .custom-notice .btn::after {
-			//   content: "收起";
-			// }
-			// .exp:checked + .custom-notice .btn::before {
-			//   visibility: hidden; /*在展开状态下隐藏省略号*/
-			// }
-		}
-
-		// .custom-notice::before {
-		//   content: "";
-		//   float: right;
-		//   clear: both;
-		//   width: 0;
-		//   height: 1.5625rem; /*先随便设置一个高度*/
-		// }
-	}
 
 	.formatTime {
 		margin-top: -1em;
